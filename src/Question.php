@@ -8,12 +8,11 @@ final class Question
      * @param array<string, string> $answers
      */
     public function __construct(
-        private string $text,
-        private array $answers,
-        private string $correctAnswer,
+        private readonly string $text,
+        private readonly array $answers,
+        private readonly string $correctAnswers,
         private bool $isSkipped = false
-    )
-    {
+    ) {
     }
 
     public function getText(): string
@@ -31,12 +30,12 @@ final class Question
 
     public function getCorrectAnswer(): string
     {
-        return $this->correctAnswer;
+        return $this->correctAnswers;
     }
 
     public function isCorrect(string $answer): bool
     {
-        return $answer === $this->correctAnswer;
+        return strtolower($this->correctAnswers) === strtolower($answer);
     }
 
     public function skip(): void

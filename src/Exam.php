@@ -2,14 +2,19 @@
 
 namespace App;
 
-final class Exam
+final readonly class Exam
 {
+    /**
+     *  @param array{ text: string, answers: array<string, string>, correctAnswers: string } $questions
+     */
     public function __construct(
         private array $questions
-    )
-    {
+    ) {
     }
 
+    /**
+     *  @return array{ text: string, answers: array<string, string>, correctAnswers: string }
+     */
     public function getQuestions(): array
     {
         return $this->questions;
@@ -22,7 +27,7 @@ final class Exam
 
     public function getCorrectAnswers(): int
     {
-        return count(array_filter($this->questions, fn(Question $question) => $question->isCorrect($question->getCorrectAnswer())));
+        return count(array_filter($this->questions, fn (Question $question) => $question->isCorrect($question->getCorrectAnswer())));
     }
 
     public function getPoints(): int
@@ -42,12 +47,12 @@ final class Exam
 
     public function getRemainingQuestions(): array
     {
-        return array_filter($this->questions, fn(Question $question) => !$question->isSkipped());
+        return array_filter($this->questions, fn (Question $question) => !$question->isSkipped());
     }
 
     public function getSkippedQuestions(): array
     {
-        return array_filter($this->questions, fn(Question $question) => $question->isSkipped());
+        return array_filter($this->questions, fn (Question $question) => $question->isSkipped());
     }
 
     public function getSkippedCount(): int
