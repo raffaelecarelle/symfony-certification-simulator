@@ -1,6 +1,6 @@
-[submodule "symfony-docs"]
-	path = symfony-docs
-	url = https://github.com/symfony/symfony-docs.git
 [submodule "php-doc"]
 	path = php-doc
 	url = https://github.com/php/doc-en.git
+[submodule "sf-doc"]
+	path = sf-doc
+	url = https://github.com/symfony/symfony-docs.git
