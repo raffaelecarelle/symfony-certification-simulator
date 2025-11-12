@@ -3,6 +3,9 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-$app = (new \Symfony\Component\Console\Application());
-$app->addCommand(new \App\ExamCommand());
+use Symfony\Component\Console\Application;
+use App\ExamCommand;
+
+$app = (new Application());
+$app->addCommand(new ExamCommand());
 $app->run();
