@@ -1,0 +1,28 @@
+{
+    "name": "raffaelecarelle/symfony-certification-program",
+    "description": "UNOFFICIAL Symfony Certification Program with Exercises",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Raffaele Carelle",
+            "email": "raffaele.carelle@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "App\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "App\\Tests\\": "tests/" }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "phpstan/phpstan": "2.1.x-dev",
+        "rector/rector": "dev-main",
+        "phpunit/phpunit": "^13.0@dev"
+    }
+}

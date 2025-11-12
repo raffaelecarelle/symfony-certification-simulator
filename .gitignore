@@ -1,4 +1,6 @@
 /.idea/
+/composer.lock
+/.castor.stub.php
 
 # Cache and logs (Symfony2)
 /app/cache/*
