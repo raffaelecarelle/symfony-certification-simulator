@@ -4008,4 +4008,919 @@ return [
         'correctAnswers' => 'A',
         'linkAtDocumentation' => 'sf-doc/messenger.rst',
     ],
+
+    // HttpKernel - SubRequest
+    [
+        'text' => 'Architecture: which HttpKernelInterface constant creates a sub-request?',
+        'answers' => [
+            'A' => 'HttpKernelInterface::SUB_REQUEST',
+            'B' => 'HttpKernelInterface::CHILD_REQUEST',
+            'C' => 'HttpKernelInterface::INTERNAL_REQUEST',
+            'D' => 'HttpKernelInterface::NESTED_REQUEST',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/http_kernel.rst',
+    ],
+    [
+        'text' => 'Architecture: which HttpKernelInterface constant represents the main request?',
+        'answers' => [
+            'A' => 'HttpKernelInterface::MAIN_REQUEST',
+            'B' => 'HttpKernelInterface::MASTER_REQUEST',
+            'C' => 'HttpKernelInterface::PRIMARY_REQUEST',
+            'D' => 'HttpKernelInterface::ROOT_REQUEST',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/http_kernel.rst',
+    ],
+
+    // Request - Content Negotiation
+    [
+        'text' => 'Controllers: which Request method returns the request format?',
+        'answers' => [
+            'A' => 'getRequestFormat()',
+            'B' => 'getFormat()',
+            'C' => 'getContentFormat()',
+            'D' => 'format()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request method sets the request format?',
+        'answers' => [
+            'A' => 'setRequestFormat()',
+            'B' => 'setFormat()',
+            'C' => 'format()',
+            'D' => 'setContentFormat()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request method gets format from MIME type?',
+        'answers' => [
+            'A' => 'getFormat()',
+            'B' => 'getMimeType()',
+            'C' => 'formatFromMime()',
+            'D' => 'mimeToFormat()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request method gets MIME types for a format?',
+        'answers' => [
+            'A' => 'getMimeTypes()',
+            'B' => 'getFormatMimeTypes()',
+            'C' => 'mimeTypes()',
+            'D' => 'formatMimeTypes()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // Response - Content Disposition
+    [
+        'text' => 'Controllers: which ResponseHeaderBag method creates Content-Disposition header?',
+        'answers' => [
+            'A' => 'makeDisposition()',
+            'B' => 'setDisposition()',
+            'C' => 'createDisposition()',
+            'D' => 'disposition()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which disposition types are available in ResponseHeaderBag?',
+        'answers' => [
+            'A' => 'ResponseHeaderBag::DISPOSITION_ATTACHMENT',
+            'B' => 'ResponseHeaderBag::DISPOSITION_INLINE',
+            'C' => 'ResponseHeaderBag::DISPOSITION_FORM_DATA',
+            'D' => 'ResponseHeaderBag::DISPOSITION_DOWNLOAD',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // JsonResponse
+    [
+        'text' => 'Controllers: which JsonResponse method sets the data?',
+        'answers' => [
+            'A' => 'setData()',
+            'B' => 'setJson()',
+            'C' => 'setContent()',
+            'D' => 'data()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which JsonResponse options control encoding?',
+        'answers' => [
+            'A' => 'JSON_HEX_TAG',
+            'B' => 'JSON_HEX_APOS',
+            'C' => 'JSON_HEX_AMP',
+            'D' => 'JSON_HEX_QUOT',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which JsonResponse method sets encoding options?',
+        'answers' => [
+            'A' => 'setEncodingOptions()',
+            'B' => 'setJsonOptions()',
+            'C' => 'setOptions()',
+            'D' => 'jsonOptions()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // RedirectResponse
+    [
+        'text' => 'Controllers: which RedirectResponse method sets the target URL?',
+        'answers' => [
+            'A' => 'setTargetUrl()',
+            'B' => 'setUrl()',
+            'C' => 'setLocation()',
+            'D' => 'redirect()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which RedirectResponse method returns the target URL?',
+        'answers' => [
+            'A' => 'getTargetUrl()',
+            'B' => 'getUrl()',
+            'C' => 'getLocation()',
+            'D' => 'targetUrl()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // Routing - Route Options
+    [
+        'text' => 'Routing: which Route option sets the path?',
+        'answers' => [
+            'A' => 'path',
+            'B' => 'route',
+            'C' => 'url',
+            'D' => 'pattern',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which Route method sets defaults?',
+        'answers' => [
+            'A' => 'setDefaults()',
+            'B' => 'setDefault()',
+            'C' => 'addDefaults()',
+            'D' => 'defaults()',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which Route method sets requirements?',
+        'answers' => [
+            'A' => 'setRequirements()',
+            'B' => 'setRequirement()',
+            'C' => 'addRequirements()',
+            'D' => 'requirements()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which Route method sets options?',
+        'answers' => [
+            'A' => 'setOptions()',
+            'B' => 'setOption()',
+            'C' => 'addOptions()',
+            'D' => 'options()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which Route method sets the host?',
+        'answers' => [
+            'A' => 'setHost()',
+            'B' => 'host()',
+            'C' => 'setDomain()',
+            'D' => 'domain()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+
+    // Router Matching
+    [
+        'text' => 'Routing: which RouterInterface method matches a request?',
+        'answers' => [
+            'A' => 'matchRequest()',
+            'B' => 'match()',
+            'C' => 'findRoute()',
+            'D' => 'resolve()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which exception is thrown when no route matches?',
+        'answers' => [
+            'A' => 'ResourceNotFoundException',
+            'B' => 'RouteNotFoundException',
+            'C' => 'NoMatchException',
+            'D' => 'RoutingException',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which exception is thrown when HTTP method is not allowed?',
+        'answers' => [
+            'A' => 'MethodNotAllowedException',
+            'B' => 'InvalidMethodException',
+            'C' => 'HttpMethodException',
+            'D' => 'NotAllowedException',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+
+    // Twig Extensions
+    [
+        'text' => 'Twig: which interface must a Twig extension implement?',
+        'answers' => [
+            'A' => 'ExtensionInterface',
+            'B' => 'TwigExtensionInterface',
+            'C' => 'Extension',
+            'D' => 'TwigExtension',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which class should a Twig extension extend?',
+        'answers' => [
+            'A' => 'AbstractExtension',
+            'B' => 'Extension',
+            'C' => 'BaseExtension',
+            'D' => 'TwigExtension',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which extension methods register custom features?',
+        'answers' => [
+            'A' => 'getFilters()',
+            'B' => 'getFunctions()',
+            'C' => 'getTests()',
+            'D' => 'getOperators()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+
+    // Twig - Template References
+    [
+        'text' => 'Twig: which function returns the parent template name?',
+        'answers' => [
+            'A' => 'No such function exists',
+            'B' => 'parent_template()',
+            'C' => 'get_parent()',
+            'D' => 'template_parent()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which syntax includes a template?',
+        'answers' => [
+            'A' => '{% include %}',
+            'B' => '{% import %}',
+            'C' => '{% use %}',
+            'D' => '{% embed %}',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which syntax imports macros?',
+        'answers' => [
+            'A' => '{% import %}',
+            'B' => '{% from %}',
+            'C' => '{% use %}',
+            'D' => '{% include %}',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+
+    // Forms - FormInterface Methods
+    [
+        'text' => 'Forms: which FormInterface method adds a child form?',
+        'answers' => [
+            'A' => 'add()',
+            'B' => 'addChild()',
+            'C' => 'addForm()',
+            'D' => 'appendChild()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormInterface method removes a child form?',
+        'answers' => [
+            'A' => 'remove()',
+            'B' => 'removeChild()',
+            'C' => 'delete()',
+            'D' => 'removeForm()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormInterface method checks if a child exists?',
+        'answers' => [
+            'A' => 'has()',
+            'B' => 'hasChild()',
+            'C' => 'contains()',
+            'D' => 'exists()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormInterface method retrieves a child form?',
+        'answers' => [
+            'A' => 'get()',
+            'B' => 'getChild()',
+            'C' => 'child()',
+            'D' => 'find()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormInterface method returns all children?',
+        'answers' => [
+            'A' => 'all()',
+            'B' => 'getChildren()',
+            'C' => 'children()',
+            'D' => 'getAll()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+
+    // Forms - Form State
+    [
+        'text' => 'Forms: which FormInterface method checks if form is valid?',
+        'answers' => [
+            'A' => 'isValid()',
+            'B' => 'valid()',
+            'C' => 'hasErrors()',
+            'D' => 'validate()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormInterface method returns form errors?',
+        'answers' => [
+            'A' => 'getErrors()',
+            'B' => 'errors()',
+            'C' => 'getViolations()',
+            'D' => 'violations()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormInterface method creates the form view?',
+        'answers' => [
+            'A' => 'createView()',
+            'B' => 'getView()',
+            'C' => 'view()',
+            'D' => 'toView()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+
+    // Validation - ValidatorInterface
+    [
+        'text' => 'Validation: which ValidatorInterface method validates a value?',
+        'answers' => [
+            'A' => 'validate()',
+            'B' => 'check()',
+            'C' => 'verify()',
+            'D' => 'assert()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which ValidatorInterface method validates a property?',
+        'answers' => [
+            'A' => 'validateProperty()',
+            'B' => 'validatePropertyValue()',
+            'C' => 'checkProperty()',
+            'D' => 'verifyProperty()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which method returns ConstraintViolationListInterface?',
+        'answers' => [
+            'A' => 'validate()',
+            'B' => 'validateProperty()',
+            'C' => 'validatePropertyValue()',
+            'D' => 'getViolations()',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+
+    // Validation - Constraint Validator
+    [
+        'text' => 'Validation: which class must a constraint validator extend?',
+        'answers' => [
+            'A' => 'ConstraintValidator',
+            'B' => 'AbstractConstraintValidator',
+            'C' => 'BaseValidator',
+            'D' => 'Validator',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which method must a constraint validator implement?',
+        'answers' => [
+            'A' => 'validate()',
+            'B' => 'check()',
+            'C' => 'verify()',
+            'D' => 'assert()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which ExecutionContextInterface method adds a violation?',
+        'answers' => [
+            'A' => 'buildViolation()',
+            'B' => 'addViolation()',
+            'C' => 'violation()',
+            'D' => 'createViolation()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+
+    // Dependency Injection - Container Interface
+    [
+        'text' => 'Dependency Injection: which ContainerInterface method retrieves a service?',
+        'answers' => [
+            'A' => 'get()',
+            'B' => 'getService()',
+            'C' => 'service()',
+            'D' => 'retrieve()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which ContainerInterface method checks if service exists?',
+        'answers' => [
+            'A' => 'has()',
+            'B' => 'exists()',
+            'C' => 'hasService()',
+            'D' => 'contains()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which exception is thrown for missing service?',
+        'answers' => [
+            'A' => 'ServiceNotFoundException',
+            'B' => 'MissingServiceException',
+            'C' => 'ContainerException',
+            'D' => 'NotFoundException',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+
+    // Dependency Injection - Compiler Pass
+    [
+        'text' => 'Dependency Injection: which interface must a compiler pass implement?',
+        'answers' => [
+            'A' => 'CompilerPassInterface',
+            'B' => 'PassInterface',
+            'C' => 'ContainerPassInterface',
+            'D' => 'BuildPassInterface',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which method must a compiler pass implement?',
+        'answers' => [
+            'A' => 'process()',
+            'B' => 'compile()',
+            'C' => 'build()',
+            'D' => 'execute()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which PassConfig constants set compiler pass type?',
+        'answers' => [
+            'A' => 'PassConfig::TYPE_BEFORE_OPTIMIZATION',
+            'B' => 'PassConfig::TYPE_OPTIMIZE',
+            'C' => 'PassConfig::TYPE_BEFORE_REMOVING',
+            'D' => 'PassConfig::TYPE_REMOVE',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+
+    // Security - FirewallInterface
+    [
+        'text' => 'Security: which attribute configures firewall for a controller?',
+        'answers' => [
+            'A' => 'No attribute exists for this',
+            'B' => '#[Firewall]',
+            'C' => '#[Security]',
+            'D' => '#[IsGranted]',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which security.yaml key defines firewalls?',
+        'answers' => [
+            'A' => 'firewalls',
+            'B' => 'firewall',
+            'C' => 'security_firewalls',
+            'D' => 'access_control',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which firewall option makes it stateless?',
+        'answers' => [
+            'A' => 'stateless',
+            'B' => 'session',
+            'C' => 'remember_me',
+            'D' => 'lazy',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+
+    // Security - UserInterface
+    [
+        'text' => 'Security: which UserInterface method returns the username?',
+        'answers' => [
+            'A' => 'getUserIdentifier()',
+            'B' => 'getUsername()',
+            'C' => 'getIdentifier()',
+            'D' => 'getId()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which UserInterface method returns user roles?',
+        'answers' => [
+            'A' => 'getRoles()',
+            'B' => 'roles()',
+            'C' => 'getUserRoles()',
+            'D' => 'getAuthorities()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which UserInterface method erases credentials?',
+        'answers' => [
+            'A' => 'eraseCredentials()',
+            'B' => 'clearCredentials()',
+            'C' => 'removeCredentials()',
+            'D' => 'resetCredentials()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+
+    // HTTP Cache - Cache Control Directives
+    [
+        'text' => 'HTTP Cache: which Response method sets cache as private?',
+        'answers' => [
+            'A' => 'setPrivate()',
+            'B' => 'private()',
+            'C' => 'setCachePrivate()',
+            'D' => 'makePrivate()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which Response method sets s-maxage?',
+        'answers' => [
+            'A' => 'setSharedMaxAge()',
+            'B' => 'setSMaxAge()',
+            'C' => 'setProxyMaxAge()',
+            'D' => 'sharedMaxAge()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which Response method marks response as immutable?',
+        'answers' => [
+            'A' => 'setImmutable()',
+            'B' => 'immutable()',
+            'C' => 'makeImmutable()',
+            'D' => 'setCacheImmutable()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+
+    // HTTP Cache - Validation
+    [
+        'text' => 'HTTP Cache: which Response method sets ETag?',
+        'answers' => [
+            'A' => 'setEtag()',
+            'B' => 'etag()',
+            'C' => 'setEntityTag()',
+            'D' => 'entityTag()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which Response method sets Last-Modified?',
+        'answers' => [
+            'A' => 'setLastModified()',
+            'B' => 'lastModified()',
+            'C' => 'setModified()',
+            'D' => 'modified()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which Request method returns If-None-Match header?',
+        'answers' => [
+            'A' => 'getETags()',
+            'B' => 'getIfNoneMatch()',
+            'C' => 'getETag()',
+            'D' => 'ifNoneMatch()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which Request method returns If-Modified-Since header?',
+        'answers' => [
+            'A' => 'headers->get("If-Modified-Since")',
+            'B' => 'getIfModifiedSince()',
+            'C' => 'ifModifiedSince()',
+            'D' => 'getModifiedSince()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+
+    // Console - Command Registration
+    [
+        'text' => 'Console: which attribute registers a console command?',
+        'answers' => [
+            'A' => '#[AsCommand]',
+            'B' => '#[Command]',
+            'C' => '#[Console]',
+            'D' => '#[ConsoleCommand]',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which Command method sets the command name?',
+        'answers' => [
+            'A' => 'setName()',
+            'B' => 'name()',
+            'C' => 'setCommandName()',
+            'D' => 'commandName()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which Command method sets the description?',
+        'answers' => [
+            'A' => 'setDescription()',
+            'B' => 'description()',
+            'C' => 'setHelp()',
+            'D' => 'help()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which Command method sets the help text?',
+        'answers' => [
+            'A' => 'setHelp()',
+            'B' => 'help()',
+            'C' => 'setDescription()',
+            'D' => 'setHelpText()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+
+    // Console - Input Definition
+    [
+        'text' => 'Console: which Command method adds an argument?',
+        'answers' => [
+            'A' => 'addArgument()',
+            'B' => 'argument()',
+            'C' => 'setArgument()',
+            'D' => 'defineArgument()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which Command method adds an option?',
+        'answers' => [
+            'A' => 'addOption()',
+            'B' => 'option()',
+            'C' => 'setOption()',
+            'D' => 'defineOption()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which InputArgument mode makes it required?',
+        'answers' => [
+            'A' => 'InputArgument::REQUIRED',
+            'B' => 'InputArgument::MANDATORY',
+            'C' => 'InputArgument::NEEDED',
+            'D' => 'InputArgument::MUST',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which InputOption mode requires a value?',
+        'answers' => [
+            'A' => 'InputOption::VALUE_REQUIRED',
+            'B' => 'InputOption::REQUIRED',
+            'C' => 'InputOption::MUST_HAVE_VALUE',
+            'D' => 'InputOption::NEEDS_VALUE',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which InputOption mode makes value optional?',
+        'answers' => [
+            'A' => 'InputOption::VALUE_OPTIONAL',
+            'B' => 'InputOption::OPTIONAL',
+            'C' => 'InputOption::MAY_HAVE_VALUE',
+            'D' => 'InputOption::CAN_HAVE_VALUE',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which InputOption mode creates a flag?',
+        'answers' => [
+            'A' => 'InputOption::VALUE_NONE',
+            'B' => 'InputOption::NO_VALUE',
+            'C' => 'InputOption::FLAG',
+            'D' => 'InputOption::BOOLEAN',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+
+    // Testing - Client Configuration
+    [
+        'text' => 'Testing: which Client method follows redirects?',
+        'answers' => [
+            'A' => 'followRedirects()',
+            'B' => 'followRedirect()',
+            'C' => 'setFollowRedirects()',
+            'D' => 'autoRedirect()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Client method gets the response?',
+        'answers' => [
+            'A' => 'getResponse()',
+            'B' => 'response()',
+            'C' => 'getLastResponse()',
+            'D' => 'lastResponse()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Client method gets the crawler?',
+        'answers' => [
+            'A' => 'getCrawler()',
+            'B' => 'crawler()',
+            'C' => 'getLastCrawler()',
+            'D' => 'dom()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Client method gets internal request?',
+        'answers' => [
+            'A' => 'getInternalRequest()',
+            'B' => 'getRequest()',
+            'C' => 'request()',
+            'D' => 'internalRequest()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+
+    // Testing - Crawler Filters
+    [
+        'text' => 'Testing: which Crawler method filters by CSS selector?',
+        'answers' => [
+            'A' => 'filter()',
+            'B' => 'filterCss()',
+            'C' => 'css()',
+            'D' => 'select()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Crawler method filters by XPath?',
+        'answers' => [
+            'A' => 'filterXPath()',
+            'B' => 'xpath()',
+            'C' => 'filterByXPath()',
+            'D' => 'xpathFilter()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Crawler method returns element text?',
+        'answers' => [
+            'A' => 'text()',
+            'B' => 'getText()',
+            'C' => 'content()',
+            'D' => 'innerText()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Crawler method returns element HTML?',
+        'answers' => [
+            'A' => 'html()',
+            'B' => 'getHtml()',
+            'C' => 'outerHtml()',
+            'D' => 'innerHTML()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Crawler method returns an attribute value?',
+        'answers' => [
+            'A' => 'attr()',
+            'B' => 'attribute()',
+            'C' => 'getAttribute()',
+            'D' => 'get()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
 ];
