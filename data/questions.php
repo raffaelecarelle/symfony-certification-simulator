@@ -3196,4 +3196,816 @@ return [
         'correctAnswers' => 'A',
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
+
+    // Event Dispatcher - EventSubscriberInterface
+    [
+        'text' => 'Architecture: which EventSubscriberInterface method returns subscribed events?',
+        'answers' => [
+            'A' => 'getSubscribedEvents()',
+            'B' => 'subscribe()',
+            'C' => 'getEvents()',
+            'D' => 'subscribeToEvents()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
+    ],
+    [
+        'text' => 'Architecture: which formats can getSubscribedEvents() return?',
+        'answers' => [
+            'A' => 'Array with event name as key and method name as value',
+            'B' => 'Array with event name as key and array [method, priority] as value',
+            'C' => 'Array with event name as key and array of [method, priority] arrays as value',
+            'D' => 'Array of event names only',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
+    ],
+    [
+        'text' => 'Architecture: which event has the highest priority value?',
+        'answers' => [
+            'A' => 'Events with positive numbers execute first',
+            'B' => 'Events with negative numbers execute first',
+            'C' => 'Events with zero execute first',
+            'D' => 'Priority does not affect order',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
+    ],
+
+    // Request - Advanced Methods
+    [
+        'text' => 'Controllers: which Request method retrieves the client IP address?',
+        'answers' => [
+            'A' => 'getClientIp()',
+            'B' => 'getIpAddress()',
+            'C' => 'getRemoteAddr()',
+            'D' => 'getClientAddress()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request method returns the request method (GET, POST, etc.)?',
+        'answers' => [
+            'A' => 'getMethod()',
+            'B' => 'getHttpMethod()',
+            'C' => 'getRequestMethod()',
+            'D' => 'method()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request methods check for specific HTTP methods?',
+        'answers' => [
+            'A' => 'isMethod()',
+            'B' => 'isMethodSafe()',
+            'C' => 'isMethodIdempotent()',
+            'D' => 'isMethodCacheable()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request method retrieves the preferred language?',
+        'answers' => [
+            'A' => 'getPreferredLanguage()',
+            'B' => 'getLocale()',
+            'C' => 'getLanguage()',
+            'D' => 'getPreferredLocale()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request method returns accepted content types from Accept header?',
+        'answers' => [
+            'A' => 'getAcceptableContentTypes()',
+            'B' => 'getContentTypes()',
+            'C' => 'getAcceptedTypes()',
+            'D' => 'getAcceptHeader()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // Response - Header Management
+    [
+        'text' => 'Controllers: which Response methods manage headers?',
+        'answers' => [
+            'A' => 'headers->set()',
+            'B' => 'headers->get()',
+            'C' => 'headers->has()',
+            'D' => 'headers->remove()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Response method sets the Content-Type header?',
+        'answers' => [
+            'A' => 'headers->set("Content-Type", $value)',
+            'B' => 'setContentType()',
+            'C' => 'setMimeType()',
+            'D' => 'contentType()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Response method sets the charset?',
+        'answers' => [
+            'A' => 'setCharset()',
+            'B' => 'setEncoding()',
+            'C' => 'charset()',
+            'D' => 'headers->set("charset")',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Response method prepares the response before sending?',
+        'answers' => [
+            'A' => 'prepare()',
+            'B' => 'finalize()',
+            'C' => 'ready()',
+            'D' => 'build()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // Routing - Route Collection
+    [
+        'text' => 'Routing: which RouteCollection method adds a route?',
+        'answers' => [
+            'A' => 'add()',
+            'B' => 'addRoute()',
+            'C' => 'register()',
+            'D' => 'set()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which RouteCollection methods retrieve routes?',
+        'answers' => [
+            'A' => 'get()',
+            'B' => 'all()',
+            'C' => 'getIterator()',
+            'D' => 'find()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which RouteCollection method adds a prefix to all routes?',
+        'answers' => [
+            'A' => 'addPrefix()',
+            'B' => 'prefix()',
+            'C' => 'setPrefix()',
+            'D' => 'prependPrefix()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which RouteCollection method adds a name prefix to all routes?',
+        'answers' => [
+            'A' => 'addNamePrefix()',
+            'B' => 'prefixName()',
+            'C' => 'setNamePrefix()',
+            'D' => 'prependName()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+
+    // Twig - Naming Conventions and Paths
+    [
+        'text' => 'Twig: which syntax references a template in a bundle?',
+        'answers' => [
+            'A' => '@BundleName/directory/template.html.twig',
+            'B' => 'BundleName:directory:template.html.twig',
+            'C' => 'Bundle/BundleName/directory/template.html.twig',
+            'D' => '#BundleName/directory/template.html.twig',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which syntax adds a template namespace?',
+        'answers' => [
+            'A' => '@namespace_name/template.html.twig',
+            'B' => 'namespace:template.html.twig',
+            'C' => 'namespace_name::template.html.twig',
+            'D' => '#namespace_name/template.html.twig',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which Twig tag embeds a controller result?',
+        'answers' => [
+            'A' => 'No tag, use render() function',
+            'B' => '{% render %}',
+            'C' => '{% controller %}',
+            'D' => '{% embed_controller %}',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+
+    // Twig - Advanced Block Features
+    [
+        'text' => 'Twig: which syntax defines a block without content?',
+        'answers' => [
+            'A' => '{% block name %}{% endblock %}',
+            'B' => '{% block name / %}',
+            'C' => '{% empty_block name %}',
+            'D' => '{% block name empty %}',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which function checks if a block is defined?',
+        'answers' => [
+            'A' => 'block() returns empty string if not defined',
+            'B' => 'block_exists()',
+            'C' => 'is_block_defined()',
+            'D' => 'has_block()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which syntax prevents template inheritance?',
+        'answers' => [
+            'A' => 'Do not use extends tag',
+            'B' => '{% no_extends %}',
+            'C' => '{% standalone %}',
+            'D' => '{% isolated %}',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+
+    // Forms - Form View Variables
+    [
+        'text' => 'Forms: which form view variables are available in Twig templates?',
+        'answers' => [
+            'A' => 'form.vars.value',
+            'B' => 'form.vars.errors',
+            'C' => 'form.vars.attr',
+            'D' => 'form.vars.label',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which form view variable contains the form name?',
+        'answers' => [
+            'A' => 'form.vars.name',
+            'B' => 'form.vars.id',
+            'C' => 'form.name',
+            'D' => 'form.vars.full_name',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which form view variable contains validation errors?',
+        'answers' => [
+            'A' => 'form.vars.errors',
+            'B' => 'form.errors',
+            'C' => 'form.vars.violations',
+            'D' => 'form.validation_errors',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which form view variable indicates if the form is submitted?',
+        'answers' => [
+            'A' => 'form.vars.submitted',
+            'B' => 'form.isSubmitted',
+            'C' => 'form.vars.is_submitted',
+            'D' => 'form.submitted',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+
+    // Forms - Compound and Simple Forms
+    [
+        'text' => 'Forms: which form view variable indicates if a form field is compound?',
+        'answers' => [
+            'A' => 'form.vars.compound',
+            'B' => 'form.isCompound',
+            'C' => 'form.vars.is_compound',
+            'D' => 'form.compound',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: what does compound form field mean?',
+        'answers' => [
+            'A' => 'The field contains nested fields',
+            'B' => 'The field has multiple values',
+            'C' => 'The field uses multiple transformers',
+            'D' => 'The field has multiple constraints',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+
+    // Validation - Constraint Targets
+    [
+        'text' => 'Validation: which constraint targets are available?',
+        'answers' => [
+            'A' => 'PROPERTY_CONSTRAINT',
+            'B' => 'CLASS_CONSTRAINT',
+            'C' => 'METHOD_CONSTRAINT',
+            'D' => 'GETTER_CONSTRAINT',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which method defines constraint targets in a custom constraint?',
+        'answers' => [
+            'A' => 'getTargets()',
+            'B' => 'targets()',
+            'C' => 'getAppliesTo()',
+            'D' => 'appliesTo()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+
+    // Validation - Constraint Options
+    [
+        'text' => 'Validation: which Constraint options are available in all constraints?',
+        'answers' => [
+            'A' => 'message',
+            'B' => 'groups',
+            'C' => 'payload',
+            'D' => 'priority',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which Count constraint options validate array size?',
+        'answers' => [
+            'A' => 'min',
+            'B' => 'max',
+            'C' => 'divisibleBy',
+            'D' => 'exactly',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which Range constraint options define numeric boundaries?',
+        'answers' => [
+            'A' => 'min',
+            'B' => 'max',
+            'C' => 'minMessage',
+            'D' => 'maxMessage',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+
+    // Dependency Injection - Service Aliases
+    [
+        'text' => 'Dependency Injection: which YAML key creates a service alias?',
+        'answers' => [
+            'A' => 'alias',
+            'B' => 'aliasOf',
+            'C' => 'parent',
+            'D' => 'extends',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which interface should an alias reference implement?',
+        'answers' => [
+            'A' => 'The same interface as the target service',
+            'B' => 'AliasInterface',
+            'C' => 'ServiceAliasInterface',
+            'D' => 'No specific requirement',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which YAML key marks an alias as public?',
+        'answers' => [
+            'A' => 'public',
+            'B' => 'visible',
+            'C' => 'exposed',
+            'D' => 'accessible',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+
+    // Dependency Injection - Abstract Services
+    [
+        'text' => 'Dependency Injection: which YAML key defines an abstract service?',
+        'answers' => [
+            'A' => 'abstract',
+            'B' => 'template',
+            'C' => 'base',
+            'D' => 'prototype',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which YAML key inherits from an abstract service?',
+        'answers' => [
+            'A' => 'parent',
+            'B' => 'extends',
+            'C' => 'inherits',
+            'D' => 'base',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: can abstract services be instantiated?',
+        'answers' => [
+            'A' => 'No, they serve as templates only',
+            'B' => 'Yes, if marked as public',
+            'C' => 'Yes, using factory pattern',
+            'D' => 'Yes, via service locator',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+
+    // Security - Password Hashing Algorithms
+    [
+        'text' => 'Security: which password hashing algorithms are available?',
+        'answers' => [
+            'A' => 'auto',
+            'B' => 'bcrypt',
+            'C' => 'sodium',
+            'D' => 'plaintext',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which algorithm is recommended for password hashing?',
+        'answers' => [
+            'A' => 'auto',
+            'B' => 'bcrypt',
+            'C' => 'sodium',
+            'D' => 'argon2i',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which algorithm should NOT be used in production?',
+        'answers' => [
+            'A' => 'plaintext',
+            'B' => 'bcrypt',
+            'C' => 'sodium',
+            'D' => 'auto',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+
+    // Security - Access Decision Strategies
+    [
+        'text' => 'Security: which access decision strategies are available?',
+        'answers' => [
+            'A' => 'affirmative',
+            'B' => 'consensus',
+            'C' => 'unanimous',
+            'D' => 'priority',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: what is the default access decision strategy?',
+        'answers' => [
+            'A' => 'affirmative',
+            'B' => 'consensus',
+            'C' => 'unanimous',
+            'D' => 'priority',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: what does the affirmative strategy require?',
+        'answers' => [
+            'A' => 'At least one voter must grant access',
+            'B' => 'All voters must grant access',
+            'C' => 'Majority of voters must grant access',
+            'D' => 'No voter must deny access',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: what does the unanimous strategy require?',
+        'answers' => [
+            'A' => 'All voters must grant access',
+            'B' => 'At least one voter must grant access',
+            'C' => 'No voter must abstain',
+            'D' => 'Majority of voters must grant access',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+
+    // HTTP Cache - Vary Header
+    [
+        'text' => 'HTTP Cache: which Response method sets the Vary header?',
+        'answers' => [
+            'A' => 'setVary()',
+            'B' => 'vary()',
+            'C' => 'addVary()',
+            'D' => 'headers->set("Vary")',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: what does the Vary header control?',
+        'answers' => [
+            'A' => 'Which request headers affect cache variations',
+            'B' => 'Cache expiration time',
+            'C' => 'Cache validation method',
+            'D' => 'Cache storage location',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which headers are commonly used in Vary?',
+        'answers' => [
+            'A' => 'Accept',
+            'B' => 'Accept-Language',
+            'C' => 'Accept-Encoding',
+            'D' => 'Cookie',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+
+    // Console - Progress Bar
+    [
+        'text' => 'Console: which ProgressBar methods control the progress?',
+        'answers' => [
+            'A' => 'start()',
+            'B' => 'advance()',
+            'C' => 'setProgress()',
+            'D' => 'finish()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which ProgressBar method sets the maximum steps?',
+        'answers' => [
+            'A' => 'setMaxSteps()',
+            'B' => 'setMax()',
+            'C' => 'setTotal()',
+            'D' => 'maxSteps()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which ProgressBar method sets the progress message?',
+        'answers' => [
+            'A' => 'setMessage()',
+            'B' => 'message()',
+            'C' => 'setLabel()',
+            'D' => 'setText()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which ProgressBar method sets the format?',
+        'answers' => [
+            'A' => 'setFormat()',
+            'B' => 'format()',
+            'C' => 'setTemplate()',
+            'D' => 'setStyle()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+
+    // Console - Question Helper
+    [
+        'text' => 'Console: which SymfonyStyle methods ask questions?',
+        'answers' => [
+            'A' => 'ask()',
+            'B' => 'askHidden()',
+            'C' => 'confirm()',
+            'D' => 'choice()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which method asks for a password without displaying it?',
+        'answers' => [
+            'A' => 'askHidden()',
+            'B' => 'askPassword()',
+            'C' => 'askSecret()',
+            'D' => 'prompt()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which method asks a yes/no confirmation?',
+        'answers' => [
+            'A' => 'confirm()',
+            'B' => 'askConfirmation()',
+            'C' => 'askYesNo()',
+            'D' => 'yesNo()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+
+    // Testing - Assertion Methods Advanced
+    [
+        'text' => 'Testing: which assertion checks for specific HTML selector?',
+        'answers' => [
+            'A' => 'assertSelectorExists()',
+            'B' => 'assertSelectorNotExists()',
+            'C' => 'assertSelectorTextContains()',
+            'D' => 'assertSelectorTextSame()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which assertion checks response has specific header?',
+        'answers' => [
+            'A' => 'assertResponseHasHeader()',
+            'B' => 'assertResponseHeaderSame()',
+            'C' => 'assertResponseHeaderNotSame()',
+            'D' => 'assertHeaderExists()',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which assertion checks for form validation errors?',
+        'answers' => [
+            'A' => 'assertFormHasErrors()',
+            'B' => 'assertNoFormErrors()',
+            'C' => 'assertFormIsValid()',
+            'D' => 'assertValidForm()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+
+    // Miscellaneous - Environment Variables
+    [
+        'text' => 'Configuration: which syntax references environment variables in YAML?',
+        'answers' => [
+            'A' => '%env(VAR_NAME)%',
+            'B' => '${VAR_NAME}',
+            'C' => '$env(VAR_NAME)',
+            'D' => '{{VAR_NAME}}',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/configuration.rst',
+    ],
+    [
+        'text' => 'Configuration: which env processors are available?',
+        'answers' => [
+            'A' => 'env(string:VAR)',
+            'B' => 'env(bool:VAR)',
+            'C' => 'env(int:VAR)',
+            'D' => 'env(float:VAR)',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/configuration.rst',
+    ],
+    [
+        'text' => 'Configuration: which env processor decodes JSON?',
+        'answers' => [
+            'A' => 'env(json:VAR)',
+            'B' => 'env(decode:VAR)',
+            'C' => 'env(parse_json:VAR)',
+            'D' => 'env(json_decode:VAR)',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/configuration.rst',
+    ],
+    [
+        'text' => 'Configuration: which env processor reads from a file?',
+        'answers' => [
+            'A' => 'env(file:VAR)',
+            'B' => 'env(read:VAR)',
+            'C' => 'env(file_contents:VAR)',
+            'D' => 'env(load:VAR)',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/configuration.rst',
+    ],
+
+    // Miscellaneous - Serializer
+    [
+        'text' => 'Serializer: which formats does the Serializer component support by default?',
+        'answers' => [
+            'A' => 'json',
+            'B' => 'xml',
+            'C' => 'csv',
+            'D' => 'yaml',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/serializer.rst',
+    ],
+    [
+        'text' => 'Serializer: which attribute controls property serialization?',
+        'answers' => [
+            'A' => '#[Ignore]',
+            'B' => '#[SerializedName]',
+            'C' => '#[Groups]',
+            'D' => '#[MaxDepth]',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/serializer.rst',
+    ],
+    [
+        'text' => 'Serializer: which normalizer converts DateTime objects?',
+        'answers' => [
+            'A' => 'DateTimeNormalizer',
+            'B' => 'DateNormalizer',
+            'C' => 'TimeNormalizer',
+            'D' => 'DateTimeFormatNormalizer',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/serializer.rst',
+    ],
+
+    // Messenger Component
+    [
+        'text' => 'Messenger: which interface must a message implement?',
+        'answers' => [
+            'A' => 'No specific interface required',
+            'B' => 'MessageInterface',
+            'C' => 'MessengerInterface',
+            'D' => 'AsyncMessageInterface',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/messenger.rst',
+    ],
+    [
+        'text' => 'Messenger: which attribute marks a message handler?',
+        'answers' => [
+            'A' => '#[AsMessageHandler]',
+            'B' => '#[MessageHandler]',
+            'C' => '#[Handler]',
+            'D' => '#[HandlesMessage]',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/messenger.rst',
+    ],
+    [
+        'text' => 'Messenger: which method must a message handler implement?',
+        'answers' => [
+            'A' => '__invoke()',
+            'B' => 'handle()',
+            'C' => 'execute()',
+            'D' => 'process()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/messenger.rst',
+    ],
+    [
+        'text' => 'Messenger: which MessageBusInterface method dispatches a message?',
+        'answers' => [
+            'A' => 'dispatch()',
+            'B' => 'send()',
+            'C' => 'publish()',
+            'D' => 'emit()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/messenger.rst',
+    ],
 ];
