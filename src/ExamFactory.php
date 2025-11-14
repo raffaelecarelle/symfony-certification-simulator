@@ -23,10 +23,42 @@ final readonly class ExamFactory
         $finalQuestions = [];
         foreach ($indexes as $index) {
             $question = $questions[$index];
+
+            // Original answers and original correct indexes
+            $originalAnswers       = $question['answers'];
+            $originalCorrectIndexes = explode(',', $question['correctAnswers']);
+
+            // 1. Attach the original index to each answer
+            $answersWithIndex = [];
+            foreach ($originalAnswers as $i => $answerText) {
+                $answersWithIndex[] = [
+                    'originalIndex' => $i,
+                    'text'          => $answerText,
+                ];
+            }
+
+            // 2. Shuffle the answers
+            shuffle($answersWithIndex);
+
+            // 3. Rebuild the answers array and the new correct indexes
+            $shuffledAnswers        = [];
+            $shuffledCorrectIndexes = [];
+
+            foreach ($answersWithIndex as $newIndex => $item) {
+                // Map 0 => 'A', 1 => 'B', 2 => 'C', ...
+                $label = chr(65 + $newIndex);
+                $shuffledAnswers[$label] = $item['text'];
+
+                // if the original index was correct, the new index is correct
+                if (in_array($item['originalIndex'], $originalCorrectIndexes, true)) {
+                    $shuffledCorrectIndexes[] = $label;
+                }
+            }
+
             $finalQuestions[] = new Question(
                 $question['text'],
-                $question['answers'],
-                $question['correctAnswers'],
+                $shuffledAnswers,
+                implode(',', $shuffledCorrectIndexes),
                 $question['linkAtDocumentation'] ?? null,
             );
         }
