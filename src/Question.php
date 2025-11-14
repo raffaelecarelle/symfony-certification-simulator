@@ -51,6 +51,10 @@ final class Question
 
     public function getLinkAtDocumentation(): ?string
     {
-        return $this->linkAtDocumentation;
+        if ($this->linkAtDocumentation === null) {
+            return null;
+        }
+
+        return str_replace(['sf-doc/', '.rst'], ['https://symfony.com/doc/current/', '.html'], $this->linkAtDocumentation);
     }
 }

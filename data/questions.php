@@ -331,7 +331,7 @@ return [
             'D' => "use_factory: app.factory:create",
         ],
         'correctAnswers' => 'B',
-        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+        'linkAtDocumentation' => 'sf-doc/service_container/factories.html',
     ],
     [
         'text' => "How do you register a service decorator in YAML?",
@@ -861,14 +861,14 @@ return [
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
     [
-        'text' => "Security: how do you define an in-memory user provider with two users?",
+        'text' => "Security: how do you hash a password for a User entity in a controller?",
         'answers' => [
-            'A' => "providers: in_memory: memory: users: { user: { password: 'p', roles: ['ROLE_USER'] }, admin: { password: 'p', roles: ['ROLE_ADMIN'] } }",
-            'B' => "providers: in_memory: users: ...",
-            'C' => "providers: memory: in_memory: ...",
-            'D' => "providers: { in_memory: { users: {...} } }",
+            'A' => '$hashed = $passwordHasher->hashPassword($user, $plainPassword);',
+            'B' => '$hashed = password_hash($plainPassword, PASSWORD_BCRYPT);',
+            'C' => '$hashed = $encoder->encodePassword($user, $plainPassword);',
+            'D' => '$hashed = $user->hashPassword($plainPassword);',
         ],
-        'correctAnswers' => 'A,D',
+        'correctAnswers' => 'A',
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
     [
@@ -1926,5 +1926,262 @@ return [
         ],
         'correctAnswers' => 'A,B,D',
         'linkAtDocumentation' => 'sf-doc/templates.rst'
-    ]
-];
+    ],
+    // Components: Clock
+    [
+        'text' => 'Clock: which ClockInterface implementations are provided out of the box?',
+        'answers' => [
+            'A' => 'Symfony\\Component\\Clock\\NativeClock',
+            'B' => 'Symfony\\Component\\Clock\\MockClock',
+            'C' => 'Symfony\\Component\\Clock\\MonotonicClock',
+            'D' => 'Symfony\\Component\\Clock\\SystemClock'
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/components/clock.rst'
+    ],
+    [
+        'text' => 'Clock: which function returns the current time as a DatePoint and accepts an optional modifier string?',
+        'answers' => [
+            'A' => 'now()',
+            'B' => 'time()',
+            'C' => 'current()',
+            'D' => 'tick()'
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/clock.rst'
+    ],
+    [
+        'text' => 'Clock: how do you change the timezone used by a clock instance?',
+        'answers' => [
+            'A' => "$clock->withTimeZone('Europe/Paris')",
+            'B' => "$clock->setTimezone('Europe/Paris')",
+            'C' => "$clock->setTimeZone('Europe/Paris')",
+            'D' => "$clock->timezone('Europe/Paris')"
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/clock.rst'
+    ],
+    [
+        'text' => 'Clock: the MonotonicClock relies on which PHP function to provide a high-resolution, monotonic source of time?',
+        'answers' => [
+            'A' => 'hrtime()',
+            'B' => 'microtime(true)',
+            'C' => 'time()',
+            'D' => 'gettimeofday()'
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/clock.rst'
+    ],
+    // Components: Runtime
+    [
+        'text' => 'Runtime: which file is automatically created by the Composer plugin to bootstrap the runtime?',
+        'answers' => [
+            'A' => 'vendor/autoload_runtime.php',
+            'B' => 'vendor/autoload.php',
+            'C' => 'config/runtime.php',
+            'D' => 'public/runtime.php'
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/runtime.rst'
+    ],
+    [
+        'text' => 'Runtime: under which Composer options will autoload_runtime.php not be created (and what version constraint applies)?',
+        'answers' => [
+            'A' => 'Using --no-plugins prevents its creation',
+            'B' => 'Using --no-scripts requires Composer >= 2.1.3; otherwise it is not created',
+            'C' => 'Using --no-dev prevents its creation',
+            'D' => 'Using --classmap-authoritative prevents its creation'
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/components/runtime.rst'
+    ],
+    [
+        'text' => 'Runtime: how do you change the Runtime class via composer.json configuration?',
+        'answers' => [
+            'A' => 'Set extra.runtime.class to the fully-qualified class name',
+            'B' => 'Set config.runtime.class to the fully-qualified class name',
+            'C' => 'Set autoload.runtime.class to the fully-qualified class name',
+            'D' => 'Set extra.runtime.autoload to the fully-qualified class name'
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/components/runtime.rst'
+    ],
+    [
+        'text' => 'Runtime: which arguments are supported by both SymfonyRuntime and GenericRuntime (type and variable name are important)?',
+        'answers' => [
+            'A' => 'array $context',
+            'B' => 'array $argv',
+            'C' => 'array $request',
+            'D' => 'Request $request'
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/components/runtime.rst'
+    ],
+    [
+        'text' => 'Runtime: which application return types can the SymfonyRuntime handle directly?',
+        'answers' => [
+            'A' => 'Symfony\\Component\\HttpKernel\\HttpKernelInterface',
+            'B' => 'Symfony\\Component\\HttpFoundation\\Response',
+            'C' => 'Symfony\\Component\\Console\\Command\\Command',
+            'D' => 'Psr\\Http\\Server\\RequestHandlerInterface'
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/components/runtime.rst'
+    ],
+    // PHP Core (Namespaces, OOP, Exceptions, Closures, SPL)
+    [
+        'text' => 'Namespaces: which syntax correctly imports a function from another namespace?',
+        'answers' => [
+            'A' => 'use function My\\Full\\functionName;',
+            'B' => 'use My\\Full\\functionName();',
+            'C' => 'import function My\\Full\\functionName;',
+            'D' => 'use func My\\Full\\functionName;',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: which group use syntax is valid to import multiple functions at once?',
+        'answers' => [
+            'A' => 'use function some\\namespace\\{fn_a, fn_b, fn_c};',
+            'B' => 'use some\\namespace\\(fn_a, fn_b, fn_c);',
+            'C' => 'use functions some\\namespace\\{fn_a, fn_b, fn_c};',
+            'D' => 'import function some\\namespace\\{fn_a, fn_b, fn_c};',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: how do you import a constant from another namespace?',
+        'answers' => [
+            'A' => 'use const My\\Full\\CONSTANT;',
+            'B' => 'use My\\Full\\CONSTANT;',
+            'C' => 'import const My\\Full\\CONSTANT;',
+            'D' => 'use constant My\\Full\\CONSTANT;',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Interfaces: which operator is used by a class to implement an interface?',
+        'answers' => [
+            'A' => 'implements',
+            'B' => 'extends',
+            'C' => 'uses',
+            'D' => 'with',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/oop5/interfaces.xml',
+    ],
+    [
+        'text' => 'Traits: which keyword resolves method name conflicts between imported traits?',
+        'answers' => [
+            'A' => 'insteadof',
+            'B' => 'instead',
+            'C' => 'override',
+            'D' => 'prefers',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/oop5/traits.xml',
+    ],
+    [
+        'text' => 'Exceptions: what must a thrown object be an instance of?',
+        'answers' => [
+            'A' => 'Throwable',
+            'B' => 'Exception',
+            'C' => 'Error',
+            'D' => 'RuntimeException',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
+    ],
+    [
+        'text' => 'Exceptions: what is the type and name of the third parameter of Exception::__construct?',
+        'answers' => [
+            'A' => '?Throwable $previous',
+            'B' => 'Throwable $previous = null',
+            'C' => '?Exception $previous',
+            'D' => 'mixed $previous = null',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
+    ],
+    [
+        'text' => 'Closures: which method converts any callable into a Closure instance?',
+        'answers' => [
+            'A' => 'Closure::fromCallable',
+            'B' => 'Closure::wrap',
+            'C' => 'callable_to_closure()',
+            'D' => 'Closure::bindCallable',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/predefined/closure/fromcallable.xml',
+    ],
+    [
+        'text' => 'Arrays: which call to array_map() zips arrays together when no callback is provided?',
+        'answers' => [
+            'A' => 'array_map(null, $a, $b, $c)',
+            'B' => 'array_map([], $a, $b, $c)',
+            'C' => 'array_map(\'\', $a, $b, $c)',
+            'D' => 'array_map(fn()=>null, $a, $b, $c)',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/reference/array/functions/array-map.xml',
+    ],
+    [
+        'text' => 'SPL: which iterator mode constants represent the default behavior of SplDoublyLinkedList?',
+        'answers' => [
+            'A' => 'SplDoublyLinkedList::IT_MODE_FIFO',
+            'B' => 'SplDoublyLinkedList::IT_MODE_KEEP',
+            'C' => 'SplDoublyLinkedList::IT_MODE_LIFO',
+            'D' => 'SplDoublyLinkedList::IT_MODE_DELETE',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'php-doc/reference/spl/spldoublylinkedlist/setiteratormode.xml',
+    ],
+    [
+        'text' => 'SPL: SplQueue::enqueue is an alias of which SplDoublyLinkedList method?',
+        'answers' => [
+            'A' => 'SplDoublyLinkedList::push',
+            'B' => 'SplDoublyLinkedList::unshift',
+            'C' => 'SplDoublyLinkedList::enqueue',
+            'D' => 'SplDoublyLinkedList::add',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/reference/spl/splqueue/enqueue.xml',
+    ],
+    [
+        'text' => 'OOP: which statement is true about readonly properties?',
+        'answers' => [
+            'A' => 'Readonly static properties are not supported.',
+            'B' => 'Readonly properties can declare default values.',
+            'C' => 'Readonly properties can be unset after initialization.',
+            'D' => 'Readonly properties have no type constraints.',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/oop5/properties.xml',
+    ],
+    [
+        'text' => 'OOP: which modifier can be applied to a class to enforce that all declared properties are readonly by default?',
+        'answers' => [
+            'A' => 'readonly',
+            'B' => 'final',
+            'C' => 'sealed',
+            'D' => 'immutable',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/oop5/basic.xml',
+    ],
+    [
+        'text' => 'Namespaces: how do you import a function and give it a local alias?',
+        'answers' => [
+            'A' => 'use function My\\Full\\functionName as func;',
+            'B' => 'use My\\Full\\functionName as func();',
+            'C' => 'use function My\\Full\\functionName alias func;',
+            'D' => 'import function My\\Full\\functionName as func;',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+]
+;
