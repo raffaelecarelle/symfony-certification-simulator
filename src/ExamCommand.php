@@ -66,6 +66,14 @@ class ExamCommand extends Command
 
         $progressBar->finish();
 
+        $style->info('You have finished the exam.');
+        $style->table(
+            ['Total Score', 'Corrects', 'Incorrect'],
+            [
+                [$exam->getPercentage() . '%', $exam->getCorrectCount(), $exam->getIncorrectCount()]
+            ]
+        );
+
         return Command::SUCCESS;
     }
 }

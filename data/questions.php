@@ -1557,4 +1557,699 @@ return [
         'correctAnswers' => 'A',
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
+
+    // Advanced Symfony Questions - Architecture
+    [
+        'text' => 'Architecture: which KernelEvents constant represents the event dispatched when a controller is about to be called?',
+        'answers' => [
+            'A' => 'KernelEvents::CONTROLLER',
+            'B' => 'KernelEvents::CONTROLLER_ARGUMENTS',
+            'C' => 'KernelEvents::REQUEST',
+            'D' => 'KernelEvents::VIEW',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
+    ],
+    [
+        'text' => 'Architecture: which methods does MicroKernelTrait require to be implemented in the Kernel class?',
+        'answers' => [
+            'A' => 'configureContainer()',
+            'B' => 'configureRoutes()',
+            'C' => 'registerBundles()',
+            'D' => 'configureBundles()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/configuration.rst',
+    ],
+    [
+        'text' => 'Architecture: which request types are defined in HttpKernelInterface?',
+        'answers' => [
+            'A' => 'HttpKernelInterface::MAIN_REQUEST',
+            'B' => 'HttpKernelInterface::SUB_REQUEST',
+            'C' => 'HttpKernelInterface::MASTER_REQUEST',
+            'D' => 'HttpKernelInterface::CHILD_REQUEST',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
+    ],
+    [
+        'text' => 'Architecture: in which method should you register compiler passes in a bundle or kernel?',
+        'answers' => [
+            'A' => 'build()',
+            'B' => 'boot()',
+            'C' => 'register()',
+            'D' => 'configure()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Architecture: which event is dispatched after kernel.response to perform cleanup tasks after response is sent?',
+        'answers' => [
+            'A' => 'KernelEvents::TERMINATE',
+            'B' => 'KernelEvents::FINISH_REQUEST',
+            'C' => 'KernelEvents::CLEANUP',
+            'D' => 'KernelEvents::SHUTDOWN',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
+    ],
+
+    // Controllers - Advanced Value Resolvers
+    [
+        'text' => 'Controllers: which attribute injects the decorated service in a decorator class constructor?',
+        'answers' => [
+            'A' => '#[AutowireDecorated]',
+            'B' => '#[Autowire(service: ".inner")]',
+            'C' => '#[DecoratedService]',
+            'D' => '#[InnerService]',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which MapQueryParameter filter option validates a regexp pattern?',
+        'answers' => [
+            'A' => 'FILTER_VALIDATE_REGEXP',
+            'B' => 'FILTER_VALIDATE_REGEX',
+            'C' => 'FILTER_REGEXP',
+            'D' => 'FILTER_PATTERN',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which UploadedFile method is SAFE for determining file extension?',
+        'answers' => [
+            'A' => 'guessExtension()',
+            'B' => 'getClientOriginalExtension()',
+            'C' => 'getExtension()',
+            'D' => 'getMimeExtension()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which Request property bags contain form data?',
+        'answers' => [
+            'A' => '$request->request',
+            'B' => '$request->getPayload()',
+            'C' => '$request->query',
+            'D' => '$request->post',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+    [
+        'text' => 'Controllers: which AbstractController method creates and returns a RedirectResponse to a given route?',
+        'answers' => [
+            'A' => 'redirectToRoute()',
+            'B' => 'redirect()',
+            'C' => 'forward()',
+            'D' => 'generateUrl()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/controller.rst',
+    ],
+
+    // Routing - Advanced Features
+    [
+        'text' => 'Routing: which inline syntax combines both requirement and default value for a route parameter?',
+        'answers' => [
+            'A' => '{page<\\d+>?1}',
+            'B' => '{page?1<\\d+>}',
+            'C' => '{page:\\d+:1}',
+            'D' => '{page=1|\\d+}',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which Requirement constants are available in Symfony 7.1+?',
+        'answers' => [
+            'A' => 'Requirement::DIGITS',
+            'B' => 'Requirement::ASCII_SLUG',
+            'C' => 'Requirement::DATE_YMD',
+            'D' => 'Requirement::UUID',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which redirect status codes are set by RedirectController with keepRequestMethod option?',
+        'answers' => [
+            'A' => '307',
+            'B' => '308',
+            'C' => '302',
+            'D' => '301',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: what is the return type of UrlGeneratorInterface::NETWORK_PATH reference type?',
+        'answers' => [
+            'A' => '//example.com/path',
+            'B' => 'https://example.com/path',
+            'C' => '/path',
+            'D' => '../path',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+    [
+        'text' => 'Routing: which exceptions can UriSigner::verify() throw?',
+        'answers' => [
+            'A' => 'UnsignedUriException',
+            'B' => 'UnverifiedSignedUriException',
+            'C' => 'ExpiredSignedUriException',
+            'D' => 'InvalidSignatureException',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/routing.rst',
+    ],
+
+    // Twig - Advanced Filters and Functions
+    [
+        'text' => 'Twig: which parameters does the trans filter accept?',
+        'answers' => [
+            'A' => 'arguments',
+            'B' => 'domain',
+            'C' => 'locale',
+            'D' => 'parameters',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which function creates a TranslatableMessage object in Symfony?',
+        'answers' => [
+            'A' => 't()',
+            'B' => 'trans()',
+            'C' => 'translate()',
+            'D' => 'message()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which app global variable properties are available for routing information?',
+        'answers' => [
+            'A' => 'app.current_route',
+            'B' => 'app.current_route_parameters',
+            'C' => 'app.route_name',
+            'D' => 'app.route_params',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: which render function generates ESI tags when ESI support is enabled?',
+        'answers' => [
+            'A' => 'render_esi()',
+            'B' => 'render()',
+            'C' => 'esi()',
+            'D' => 'render_hinclude()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Twig: what is the difference between the trans filter and trans tag regarding escaping?',
+        'answers' => [
+            'A' => 'Filter auto-escapes output, tag does not',
+            'B' => 'Tag auto-escapes output, filter does not',
+            'C' => 'Both auto-escape output',
+            'D' => 'Neither auto-escapes output',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+
+    // Forms - Advanced Events and Transformers
+    [
+        'text' => 'Forms: in which FormEvent can you still add or remove form fields?',
+        'answers' => [
+            'A' => 'FormEvents::PRE_SET_DATA',
+            'B' => 'FormEvents::POST_SET_DATA',
+            'C' => 'FormEvents::PRE_SUBMIT',
+            'D' => 'FormEvents::POST_SUBMIT',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which FormBuilderInterface methods add data transformers?',
+        'answers' => [
+            'A' => 'addModelTransformer()',
+            'B' => 'addViewTransformer()',
+            'C' => 'addNormTransformer()',
+            'D' => 'addDataTransformer()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which built-in form types are available for date and time?',
+        'answers' => [
+            'A' => 'DateType',
+            'B' => 'DateTimeType',
+            'C' => 'TimeType',
+            'D' => 'DateIntervalType',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which option controls whether form errors bubble up to the parent form?',
+        'answers' => [
+            'A' => 'error_bubbling',
+            'B' => 'bubble_errors',
+            'C' => 'propagate_errors',
+            'D' => 'cascade_errors',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: which CollectionType options enable dynamic add/remove of entries?',
+        'answers' => [
+            'A' => 'allow_add',
+            'B' => 'allow_delete',
+            'C' => 'prototype',
+            'D' => 'delete_empty',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Forms: what is the default value for the prototype_name option in CollectionType?',
+        'answers' => [
+            'A' => '__name__',
+            'B' => '__index__',
+            'C' => '__prototype__',
+            'D' => '__item__',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+
+    // Validation - Advanced Constraints
+    [
+        'text' => 'Validation: which constraint validates that a value is a valid email according to HTML5?',
+        'answers' => [
+            'A' => 'Email with mode: "html5"',
+            'B' => 'Email with mode: "strict"',
+            'C' => 'Email with mode: "loose"',
+            'D' => 'Html5Email',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which ConstraintViolationBuilderInterface methods are chainable?',
+        'answers' => [
+            'A' => 'setParameter()',
+            'B' => 'atPath()',
+            'C' => 'setCode()',
+            'D' => 'addViolation()',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which constraint option specifies the validation payload?',
+        'answers' => [
+            'A' => 'payload',
+            'B' => 'data',
+            'C' => 'context',
+            'D' => 'extra',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+    [
+        'text' => 'Validation: which constraint validates nested object properties recursively?',
+        'answers' => [
+            'A' => 'Valid',
+            'B' => 'Cascade',
+            'C' => 'Traverse',
+            'D' => 'Deep',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/validation.rst',
+    ],
+
+    // Dependency Injection - Advanced Attributes
+    [
+        'text' => 'Dependency Injection: which AutowireIterator attribute options configure tagged service iteration?',
+        'answers' => [
+            'A' => 'indexAttribute',
+            'B' => 'defaultIndexMethod',
+            'C' => 'defaultPriorityMethod',
+            'D' => 'exclude',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which attribute injects a lazy-loading closure for a service?',
+        'answers' => [
+            'A' => '#[AutowireServiceClosure]',
+            'B' => '#[LazyService]',
+            'C' => '#[ServiceClosure]',
+            'D' => '#[DeferredService]',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which AutowireLocator attribute parameters create a service locator?',
+        'answers' => [
+            'A' => 'Array of service class names',
+            'B' => 'Tag name with indexAttribute',
+            'C' => 'defaultIndexMethod',
+            'D' => 'defaultPriorityMethod',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: what is the default behavior for the lazy service option?',
+        'answers' => [
+            'A' => 'Creates a ghost object',
+            'B' => 'Creates a proxy object',
+            'C' => 'Defers instantiation',
+            'D' => 'Uses factory pattern',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Dependency Injection: which YAML option references the decorated service in a decorator?',
+        'answers' => [
+            'A' => 'decoration_inner_name',
+            'B' => 'decorated_service',
+            'C' => 'inner_service',
+            'D' => 'original_service',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+
+    // HTTP Cache - Advanced
+    [
+        'text' => 'HTTP Cache: which Response method checks if content has been modified based on request headers?',
+        'answers' => [
+            'A' => 'isNotModified()',
+            'B' => 'isModified()',
+            'C' => 'checkModified()',
+            'D' => 'compareModified()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which response methods implement stale-if-error and stale-while-revalidate (RFC 5861)?',
+        'answers' => [
+            'A' => 'setStaleIfError()',
+            'B' => 'setStaleWhileRevalidate()',
+            'C' => 'setStaleOnError()',
+            'D' => 'enableStaleContent()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which framework configuration options enable ESI support?',
+        'answers' => [
+            'A' => 'esi',
+            'B' => 'fragments',
+            'C' => 'http_cache',
+            'D' => 'esi_support',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: what HTTP header advertises ESI capability to Symfony?',
+        'answers' => [
+            'A' => 'Surrogate-Capability',
+            'B' => 'ESI-Support',
+            'C' => 'X-ESI-Capability',
+            'D' => 'Cache-Capability',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+    [
+        'text' => 'HTTP Cache: which Cache attribute parameters configure response caching?',
+        'answers' => [
+            'A' => 'public',
+            'B' => 'maxage',
+            'C' => 'smaxage',
+            'D' => 'mustRevalidate',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/http_cache.rst',
+    ],
+
+    // Console - Advanced
+    [
+        'text' => 'Console: which lifecycle methods are called in order during command execution?',
+        'answers' => [
+            'A' => 'initialize()',
+            'B' => 'interact()',
+            'C' => 'execute()',
+            'D' => 'configure()',
+        ],
+        'correctAnswers' => 'A,B,C',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which OutputInterface constants correspond to -vv verbosity?',
+        'answers' => [
+            'A' => 'OutputInterface::VERBOSITY_VERY_VERBOSE',
+            'B' => 'OutputInterface::VERBOSITY_DEBUG',
+            'C' => 'OutputInterface::VERBOSITY_VERBOSE',
+            'D' => 'OutputInterface::VERBOSITY_NORMAL',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which SymfonyStyle methods create admonition blocks?',
+        'answers' => [
+            'A' => 'note()',
+            'B' => 'caution()',
+            'C' => 'warning()',
+            'D' => 'info()',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which Table style constants are built-in?',
+        'answers' => [
+            'A' => 'default',
+            'B' => 'compact',
+            'C' => 'borderless',
+            'D' => 'box',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+    [
+        'text' => 'Console: which ConsoleEvents constant is dispatched when a signal is received?',
+        'answers' => [
+            'A' => 'ConsoleEvents::SIGNAL',
+            'B' => 'ConsoleEvents::INTERRUPT',
+            'C' => 'ConsoleEvents::SIGTERM',
+            'D' => 'ConsoleEvents::KILL',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/console.rst',
+    ],
+
+    // Testing - Advanced
+    [
+        'text' => 'Testing: which WebTestCase method creates a test HTTP client?',
+        'answers' => [
+            'A' => 'static::createClient()',
+            'B' => 'static::getClient()',
+            'C' => 'static::makeClient()',
+            'D' => 'static::newClient()',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Crawler methods traverse DOM elements?',
+        'answers' => [
+            'A' => 'filter()',
+            'B' => 'filterXPath()',
+            'C' => 'children()',
+            'D' => 'siblings()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which Client methods simulate user interactions?',
+        'answers' => [
+            'A' => 'click()',
+            'B' => 'submit()',
+            'C' => 'clickLink()',
+            'D' => 'submitForm()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which SYMFONY_DEPRECATIONS_HELPER options control deprecation thresholds?',
+        'answers' => [
+            'A' => 'max[total]',
+            'B' => 'max[self]',
+            'C' => 'max[direct]',
+            'D' => 'max[indirect]',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which trait enables expectDeprecation() assertions in tests?',
+        'answers' => [
+            'A' => 'ExpectDeprecationTrait',
+            'B' => 'DeprecationTrait',
+            'C' => 'AssertDeprecationTrait',
+            'D' => 'LegacyTestTrait',
+        ],
+        'correctAnswers' => 'A',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+    [
+        'text' => 'Testing: which assertion methods check response status?',
+        'answers' => [
+            'A' => 'assertResponseIsSuccessful()',
+            'B' => 'assertResponseStatusCodeSame()',
+            'C' => 'assertResponseRedirects()',
+            'D' => 'assertResponseIsUnprocessable()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/testing.rst',
+    ],
+
+    // Security - Advanced Authenticators
+    [
+        'text' => 'Security: which Passport Badge classes are available for authentication?',
+        'answers' => [
+            'A' => 'UserBadge',
+            'B' => 'PasswordCredentials',
+            'C' => 'CsrfTokenBadge',
+            'D' => 'RememberMeBadge',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which AuthenticatorInterface methods must be implemented?',
+        'answers' => [
+            'A' => 'supports()',
+            'B' => 'authenticate()',
+            'C' => 'onAuthenticationSuccess()',
+            'D' => 'onAuthenticationFailure()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: what is the difference between IS_AUTHENTICATED_FULLY and IS_AUTHENTICATED_REMEMBERED?',
+        'answers' => [
+            'A' => 'FULLY excludes remember-me authentication',
+            'B' => 'REMEMBERED includes remember-me authentication',
+            'C' => 'FULLY requires password authentication',
+            'D' => 'REMEMBERED allows anonymous access',
+        ],
+        'correctAnswers' => 'A,B',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+    [
+        'text' => 'Security: which access_control options configure firewall matching?',
+        'answers' => [
+            'A' => 'path',
+            'B' => 'host',
+            'C' => 'methods',
+            'D' => 'roles',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/security.rst',
+    ],
+
+    // Advanced Pair Questions (similar text, multiple correct answers)
+    [
+        'text' => 'Which form field options control data mapping between the form and underlying object?',
+        'answers' => [
+            'A' => 'mapped',
+            'B' => 'property_path',
+            'C' => 'inherit_data',
+            'D' => 'by_reference',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Which form field options control validation behavior?',
+        'answers' => [
+            'A' => 'constraints',
+            'B' => 'validation_groups',
+            'C' => 'invalid_message',
+            'D' => 'error_mapping',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/forms.rst',
+    ],
+    [
+        'text' => 'Which Twig functions render controller fragments?',
+        'answers' => [
+            'A' => 'render()',
+            'B' => 'render_esi()',
+            'C' => 'controller()',
+            'D' => 'render_hinclude()',
+        ],
+        'correctAnswers' => 'A,B,D',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Which Twig functions generate URLs?',
+        'answers' => [
+            'A' => 'path()',
+            'B' => 'url()',
+            'C' => 'absolute_url()',
+            'D' => 'relative_path()',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/templates.rst',
+    ],
+    [
+        'text' => 'Which service container YAML keys configure service instantiation?',
+        'answers' => [
+            'A' => 'class',
+            'B' => 'factory',
+            'C' => 'arguments',
+            'D' => 'calls',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
+    [
+        'text' => 'Which service container YAML keys configure service behavior?',
+        'answers' => [
+            'A' => 'public',
+            'B' => 'shared',
+            'C' => 'lazy',
+            'D' => 'autowire',
+        ],
+        'correctAnswers' => 'A,B,C,D',
+        'linkAtDocumentation' => 'sf-doc/service_container.rst',
+    ],
 ];
