@@ -5,47 +5,109 @@ UNOFFICIAL Symfony Certification Program with exercises
 
 A lightweight tool to simulate the official Symfony certification exam.
 
-Purpose
+Goals
 - Simulate a 75-question multiple-choice exam for Symfony certification.
-- Questions may have one or more correct answers (single or multiple selection).
-- Help candidates practice under exam-like conditions using official documentation.
+- Support questions with one or more correct answers (single or multiple selection).
+- Help candidates practice under exam-like conditions, with references to the official documentation.
 
 What this project includes
 - sf-doc: a packaged subset or links to the official Symfony documentation used as reference.
 - php-doc: a packaged subset or links to the official PHP documentation used as reference.
-- Question bank and exam simulator logic (75-question run mode, randomization, scoring).
+- A question bank and the simulator logic (75-question mode, randomization, scoring).
 
 Key features
-- 75-question simulated exam session.
+- 75-question simulated session.
 - Multiple-choice questions with support for multiple correct answers.
-- Scoring and feedback indicating correct/incorrect selections and explanations (when available).
-- Option to review referenced documentation from sf-doc and php-doc for each question.
+- Scoring and feedback with correct/incorrect indication and a link for further reading when available.
+- Ability to consult the reference documentation (sf-doc and php-doc) for each question.
 
-Project layout (example)
-- /sf-doc/      -> Official Symfony documentation references or extracts
-- /php-doc/     -> Official PHP documentation references or extracts
-- /questions/   -> Question definitions and metadata
-- /src/         -> Simulator source code
-- /bin/         -> CLI or web entry points
+Project structure (actual)
+- /sf-doc/      -> Symfony documentation references/excerpts
+- /php-doc/     -> PHP documentation references/excerpts
+- /data/        -> Question bank (questions.php)
+- /src/         -> Simulator source code (Console)
+- /bin/         -> CLI entry point (bin/console)
+- /tests/       -> Automated tests (PHPUnit)
 - README.md     -> This file
 
-Question format (simple example)
-- id: unique identifier
+Question format (simplified example)
 - text: question text
-- choices: array of answer choices
-- correct: array of index/ids of correct choices (supports 1..N)
-- docs: optional links or references to sf-doc/php-doc entries
+- answers: map of options labeled with letters (A, B, C, ...)
+- correctAnswers: string with the correct labels separated by commas (e.g., "A" or "A,C")
+- linkAtDocumentation: optional; internal path under sf-doc/php-doc that will be mapped to public URLs (symfony.com/php.net)
 
-Usage (high level)
-1. Install project dependencies (if any).
-2. Run the simulator entry point (CLI or web).
-3. Start a 75-question session; answer questions in sequence or review at the end.
-4. Get a final score and review explanations and doc references.
+How to run (overview)
+1. Install project dependencies (Composer).
+2. Launch the CLI entry point.
+3. Start a 75-question session and answer in sequence.
+4. Get the final score and documentation links for further reading.
+
+Requirements
+- PHP >= 8.2
+- Standard PHP extensions (no additional special requirements)
+- Composer
+
+Installation
+```bash
+git clone https://github.com/raffaelecarelle/symfony-certification-program.git
+cd symfony-certification-program
+composer install
+```
+
+Usage (CLI)
+- Unix/macOS:
+  ```bash
+  php bin/console exam:start
+  # or, if executable
+  chmod +x bin/console
+  ./bin/console exam:start
+  ```
+- Windows (PowerShell/CMD):
+  ```powershell
+  php bin/console exam:start
+  ```
+
+Usage notes
+- Some questions have multiple correct answers: select them by separating with a comma (e.g., "A,C").
+- When the answer is incorrect, a link to the corresponding official documentation (if available) will be shown.
+- At the end of the exam, a table with percentage, number of correct and incorrect answers is displayed.
+
+Questions and documentation
+- The questions reside in: `data/questions.php`.
+- Answer labels are shuffled at each session; references to the correct ones are recalculated automatically.
+- Paths `sf-doc/... .rst` are mapped to `https://symfony.com/doc/current/... .html`.
+- Paths `php-doc/... .xml` are mapped to `https://www.php.net/manual/en/... .php`.
+
+Development: tests and code quality
+- Run tests (PHPUnit):
+  ```bash
+  ./vendor/bin/phpunit -c phpunit.xml.dist
+  ```
+- Static analysis (PHPStan):
+  ```bash
+  ./vendor/bin/phpstan analyse -c phpstan.neon
+  ```
+- Automated refactoring (Rector):
+  ```bash
+  ./vendor/bin/rector
+  ```
+- Formatting and style fixes (PHP-CS-Fixer):
+  ```bash
+  ./vendor/bin/php-cs-fixer fix --diff
+  ```
 
 Contributing
-- Add or improve questions in /questions/ following the question format.
-- Keep explanations concise and include doc references (sf-doc/php-doc) when possible.
-- Submit PRs with tests or validation for new questions.
+Contributions of any kind are welcome. Suggested guidelines:
+- Open an issue to propose new questions or to fix existing ones.
+- For PRs that modify the question bank, keep explanations concise and include a reference (sf-doc/php-doc) when possible.
+- Run tests and quality tools locally before opening the PR:
+  - `./vendor/bin/phpunit -c phpunit.xml.dist`
+  - `./vendor/bin/phpstan analyse -c phpstan.neon`
+  - `./vendor/bin/php-cs-fixer fix --diff`
+- Stick to PHP >= 8.2 and the project's current standards.
 
 License
-- [LICENSE](LICENSE)
+- This project is released under the GPL-3.0-or-later license. See the [LICENSE](LICENSE) file.
+
+Disclaimer
+- UNOFFICIAL project, not affiliated with Symfony or SensioLabs. Trademarks and logos are the property of their respective owners.
