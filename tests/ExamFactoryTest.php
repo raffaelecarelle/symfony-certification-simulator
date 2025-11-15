@@ -14,22 +14,22 @@ class ExamFactoryTest extends TestCase
     {
         $mockQuestionProvider = $this->createMock(QuestionProvider::class);
         $questions = $this->generateMockQuestions(100);
-        $mockQuestionProvider->expects($this->once())
+        $mockQuestionProvider->expects(self::once())
             ->method('get')
             ->willReturn($questions);
 
         $examFactory = new ExamFactory($mockQuestionProvider);
         $exam = $examFactory->make();
 
-        $this->assertInstanceOf(Exam::class, $exam);
-        $this->assertCount(75, $exam->getQuestions());
+        self::assertInstanceOf(Exam::class, $exam);
+        self::assertCount(75, $exam->getQuestions());
     }
 
     public function testMakeShufflesQuestions(): void
     {
         $mockQuestionProvider = $this->createMock(QuestionProvider::class);
         $questions = $this->generateMockQuestions(75);
-        $mockQuestionProvider->expects($this->once())
+        $mockQuestionProvider->expects(self::once())
             ->method('get')
             ->willReturn($questions);
 
@@ -40,8 +40,8 @@ class ExamFactoryTest extends TestCase
         $originalTexts = array_column($questions, 'text');
         $shuffledTexts = array_map(fn (Question $q) => $q->getText(), $exam->getQuestions());
 
-        $this->assertNotSame($originalTexts, $shuffledTexts);
-        $this->assertCount(75, $shuffledTexts);
+        self::assertNotSame($originalTexts, $shuffledTexts);
+        self::assertCount(75, $shuffledTexts);
     }
 
     /**
@@ -50,7 +50,7 @@ class ExamFactoryTest extends TestCase
     private function generateMockQuestions(int $count): array
     {
         $questions = [];
-        for ($i = 0; $i < $count; $i++) {
+        for ($i = 0; $i < $count; ++$i) {
             $questions[] = [
                 'text' => "Question $i",
                 'answers' => [
@@ -59,9 +59,10 @@ class ExamFactoryTest extends TestCase
                     2 => "Answer C$i",
                     3 => "Answer D$i",
                 ],
-                'correctAnswers' => '2',
+                'correctAnswers' => ['2'],
             ];
         }
+
         return $questions;
     }
 }

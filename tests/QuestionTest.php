@@ -14,12 +14,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($text, $question->getText());
+        self::assertSame($text, $question->getText());
     }
 
     /**
@@ -29,13 +29,13 @@ class QuestionTest extends TestCase
     {
         $text = 'What is Symfony?';
         $answers = ['a' => 'A PHP framework'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = 'sf-doc/some/page.rst';
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
         $expectedUrl = 'https://symfony.com/doc/current/some/page.html';
-        $this->assertSame($expectedUrl, $question->getLinkAtDocumentation());
+        self::assertSame($expectedUrl, $question->getLinkAtDocumentation());
     }
 
     /**
@@ -45,13 +45,13 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHP?';
         $answers = ['a' => 'A popular scripting language'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = 'php-doc/reference/array/functions/array_map.xml';
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
         $expectedUrl = 'https://www.php.net/manual/en/function.array_map.php';
-        $this->assertSame($expectedUrl, $question->getLinkAtDocumentation());
+        self::assertSame($expectedUrl, $question->getLinkAtDocumentation());
     }
 
     /**
@@ -61,12 +61,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertNull($question->getLinkAtDocumentation());
+        self::assertNull($question->getLinkAtDocumentation());
     }
 
     /**
@@ -76,12 +76,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is custom documentation?';
         $answers = ['a' => 'A made-up example'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = 'unknown-doc/path/file.txt';
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($linkAtDocumentation, $question->getLinkAtDocumentation());
+        self::assertSame($linkAtDocumentation, $question->getLinkAtDocumentation());
     }
 
     /**
@@ -91,13 +91,13 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $question->isCorrect('a');
-        $this->assertTrue($question->isAnsweredCorrectly());
+        $question->isCorrect(['a']);
+        self::assertTrue($question->isAnsweredCorrectly());
     }
 
     /**
@@ -107,12 +107,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
-        $question->isCorrect('b');
-        $this->assertFalse($question->isAnsweredCorrectly());
+        $question->isCorrect(['b']);
+        self::assertFalse($question->isAnsweredCorrectly());
     }
 
     /**
@@ -122,13 +122,13 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $question->isCorrect('b');
-        $this->assertFalse($question->isAnsweredCorrectly());
+        $question->isCorrect(['b']);
+        self::assertFalse($question->isAnsweredCorrectly());
     }
 
     /**
@@ -138,12 +138,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($answers, $question->getAnswers());
+        self::assertSame($answers, $question->getAnswers());
     }
 
     /**
@@ -153,12 +153,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = [];
-        $correctAnswer = '';
+        $correctAnswer = [''];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($answers, $question->getAnswers());
+        self::assertSame($answers, $question->getAnswers());
     }
 
     /**
@@ -168,12 +168,12 @@ class QuestionTest extends TestCase
     {
         $text = 'When was PHP 8.0 released? (Answer: 2020)';
         $answers = ['a' => '2020', 'b' => '2019', 'c' => '2021'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($text, $question->getText());
+        self::assertSame($text, $question->getText());
     }
 
     /**
@@ -183,12 +183,12 @@ class QuestionTest extends TestCase
     {
         $text = '';
         $answers = [];
-        $correctAnswer = '';
+        $correctAnswer = [''];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($text, $question->getText());
+        self::assertSame($text, $question->getText());
     }
 
     /**
@@ -198,12 +198,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($correctAnswer, $question->getCorrectAnswer());
+        self::assertSame($correctAnswer, $question->getCorrectAnswer());
     }
 
     /**
@@ -213,12 +213,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertTrue($question->isCorrect('a'));
+        self::assertTrue($question->isCorrect(['a']));
     }
 
     /**
@@ -228,12 +228,12 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = 'a';
+        $correctAnswer = ['a'];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertFalse($question->isCorrect('b'));
+        self::assertFalse($question->isCorrect(['b']));
     }
 
     /**
@@ -243,11 +243,11 @@ class QuestionTest extends TestCase
     {
         $text = 'What is PHPUnit?';
         $answers = ['a' => 'A testing framework', 'b' => 'A package manager'];
-        $correctAnswer = '';
+        $correctAnswer = [''];
         $linkAtDocumentation = null;
 
         $question = new Question($text, $answers, $correctAnswer, $linkAtDocumentation);
 
-        $this->assertSame($correctAnswer, $question->getCorrectAnswer());
+        self::assertSame($correctAnswer, $question->getCorrectAnswer());
     }
 }

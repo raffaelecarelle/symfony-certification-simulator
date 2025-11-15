@@ -9,6 +9,6 @@ class QuestionProvider
      */
     public function get(): array
     {
-        return require __DIR__ . '/../data/questions.php';
+        return require __DIR__.'/../data/questions.php';
     }
 }

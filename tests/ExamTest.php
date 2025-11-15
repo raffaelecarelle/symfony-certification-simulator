@@ -13,11 +13,11 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageIncorrectReturnsCorrectValue(): void
     {
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
 
-        $correctQuestion->isCorrect('a');
-        $incorrectQuestion->isCorrect('b');
+        $correctQuestion->isCorrect(['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
         $questions = [
             $correctQuestion,
@@ -27,7 +27,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(66.67, round($exam->getPercentageIncorrect(), 2));
+        self::assertSame(66.67, round($exam->getPercentageIncorrect(), 2));
     }
 
     /**
@@ -35,8 +35,8 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageIncorrectReturnsZeroWhenAllCorrect(): void
     {
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -45,7 +45,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(0.0, $exam->getPercentageIncorrect());
+        self::assertSame(0.0, $exam->getPercentageIncorrect());
     }
 
     /**
@@ -53,8 +53,8 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageIncorrectReturnsHundredWhenAllIncorrect(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
         $questions = [
             $incorrectQuestion,
@@ -63,7 +63,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(100.0, $exam->getPercentageIncorrect());
+        self::assertSame(100.0, $exam->getPercentageIncorrect());
     }
 
     /**
@@ -73,7 +73,7 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame(0.0, $exam->getPercentageIncorrect());
+        self::assertSame(0.0, $exam->getPercentageIncorrect());
     }
 
     /**
@@ -82,13 +82,13 @@ class ExamTest extends TestCase
     public function testGetQuestionsReturnsCorrectQuestions(): void
     {
         $questions = [
-            new Question('Question 1', [], 'a'),
-            new Question('Question 2', [], 'b'),
+            new Question('Question 1', [], ['a']),
+            new Question('Question 2', [], ['b']),
         ];
 
         $exam = new Exam($questions);
 
-        $this->assertSame($questions, $exam->getQuestions());
+        self::assertSame($questions, $exam->getQuestions());
     }
 
     /**
@@ -97,14 +97,14 @@ class ExamTest extends TestCase
     public function testGetNumberOfQuestionsReturnsCorrectCount(): void
     {
         $questions = [
-            new Question('Question 1', [], 'a'),
-            new Question('Question 2', [], 'b'),
-            new Question('Question 3', [], 'c'),
-            ];
+            new Question('Question 1', [], ['a']),
+            new Question('Question 2', [], ['b']),
+            new Question('Question 3', [], ['c']),
+        ];
 
         $exam = new Exam($questions);
 
-        $this->assertSame(3, $exam->getNumberOfQuestions());
+        self::assertSame(3, $exam->getNumberOfQuestions());
     }
 
     /**
@@ -114,7 +114,7 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame(0, $exam->getNumberOfQuestions());
+        self::assertSame(0, $exam->getNumberOfQuestions());
     }
 
     /**
@@ -124,7 +124,7 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame([], $exam->getQuestions());
+        self::assertSame([], $exam->getQuestions());
     }
 
     /**
@@ -132,11 +132,11 @@ class ExamTest extends TestCase
      */
     public function testGetCorrectAnswersReturnsCorrectCount(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -146,8 +146,8 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(2, $exam->getCorrectAnswers());
-        $this->assertSame(2, $exam->getCorrectCount());
+        self::assertSame(2, $exam->getCorrectAnswers());
+        self::assertSame(2, $exam->getCorrectCount());
     }
 
     /**
@@ -155,11 +155,11 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageReturnsCorrectValue(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -169,7 +169,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(66.67, round($exam->getPercentage(), 2));
+        self::assertSame(66.67, round($exam->getPercentage(), 2));
     }
 
     /**
@@ -179,7 +179,7 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame(0.0, $exam->getPercentage());
+        self::assertSame(0.0, $exam->getPercentage());
     }
 
     /**
@@ -187,8 +187,8 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageHandlesZeroCorrectAnswers(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
         $questions = [
             $incorrectQuestion,
@@ -197,7 +197,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(0.0, $exam->getPercentage());
+        self::assertSame(0.0, $exam->getPercentage());
     }
 
     /**
@@ -205,8 +205,8 @@ class ExamTest extends TestCase
      */
     public function testGetCorrectAnswersReturnsZeroWhenNoCorrectAnswers(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
         $questions = [
             $incorrectQuestion,
@@ -215,8 +215,8 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(0, $exam->getCorrectAnswers());
-        $this->assertSame(0, $exam->getCorrectCount());
+        self::assertSame(0, $exam->getCorrectAnswers());
+        self::assertSame(0, $exam->getCorrectCount());
     }
 
     /**
@@ -224,11 +224,11 @@ class ExamTest extends TestCase
      */
     public function testGetIncorrectCountReturnsCorrectCount(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -238,7 +238,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(2, $exam->getIncorrectCount());
+        self::assertSame(2, $exam->getIncorrectCount());
     }
 
     /**
@@ -246,8 +246,8 @@ class ExamTest extends TestCase
      */
     public function testGetIncorrectCountReturnsZeroWhenAllCorrect(): void
     {
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -256,7 +256,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(0, $exam->getIncorrectCount());
+        self::assertSame(0, $exam->getIncorrectCount());
     }
 
     /**
@@ -266,7 +266,7 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame(0, $exam->getIncorrectCount());
+        self::assertSame(0, $exam->getIncorrectCount());
     }
 
     /**
@@ -276,8 +276,8 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame(0, $exam->getCorrectAnswers());
-        $this->assertSame(0, $exam->getCorrectCount());
+        self::assertSame(0, $exam->getCorrectAnswers());
+        self::assertSame(0, $exam->getCorrectCount());
     }
 
     /**
@@ -285,11 +285,11 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageCorrectReturnsCorrectValue(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -299,7 +299,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(66.67, round($exam->getPercentageCorrect(), 2));
+        self::assertSame(66.67, round($exam->getPercentageCorrect(), 2));
     }
 
     /**
@@ -309,7 +309,7 @@ class ExamTest extends TestCase
     {
         $exam = new Exam([]);
 
-        $this->assertSame(0.0, $exam->getPercentageCorrect());
+        self::assertSame(0.0, $exam->getPercentageCorrect());
     }
 
     /**
@@ -317,8 +317,8 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageCorrectHandlesZeroPercentage(): void
     {
-        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], 'a');
-        $incorrectQuestion->isCorrect('b');
+        $incorrectQuestion = new Question('Question 2', ['a' => 'text', 'b' => 'text'], ['a']);
+        $incorrectQuestion->isCorrect(['b']);
 
         $questions = [
             $incorrectQuestion,
@@ -327,7 +327,7 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(0.0, $exam->getPercentageCorrect());
+        self::assertSame(0.0, $exam->getPercentageCorrect());
     }
 
     /**
@@ -335,8 +335,8 @@ class ExamTest extends TestCase
      */
     public function testGetPercentageCorrectReturnsHundredPercentWhenAllCorrect(): void
     {
-        $correctQuestion = new Question('Question 1', ['a' => 'text'], 'a');
-        $correctQuestion->isCorrect('a');
+        $correctQuestion = new Question('Question 1', ['a' => 'text'], ['a']);
+        $correctQuestion->isCorrect(['a']);
 
         $questions = [
             $correctQuestion,
@@ -345,6 +345,6 @@ class ExamTest extends TestCase
 
         $exam = new Exam($questions);
 
-        $this->assertSame(100.0, $exam->getPercentageCorrect());
+        self::assertSame(100.0, $exam->getPercentageCorrect());
     }
 }

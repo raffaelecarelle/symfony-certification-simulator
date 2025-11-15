@@ -1,8 +1,7 @@
 <?php
 
 return [
-    // PHP Core (Namespaces, OOP, Exceptions, Closures, SPL)
-    [
+    0 => [
         'text' => 'Namespaces: which syntax correctly imports a function from another namespace?',
         'answers' => [
             'A' => 'use function My\\Full\\functionName;',
@@ -10,10 +9,12 @@ return [
             'C' => 'import function My\\Full\\functionName;',
             'D' => 'use func My\\Full\\functionName;',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
     ],
-    [
+    1 => [
         'text' => 'Namespaces: which group use syntax is valid to import multiple functions at once?',
         'answers' => [
             'A' => 'use function some\\namespace\\{fn_a, fn_b, fn_c};',
@@ -21,10 +22,12 @@ return [
             'C' => 'use functions some\\namespace\\{fn_a, fn_b, fn_c};',
             'D' => 'import function some\\namespace\\{fn_a, fn_b, fn_c};',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
     ],
-    [
+    2 => [
         'text' => 'Namespaces: how do you import a constant from another namespace?',
         'answers' => [
             'A' => 'use const My\\Full\\CONSTANT;',
@@ -32,10 +35,12 @@ return [
             'C' => 'import const My\\Full\\CONSTANT;',
             'D' => 'use constant My\\Full\\CONSTANT;',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
     ],
-    [
+    3 => [
         'text' => 'Interfaces: which operator is used by a class to implement an interface?',
         'answers' => [
             'A' => 'implements',
@@ -43,10 +48,12 @@ return [
             'C' => 'uses',
             'D' => 'with',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/oop5/interfaces.xml',
     ],
-    [
+    4 => [
         'text' => 'Traits: which keyword resolves method name conflicts between imported traits?',
         'answers' => [
             'A' => 'insteadof',
@@ -54,10 +61,12 @@ return [
             'C' => 'override',
             'D' => 'prefers',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/oop5/traits.xml',
     ],
-    [
+    5 => [
         'text' => 'Exceptions: what must a thrown object be an instance of?',
         'answers' => [
             'A' => 'Throwable',
@@ -65,10 +74,12 @@ return [
             'C' => 'Error',
             'D' => 'RuntimeException',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
     ],
-    [
+    6 => [
         'text' => 'Exceptions: what is the type and name of the third parameter of Exception::__construct?',
         'answers' => [
             'A' => '?Throwable $previous',
@@ -76,10 +87,12 @@ return [
             'C' => '?Exception $previous',
             'D' => 'mixed $previous = null',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
     ],
-    [
+    7 => [
         'text' => 'Closures: which method converts any callable into a Closure instance?',
         'answers' => [
             'A' => 'Closure::fromCallable',
@@ -87,10 +100,12 @@ return [
             'C' => 'callable_to_closure()',
             'D' => 'Closure::bindCallable',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/predefined/closure/fromcallable.xml',
     ],
-    [
+    8 => [
         'text' => 'Arrays: which call to array_map() zips arrays together when no callback is provided?',
         'answers' => [
             'A' => 'array_map(null, $a, $b, $c)',
@@ -98,10 +113,12 @@ return [
             'C' => 'array_map(\'\', $a, $b, $c)',
             'D' => 'array_map(fn()=>null, $a, $b, $c)',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/array/functions/array-map.xml',
     ],
-    [
+    9 => [
         'text' => 'SPL: which iterator mode constants represent the default behavior of SplDoublyLinkedList?',
         'answers' => [
             'A' => 'SplDoublyLinkedList::IT_MODE_FIFO',
@@ -109,10 +126,13 @@ return [
             'C' => 'SplDoublyLinkedList::IT_MODE_LIFO',
             'D' => 'SplDoublyLinkedList::IT_MODE_DELETE',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/spl/spldoublylinkedlist/setiteratormode.xml',
     ],
-    [
+    10 => [
         'text' => 'SPL: SplQueue::enqueue is an alias of which SplDoublyLinkedList method?',
         'answers' => [
             'A' => 'SplDoublyLinkedList::push',
@@ -120,10 +140,12 @@ return [
             'C' => 'SplDoublyLinkedList::enqueue',
             'D' => 'SplDoublyLinkedList::add',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/spl/splqueue/enqueue.xml',
     ],
-    [
+    11 => [
         'text' => 'OOP: which statement is true about readonly properties?',
         'answers' => [
             'A' => 'Readonly static properties are not supported.',
@@ -131,10 +153,12 @@ return [
             'C' => 'Readonly properties can be unset after initialization.',
             'D' => 'Readonly properties have no type constraints.',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/oop5/properties.xml',
     ],
-    [
+    12 => [
         'text' => 'OOP: which modifier can be applied to a class to enforce that all declared properties are readonly by default?',
         'answers' => [
             'A' => 'readonly',
@@ -142,10 +166,12 @@ return [
             'C' => 'sealed',
             'D' => 'immutable',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/oop5/basic.xml',
     ],
-    [
+    13 => [
         'text' => 'Namespaces: how do you import a function and give it a local alias?',
         'answers' => [
             'A' => 'use function My\\Full\\functionName as func;',
@@ -153,12 +179,12 @@ return [
             'C' => 'use function My\\Full\\functionName alias func;',
             'D' => 'import function My\\Full\\functionName as func;',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
     ],
-
-    // PHP Abstract classes
-    [
+    14 => [
         'text' => 'Abstract classes: which statement is true about instantiation?',
         'answers' => [
             'A' => 'Classes defined as abstract cannot be instantiated',
@@ -166,23 +192,25 @@ return [
             'C' => 'Abstract classes can be instantiated if they have no abstract methods',
             'D' => 'Abstract classes can be instantiated using Reflection only',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/oop5/abstract.xml',
     ],
-    [
+    15 => [
         'text' => 'Abstract classes: what must a child class do when inheriting from an abstract class?',
         'answers' => [
-            'A' => "All methods marked abstract in the parent's class declaration must be defined by the child class",
+            'A' => 'All methods marked abstract in the parent\'s class declaration must be defined by the child class',
             'B' => 'Abstract methods are optional if the child is final',
             'C' => 'Only public abstract methods must be defined by the child class',
             'D' => 'Abstract methods can be ignored if a trait provides them',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/oop5/abstract.xml',
     ],
-
-    // Closures advanced
-    [
+    16 => [
         'text' => 'Closures: which statement about static closures and binding is correct?',
         'answers' => [
             'A' => 'Static closures cannot have any bound object',
@@ -190,12 +218,12 @@ return [
             'C' => 'Static closures can bind to any object using Closure::call',
             'D' => 'Static closures are implicitly bound to the declaring class',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/language/predefined/closure/bindto.xml',
     ],
-
-    // PHP extensions
-    [
+    17 => [
         'text' => 'Extensions: what does extension_loaded() return?',
         'answers' => [
             'A' => 'Returns true if the extension identified by name is loaded, false otherwise',
@@ -203,10 +231,12 @@ return [
             'C' => 'Returns the version string of the extension or false',
             'D' => 'Returns the path to the extension shared object',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/info/functions/extension-loaded.xml',
     ],
-    [
+    18 => [
         'text' => 'Extensions: what does get_loaded_extensions() return?',
         'answers' => [
             'A' => 'Returns an array with the names of all modules compiled and loaded',
@@ -214,23 +244,25 @@ return [
             'C' => 'Returns a list of userland Composer packages',
             'D' => 'Returns the full filesystem paths of loaded extensions',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/info/functions/get-loaded-extensions.xml',
     ],
-
-    // PHP error handling
-    [
+    19 => [
         'text' => 'Error handling: when a custom error handler is set, what is the effect of error_reporting on whether the handler is called?',
         'answers' => [
-            'A' => "error_reporting settings will have no effect and the error handler will be called regardless",
+            'A' => 'error_reporting settings will have no effect and the error handler will be called regardless',
             'B' => 'The handler is called only if error_reporting includes the error level',
             'C' => 'The handler is called only when display_errors=1',
             'D' => 'The handler is never called if error_reporting=0',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/errorfunc/functions/set-error-handler.xml',
     ],
-    [
+    20 => [
         'text' => 'Error handling: what does set_error_handler() return?',
         'answers' => [
             'A' => 'Returns the previously defined error handler (if any) as a callable.',
@@ -238,10 +270,12 @@ return [
             'C' => 'Returns an integer error level bitmask',
             'D' => 'Returns void',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/errorfunc/functions/set-error-handler.xml',
     ],
-    [
+    21 => [
         'text' => 'Error handling: which value ensures every possible error is reported, equivalent to E_ALL?',
         'answers' => [
             'A' => '-1',
@@ -249,10 +283,12 @@ return [
             'C' => 'E_ALL & ~E_NOTICE',
             'D' => 'E_STRICT',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/errorfunc/functions/error-reporting.xml',
     ],
-    [
+    22 => [
         'text' => 'Error handling: when calling trigger_error() without specifying error_level, which level is used by default?',
         'answers' => [
             'A' => 'E_USER_WARNING',
@@ -260,10 +296,12 @@ return [
             'C' => 'E_USER_DEPRECATED',
             'D' => 'E_USER_ERROR',
         ],
-        'correctAnswers' => 'B',
+        'correctAnswers' => [
+            0 => 'B',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/errorfunc/functions/trigger-error.xml',
     ],
-    [
+    23 => [
         'text' => 'Error handling: after an uncaught exception is handled by set_exception_handler(), what happens next?',
         'answers' => [
             'A' => 'Execution continues after the callback returns',
@@ -271,10 +309,12 @@ return [
             'C' => 'Only the next registered handler is attempted',
             'D' => 'The exception is rethrown automatically',
         ],
-        'correctAnswers' => 'B',
+        'correctAnswers' => [
+            0 => 'B',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/errorfunc/functions/set-exception-handler.xml',
     ],
-    [
+    24 => [
         'text' => 'Error handling: what is restore_error_handler() used for?',
         'answers' => [
             'A' => 'Used after changing the error handler function using set_error_handler, to revert to the previous error handler',
@@ -282,12 +322,12 @@ return [
             'C' => 'It disables error_reporting until the next request',
             'D' => 'It converts all warnings into exceptions',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'php-doc/reference/errorfunc/functions/restore-error-handler.xml',
     ],
-
-    // Symfony — Console
-    [
+    25 => [
         'text' => 'Console: which constant indicates a successful command execution?',
         'answers' => [
             'A' => 'Command::SUCCESS',
@@ -295,10 +335,12 @@ return [
             'C' => 'ExitCode::SUCCESS',
             'D' => 'STATUS_SUCCESS',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    26 => [
         'text' => 'Console: which PHP attribute is used to register a class as a console command?',
         'answers' => [
             'A' => 'AsCommand',
@@ -306,12 +348,12 @@ return [
             'C' => 'AsConsole',
             'D' => 'Command',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Symfony — Routing
-    [
+    27 => [
         'text' => 'Routing: which Route attribute option restricts the allowed HTTP methods?',
         'answers' => [
             'A' => 'methods',
@@ -319,10 +361,12 @@ return [
             'C' => 'http',
             'D' => 'allow',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    28 => [
         'text' => 'Routing: in config/routes/attributes.yaml, which value must the type option have to load PHP attributes?',
         'answers' => [
             'A' => 'attribute',
@@ -330,23 +374,25 @@ return [
             'C' => 'php',
             'D' => 'attributes',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
-        'text' => "Routing: in YAML route definitions, what is the required format for the 'controller' value?",
+    29 => [
+        'text' => 'Routing: in YAML route definitions, what is the required format for the \'controller\' value?',
         'answers' => [
             'A' => 'controller_class::method_name',
             'B' => 'Controller#method',
             'C' => 'controller.class@method',
             'D' => 'service_id:method',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Symfony — HTTP Cache
-    [
+    30 => [
         'text' => 'HTTP Cache: which YAML value enables the built-in reverse proxy in the prod environment?',
         'answers' => [
             'A' => 'http_cache: true',
@@ -354,12 +400,12 @@ return [
             'C' => 'cache.http: enabled',
             'D' => 'reverse_proxy: on',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Symfony — Dependency Injection / Tags
-    [
+    31 => [
         'text' => 'Dependency Injection: which service tag registers a service as a Twig extension?',
         'answers' => [
             'A' => 'twig.extension',
@@ -367,10 +413,12 @@ return [
             'C' => 'twig.bundle',
             'D' => 'twig.service',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container/tags.rst',
     ],
-    [
+    32 => [
         'text' => 'Dependency Injection: which attribute can you apply on an interface to autoconfigure a custom tag?',
         'answers' => [
             'A' => 'AutoconfigureTag',
@@ -378,36 +426,38 @@ return [
             'C' => 'AsTagged',
             'D' => 'ServiceTag',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container/tags.rst',
     ],
-
-    // Symfony — Twig Configuration
-    [
-        'text' => "Twig: what is the default value of the 'default_path' option in TwigBundle configuration?",
+    33 => [
+        'text' => 'Twig: what is the default value of the \'default_path\' option in TwigBundle configuration?',
         'answers' => [
             'A' => '%kernel.project_dir%/templates',
             'B' => '%kernel.root_dir%/views',
             'C' => 'templates/',
             'D' => '%kernel.cache_dir%/twig',
         ],
-        'correctAnswers' => 'A',
-        'linkAtDocumentation' => 'sf-doc/reference/configuration/twig.rst',
-    ],
-    [
-        'text' => "Twig: what is the default value of 'form_themes'?",
-        'answers' => [
-            'A' => "['form_div_layout.html.twig']",
-            'B' => "['bootstrap_5_layout.html.twig']",
-            'C' => "['form_table_layout.html.twig']",
-            'D' => "['uikit_layout.html.twig']",
+        'correctAnswers' => [
+            0 => 'A',
         ],
-        'correctAnswers' => 'A',
         'linkAtDocumentation' => 'sf-doc/reference/configuration/twig.rst',
     ],
-
-    // Symfony — Controllers
-    [
+    34 => [
+        'text' => 'Twig: what is the default value of \'form_themes\'?',
+        'answers' => [
+            'A' => '[\'form_div_layout.html.twig\']',
+            'B' => '[\'bootstrap_5_layout.html.twig\']',
+            'C' => '[\'form_table_layout.html.twig\']',
+            'D' => '[\'uikit_layout.html.twig\']',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'sf-doc/reference/configuration/twig.rst',
+    ],
+    35 => [
         'text' => 'Controllers: which helper method of AbstractController generates the URL for a given route?',
         'answers' => [
             'A' => 'generateUrl',
@@ -415,10 +465,12 @@ return [
             'C' => 'urlFor',
             'D' => 'buildRoute',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    36 => [
         'text' => 'Controllers: which method redirects the user to a route by its name?',
         'answers' => [
             'A' => 'redirectToRoute()',
@@ -426,12 +478,12 @@ return [
             'C' => 'forwardTo()',
             'D' => 'goToRoute()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Symfony Controllers - Advanced
-    [
+    37 => [
         'text' => 'Controllers: which methods of AbstractController are used to render templates?',
         'answers' => [
             'A' => 'render()',
@@ -439,10 +491,14 @@ return [
             'C' => 'renderBlock()',
             'D' => 'renderTemplate()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    38 => [
         'text' => 'Controllers: which AbstractController method creates a NotFoundHttpException?',
         'answers' => [
             'A' => 'createNotFoundException()',
@@ -450,10 +506,12 @@ return [
             'C' => 'notFound()',
             'D' => 'abort()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    39 => [
         'text' => 'Controllers: which parameters can be passed to the json() method of AbstractController?',
         'answers' => [
             'A' => '$data',
@@ -461,10 +519,15 @@ return [
             'C' => '$headers',
             'D' => '$context',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    40 => [
         'text' => 'Controllers: what is the default HTTP status code returned by the json() method?',
         'answers' => [
             'A' => '200',
@@ -472,10 +535,12 @@ return [
             'C' => '204',
             'D' => '202',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    41 => [
         'text' => 'Controllers: which ResponseHeaderBag constants are valid for the file() method disposition parameter?',
         'answers' => [
             'A' => 'ResponseHeaderBag::DISPOSITION_ATTACHMENT',
@@ -483,10 +548,13 @@ return [
             'C' => 'ResponseHeaderBag::DISPOSITION_DOWNLOAD',
             'D' => 'ResponseHeaderBag::DISPOSITION_EMBEDDED',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    42 => [
         'text' => 'Controllers: which Request methods access GET parameters?',
         'answers' => [
             'A' => '$request->query->get()',
@@ -494,10 +562,12 @@ return [
             'C' => '$request->getPayload()->get()',
             'D' => '$request->request->get()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    43 => [
         'text' => 'Controllers: which Request property bag is used to access POST parameters in modern Symfony?',
         'answers' => [
             'A' => '$request->getPayload()',
@@ -505,10 +575,12 @@ return [
             'C' => '$request->post',
             'D' => '$request->body',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    44 => [
         'text' => 'Controllers: which Request method checks if a request is an AJAX request?',
         'answers' => [
             'A' => 'isXmlHttpRequest()',
@@ -516,10 +588,12 @@ return [
             'C' => 'isAsync()',
             'D' => 'isXhr()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    45 => [
         'text' => 'Controllers: which Request attribute contains the current route name?',
         'answers' => [
             'A' => '_route',
@@ -527,10 +601,12 @@ return [
             'C' => '_route_name',
             'D' => 'current_route',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    46 => [
         'text' => 'Controllers: what is the default status code for redirectToRoute() method?',
         'answers' => [
             'A' => '302',
@@ -538,12 +614,12 @@ return [
             'C' => '303',
             'D' => '307',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Routing - Advanced
-    [
+    47 => [
         'text' => 'Routing: which Route attribute options are used to define route matching conditions?',
         'answers' => [
             'A' => 'requirements',
@@ -551,10 +627,15 @@ return [
             'C' => 'host',
             'D' => 'schemes',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    48 => [
         'text' => 'Routing: what is the correct inline syntax to define a requirement for a numeric parameter?',
         'answers' => [
             'A' => '{id<\\d+>}',
@@ -562,10 +643,12 @@ return [
             'C' => '{id|\\d+}',
             'D' => '{id[\\d+]}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    49 => [
         'text' => 'Routing: which inline syntax defines a default value for a route parameter?',
         'answers' => [
             'A' => '{page?1}',
@@ -573,10 +656,12 @@ return [
             'C' => '{page:1}',
             'D' => '{page|1}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    50 => [
         'text' => 'Routing: which Requirement enum constant matches only digits?',
         'answers' => [
             'A' => 'Requirement::DIGITS',
@@ -584,10 +669,12 @@ return [
             'C' => 'Requirement::POSITIVE_INT',
             'D' => 'Requirement::INTEGER',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    51 => [
         'text' => 'Routing: which Requirement enum constants are available for validating UUIDs?',
         'answers' => [
             'A' => 'Requirement::UID_BASE58',
@@ -595,10 +682,14 @@ return [
             'C' => 'Requirement::UID_RFC4122',
             'D' => 'Requirement::UID_HEX',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    52 => [
         'text' => 'Routing: what is the pattern value of Requirement::ASCII_SLUG?',
         'answers' => [
             'A' => '[a-zA-Z0-9\\-]+',
@@ -606,10 +697,12 @@ return [
             'C' => '[\\w-]+',
             'D' => '[a-zA-Z0-9_-]+',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    53 => [
         'text' => 'Routing: which special parameters are recognized by the Symfony router?',
         'answers' => [
             'A' => '_controller',
@@ -617,10 +710,15 @@ return [
             'C' => '_locale',
             'D' => '_fragment',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    54 => [
         'text' => 'Routing: what syntax forces a parameter to always be included in generated URLs?',
         'answers' => [
             'A' => '{!param}',
@@ -628,10 +726,12 @@ return [
             'C' => '{param*}',
             'D' => '{+param}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    55 => [
         'text' => 'Routing: which objects are available in the condition expression?',
         'answers' => [
             'A' => 'context',
@@ -639,10 +739,14 @@ return [
             'C' => 'params',
             'D' => 'route',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    56 => [
         'text' => 'Routing: which functions can be used in condition expressions?',
         'answers' => [
             'A' => 'env()',
@@ -650,10 +754,13 @@ return [
             'C' => 'parameter()',
             'D' => 'config()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    57 => [
         'text' => 'Routing: which console command shows route aliases?',
         'answers' => [
             'A' => 'debug:router --show-aliases',
@@ -661,10 +768,12 @@ return [
             'C' => 'debug:routes --aliases',
             'D' => 'router:list --show-aliases',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    58 => [
         'text' => 'Routing: which UrlGeneratorInterface constants define URL reference types?',
         'answers' => [
             'A' => 'ABSOLUTE_URL',
@@ -672,10 +781,15 @@ return [
             'C' => 'RELATIVE_PATH',
             'D' => 'NETWORK_PATH',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    59 => [
         'text' => 'Routing: which UriSigner method throws exceptions when verification fails?',
         'answers' => [
             'A' => 'verify()',
@@ -683,12 +797,12 @@ return [
             'C' => 'checkRequest()',
             'D' => 'validate()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Twig - Advanced
-    [
+    60 => [
         'text' => 'Twig: which functions generate URLs in templates?',
         'answers' => [
             'A' => 'path()',
@@ -696,10 +810,14 @@ return [
             'C' => 'absolute_url()',
             'D' => 'generate_url()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    61 => [
         'text' => 'Twig: what does the path() function return?',
         'answers' => [
             'A' => 'A relative URL',
@@ -707,10 +825,12 @@ return [
             'C' => 'A network path',
             'D' => 'A canonical URL',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    62 => [
         'text' => 'Twig: which app global variable properties provide user information?',
         'answers' => [
             'A' => 'app.user',
@@ -718,10 +838,13 @@ return [
             'C' => 'app.authenticated',
             'D' => 'app.session',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    63 => [
         'text' => 'Twig: which app properties provide environment information?',
         'answers' => [
             'A' => 'app.environment',
@@ -729,10 +852,15 @@ return [
             'C' => 'app.locale',
             'D' => 'app.enabled_locales',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    64 => [
         'text' => 'Twig: what is the correct syntax to include parent block content?',
         'answers' => [
             'A' => '{{ parent() }}',
@@ -740,10 +868,12 @@ return [
             'C' => '{{ super() }}',
             'D' => '{% super %}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    65 => [
         'text' => 'Twig: which syntax prevents passing context to an included template?',
         'answers' => [
             'A' => '{% include "template.html.twig" only %}',
@@ -751,10 +881,12 @@ return [
             'C' => '{% include "template.html.twig" isolated %}',
             'D' => '{{ include("template.html.twig", {}, false) }}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    66 => [
         'text' => 'Twig: which filter disables output escaping?',
         'answers' => [
             'A' => 'raw',
@@ -762,10 +894,12 @@ return [
             'C' => 'safe',
             'D' => 'noescape',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    67 => [
         'text' => 'Twig: which form rendering functions are available?',
         'answers' => [
             'A' => 'form_start()',
@@ -773,10 +907,15 @@ return [
             'C' => 'form_widget()',
             'D' => 'form_row()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    68 => [
         'text' => 'Twig: which functions render form field-specific parts?',
         'answers' => [
             'A' => 'form_label()',
@@ -784,10 +923,14 @@ return [
             'C' => 'form_help()',
             'D' => 'form_value()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    69 => [
         'text' => 'Twig: what is the correct order for Twig variable access resolution?',
         'answers' => [
             'A' => 'array key, property, method, getter, isser, hasser',
@@ -795,12 +938,12 @@ return [
             'C' => 'method, property, array key, getter, hasser, isser',
             'D' => 'array key, method, property, getter, hasser, isser',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Forms - Advanced
-    [
+    70 => [
         'text' => 'Forms: which FormBuilderInterface methods add fields to a form?',
         'answers' => [
             'A' => 'add()',
@@ -808,10 +951,12 @@ return [
             'C' => 'field()',
             'D' => 'create()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    71 => [
         'text' => 'Forms: which methods must be checked after form submission?',
         'answers' => [
             'A' => 'isSubmitted()',
@@ -819,10 +964,13 @@ return [
             'C' => 'isProcessed()',
             'D' => 'hasErrors()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    72 => [
         'text' => 'Forms: which FormEvents are triggered during form processing?',
         'answers' => [
             'A' => 'FormEvents::PRE_SET_DATA',
@@ -830,10 +978,15 @@ return [
             'C' => 'FormEvents::PRE_SUBMIT',
             'D' => 'FormEvents::SUBMIT',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    73 => [
         'text' => 'Forms: which FormEvent is triggered after form submission completes?',
         'answers' => [
             'A' => 'FormEvents::POST_SUBMIT',
@@ -841,10 +994,12 @@ return [
             'C' => 'FormEvents::AFTER_SUBMIT',
             'D' => 'FormEvents::COMPLETE',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    74 => [
         'text' => 'Forms: which DataTransformerInterface methods must be implemented?',
         'answers' => [
             'A' => 'transform()',
@@ -852,10 +1007,13 @@ return [
             'C' => 'normalize()',
             'D' => 'denormalize()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    75 => [
         'text' => 'Forms: which methods add data transformers to form fields?',
         'answers' => [
             'A' => 'addModelTransformer()',
@@ -863,10 +1021,13 @@ return [
             'C' => 'addTransformer()',
             'D' => 'addDataTransformer()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    76 => [
         'text' => 'Forms: which form options control field behavior?',
         'answers' => [
             'A' => 'required',
@@ -874,10 +1035,15 @@ return [
             'C' => 'empty_data',
             'D' => 'constraints',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    77 => [
         'text' => 'Forms: which option prevents a form field from being mapped to the data object?',
         'answers' => [
             'A' => 'mapped',
@@ -885,10 +1051,12 @@ return [
             'C' => 'ignore',
             'D' => 'skip_mapping',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    78 => [
         'text' => 'Forms: which AbstractTypeExtension method specifies which form types to extend?',
         'answers' => [
             'A' => 'getExtendedTypes()',
@@ -896,12 +1064,12 @@ return [
             'C' => 'getTypes()',
             'D' => 'supports()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Validation - Advanced
-    [
+    79 => [
         'text' => 'Validation: which ConstraintViolation methods provide error information?',
         'answers' => [
             'A' => 'getMessage()',
@@ -909,10 +1077,15 @@ return [
             'C' => 'getParameters()',
             'D' => 'getPropertyPath()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    80 => [
         'text' => 'Validation: which constraint validates nested objects?',
         'answers' => [
             'A' => 'Valid',
@@ -920,10 +1093,12 @@ return [
             'C' => 'Nested',
             'D' => 'Deep',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    81 => [
         'text' => 'Validation: which Email constraint modes are available?',
         'answers' => [
             'A' => 'html5',
@@ -931,10 +1106,14 @@ return [
             'C' => 'loose',
             'D' => 'basic',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    82 => [
         'text' => 'Validation: which validation group is applied by default?',
         'answers' => [
             'A' => 'Default',
@@ -942,10 +1121,12 @@ return [
             'C' => 'Basic',
             'D' => 'All',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    83 => [
         'text' => 'Validation: which ViolationBuilder methods configure error details?',
         'answers' => [
             'A' => 'setParameter()',
@@ -953,10 +1134,15 @@ return [
             'C' => 'setCode()',
             'D' => 'addViolation()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    84 => [
         'text' => 'Validation: which constraint checks if a value is exactly true?',
         'answers' => [
             'A' => 'IsTrue',
@@ -964,10 +1150,12 @@ return [
             'C' => 'EqualTrue',
             'D' => 'Boolean',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    85 => [
         'text' => 'Validation: which Length constraint options define validation messages?',
         'answers' => [
             'A' => 'exactMessage',
@@ -975,12 +1163,14 @@ return [
             'C' => 'maxMessage',
             'D' => 'lengthMessage',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Dependency Injection - Advanced
-    [
+    86 => [
         'text' => 'Dependency Injection: which attributes configure service injection?',
         'answers' => [
             'A' => '#[Autowire(service: "id")]',
@@ -988,10 +1178,15 @@ return [
             'C' => '#[Autowire(expression: "expr")]',
             'D' => '#[AutowireCallable]',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    87 => [
         'text' => 'Dependency Injection: which attribute injects a service locator for tagged services?',
         'answers' => [
             'A' => '#[TaggedLocator("tag")]',
@@ -999,10 +1194,12 @@ return [
             'C' => '#[TaggedIterator("tag")]',
             'D' => '#[LocateTagged("tag")]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    88 => [
         'text' => 'Dependency Injection: which attribute configures when a service is loaded?',
         'answers' => [
             'A' => '#[When(env: "dev")]',
@@ -1010,10 +1207,13 @@ return [
             'C' => '#[Environment("dev")]',
             'D' => '#[Exclude(env: "prod")]',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    89 => [
         'text' => 'Dependency Injection: which YAML keys configure service behavior?',
         'answers' => [
             'A' => 'autowire',
@@ -1021,10 +1221,15 @@ return [
             'C' => 'public',
             'D' => 'shared',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    90 => [
         'text' => 'Dependency Injection: which service tags register event handlers?',
         'answers' => [
             'A' => 'kernel.event_listener',
@@ -1032,10 +1237,13 @@ return [
             'C' => 'event.listener',
             'D' => 'event.subscriber',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    91 => [
         'text' => 'Dependency Injection: which YAML key specifies service decoration?',
         'answers' => [
             'A' => 'decorates',
@@ -1043,10 +1251,12 @@ return [
             'C' => 'decorator_of',
             'D' => 'wraps',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    92 => [
         'text' => 'Dependency Injection: which YAML keys control service decoration behavior?',
         'answers' => [
             'A' => 'decoration_priority',
@@ -1054,10 +1264,13 @@ return [
             'C' => 'decoration_on_invalid',
             'D' => 'decoration_order',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    93 => [
         'text' => 'Dependency Injection: which CompilerPassInterface method must be implemented?',
         'answers' => [
             'A' => 'process()',
@@ -1065,12 +1278,12 @@ return [
             'C' => 'build()',
             'D' => 'configure()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Security - Advanced
-    [
+    94 => [
         'text' => 'Security: which UserInterface method returns unique user identification?',
         'answers' => [
             'A' => 'getUserIdentifier()',
@@ -1078,10 +1291,12 @@ return [
             'C' => 'getId()',
             'D' => 'getIdentifier()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    95 => [
         'text' => 'Security: which form_login options configure authentication endpoints?',
         'answers' => [
             'A' => 'login_path',
@@ -1089,10 +1304,13 @@ return [
             'C' => 'success_path',
             'D' => 'failure_path',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    96 => [
         'text' => 'Security: what are the default parameter names for form_login?',
         'answers' => [
             'A' => '_username',
@@ -1100,10 +1318,13 @@ return [
             'C' => 'username',
             'D' => 'password',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    97 => [
         'text' => 'Security: what is the default CSRF token ID for form_login?',
         'answers' => [
             'A' => 'authenticate',
@@ -1111,10 +1332,12 @@ return [
             'C' => 'csrf_token',
             'D' => 'form_login',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    98 => [
         'text' => 'Security: which special security attributes check authentication status?',
         'answers' => [
             'A' => 'IS_AUTHENTICATED',
@@ -1122,10 +1345,15 @@ return [
             'C' => 'IS_AUTHENTICATED_REMEMBERED',
             'D' => 'IS_REMEMBERED',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    99 => [
         'text' => 'Security: which attribute allows unauthenticated access?',
         'answers' => [
             'A' => 'PUBLIC_ACCESS',
@@ -1133,10 +1361,12 @@ return [
             'C' => 'ALLOW_ALL',
             'D' => 'NO_AUTH',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    100 => [
         'text' => 'Security: which Voter methods must be implemented?',
         'answers' => [
             'A' => 'supports()',
@@ -1144,10 +1374,13 @@ return [
             'C' => 'vote()',
             'D' => 'canVote()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    101 => [
         'text' => 'Security: which security events occur during authentication?',
         'answers' => [
             'A' => 'CheckPassportEvent',
@@ -1155,10 +1388,15 @@ return [
             'C' => 'AuthenticationSuccessEvent',
             'D' => 'LoginSuccessEvent',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    102 => [
         'text' => 'Security: which event is triggered only during interactive login?',
         'answers' => [
             'A' => 'InteractiveLoginEvent',
@@ -1166,10 +1404,12 @@ return [
             'C' => 'AuthenticationSuccessEvent',
             'D' => 'UserLoginEvent',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    103 => [
         'text' => 'Security: which authenticator types are available in Symfony?',
         'answers' => [
             'A' => 'form_login',
@@ -1177,12 +1417,15 @@ return [
             'C' => 'http_basic',
             'D' => 'login_link',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // HTTP Cache - Advanced
-    [
+    104 => [
         'text' => 'HTTP Cache: which Response methods configure cache expiration?',
         'answers' => [
             'A' => 'setPublic()',
@@ -1190,10 +1433,15 @@ return [
             'C' => 'setMaxAge()',
             'D' => 'setSharedMaxAge()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    105 => [
         'text' => 'HTTP Cache: which Response methods implement validation caching?',
         'answers' => [
             'A' => 'setETag()',
@@ -1201,10 +1449,14 @@ return [
             'C' => 'isNotModified()',
             'D' => 'setExpires()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    106 => [
         'text' => 'HTTP Cache: which Twig function renders Edge Side Includes?',
         'answers' => [
             'A' => 'render_esi()',
@@ -1212,12 +1464,12 @@ return [
             'C' => 'render_hinclude()',
             'D' => 'include_esi()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Console - Advanced
-    [
+    107 => [
         'text' => 'Console: which InputArgument modes are available?',
         'answers' => [
             'A' => 'InputArgument::REQUIRED',
@@ -1225,10 +1477,14 @@ return [
             'C' => 'InputArgument::IS_ARRAY',
             'D' => 'InputArgument::MULTIPLE',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    108 => [
         'text' => 'Console: which InputOption value modes are available?',
         'answers' => [
             'A' => 'InputOption::VALUE_NONE',
@@ -1236,10 +1492,15 @@ return [
             'C' => 'InputOption::VALUE_OPTIONAL',
             'D' => 'InputOption::VALUE_IS_ARRAY',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    109 => [
         'text' => 'Console: which InputOption mode creates a negatable option?',
         'answers' => [
             'A' => 'InputOption::VALUE_NEGATABLE',
@@ -1247,10 +1508,12 @@ return [
             'C' => 'InputOption::VALUE_BOOLEAN',
             'D' => 'InputOption::TOGGLE',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    110 => [
         'text' => 'Console: which OutputInterface verbosity constants are defined?',
         'answers' => [
             'A' => 'VERBOSITY_QUIET',
@@ -1258,10 +1521,15 @@ return [
             'C' => 'VERBOSITY_VERBOSE',
             'D' => 'VERBOSITY_DEBUG',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    111 => [
         'text' => 'Console: which ConsoleEvents are dispatched during command execution?',
         'answers' => [
             'A' => 'ConsoleEvents::COMMAND',
@@ -1269,10 +1537,14 @@ return [
             'C' => 'ConsoleEvents::ERROR',
             'D' => 'ConsoleEvents::COMPLETE',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    112 => [
         'text' => 'Console: which Command constants indicate execution result?',
         'answers' => [
             'A' => 'Command::SUCCESS',
@@ -1280,12 +1552,14 @@ return [
             'C' => 'Command::INVALID',
             'D' => 'Command::ERROR',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // MapQueryParameter - Advanced
-    [
+    113 => [
         'text' => 'MapQueryParameter: which types are supported by the attribute?',
         'answers' => [
             'A' => 'BackedEnum',
@@ -1293,10 +1567,15 @@ return [
             'C' => 'bool',
             'D' => 'AbstractUid',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    114 => [
         'text' => 'MapQueryParameter: which option accepts PHP filter constants?',
         'answers' => [
             'A' => 'filter',
@@ -1304,12 +1583,12 @@ return [
             'C' => 'type',
             'D' => 'constraint',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // MapQueryString - Advanced
-    [
+    115 => [
         'text' => 'MapQueryString: which options are available for validation?',
         'answers' => [
             'A' => 'validationGroups',
@@ -1317,10 +1596,13 @@ return [
             'C' => 'constraints',
             'D' => 'validate',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    116 => [
         'text' => 'MapQueryString: what is the default validationFailedStatusCode?',
         'answers' => [
             'A' => '404',
@@ -1328,12 +1610,12 @@ return [
             'C' => '422',
             'D' => '500',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // MapRequestPayload - Advanced
-    [
+    117 => [
         'text' => 'MapRequestPayload: which options configure payload mapping?',
         'answers' => [
             'A' => 'acceptFormat',
@@ -1341,10 +1623,15 @@ return [
             'C' => 'resolver',
             'D' => 'validationGroups',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    118 => [
         'text' => 'MapRequestPayload: what is the default validationFailedStatusCode?',
         'answers' => [
             'A' => '422',
@@ -1352,12 +1639,12 @@ return [
             'C' => '404',
             'D' => '500',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Symfony Architecture
-    [
+    119 => [
         'text' => 'Architecture: which directories are part of the default Symfony Flex structure?',
         'answers' => [
             'A' => 'bin/',
@@ -1365,10 +1652,15 @@ return [
             'C' => 'public/',
             'D' => 'templates/',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/setup.rst',
     ],
-    [
+    120 => [
         'text' => 'Architecture: which Kernel methods configure application behavior?',
         'answers' => [
             'A' => 'configureContainer()',
@@ -1376,10 +1668,13 @@ return [
             'C' => 'configure()',
             'D' => 'build()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
-    [
+    121 => [
         'text' => 'Architecture: which PSR standards does Symfony comply with?',
         'answers' => [
             'A' => 'PSR-4',
@@ -1387,12 +1682,15 @@ return [
             'C' => 'PSR-11',
             'D' => 'PSR-15',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/best_practices.rst',
     ],
-
-    // Advanced Routing Parameter Mapping
-    [
+    122 => [
         'text' => 'Routing: which syntax maps a route parameter to an entity property?',
         'answers' => [
             'A' => '{slug:post}',
@@ -1400,10 +1698,12 @@ return [
             'C' => '{slug@post}',
             'D' => '{post:slug}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    123 => [
         'text' => 'Routing: which syntax maps nested entity properties?',
         'answers' => [
             'A' => '{authorName:author.name}',
@@ -1411,12 +1711,12 @@ return [
             'C' => '{authorName->author->name}',
             'D' => '{authorName@author.name}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // AsRoutingConditionService
-    [
+    124 => [
         'text' => 'Routing: which attribute registers a custom routing condition service?',
         'answers' => [
             'A' => '#[AsRoutingConditionService]',
@@ -1424,12 +1724,12 @@ return [
             'C' => '#[RouteCondition]',
             'D' => '#[ConditionService]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Template Attribute Advanced
-    [
+    125 => [
         'text' => 'Controllers: which Template attribute option specifies a block to render?',
         'answers' => [
             'A' => 'block',
@@ -1437,12 +1737,12 @@ return [
             'C' => 'fragment',
             'D' => 'part',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // IsGranted Attribute Advanced
-    [
+    126 => [
         'text' => 'Security: which IsGranted attribute options configure access denial?',
         'answers' => [
             'A' => 'message',
@@ -1450,12 +1750,14 @@ return [
             'C' => 'exceptionCode',
             'D' => 'redirectUrl',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // Password Hasher Methods
-    [
+    127 => [
         'text' => 'Security: which PasswordHasherInterface methods are available?',
         'answers' => [
             'A' => 'hashPassword()',
@@ -1463,12 +1765,13 @@ return [
             'C' => 'needsRehash()',
             'D' => 'verifyPassword()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // Autoconfigure Attribute
-    [
+    128 => [
         'text' => 'Dependency Injection: which Autoconfigure attribute options are available?',
         'answers' => [
             'A' => 'public',
@@ -1476,12 +1779,13 @@ return [
             'C' => 'lazy',
             'D' => 'autowire',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // AsTaggedItem Attribute
-    [
+    129 => [
         'text' => 'Dependency Injection: which AsTaggedItem attribute option sets item priority?',
         'answers' => [
             'A' => 'priority',
@@ -1489,12 +1793,12 @@ return [
             'C' => 'weight',
             'D' => 'index',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Constraint Validation Options
-    [
+    130 => [
         'text' => 'Validation: which Regex constraint option controls matching behavior?',
         'answers' => [
             'A' => 'match',
@@ -1502,12 +1806,12 @@ return [
             'C' => 'mustMatch',
             'D' => 'positive',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Choice Constraint Advanced
-    [
+    131 => [
         'text' => 'Validation: which Choice constraint options control multiple selections?',
         'answers' => [
             'A' => 'multiple',
@@ -1515,12 +1819,14 @@ return [
             'C' => 'max',
             'D' => 'count',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Response Cache Methods
-    [
+    132 => [
         'text' => 'HTTP Cache: which method sets an absolute cache expiration time?',
         'answers' => [
             'A' => 'setExpires()',
@@ -1528,12 +1834,12 @@ return [
             'C' => 'setExpiration()',
             'D' => 'expire()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Signed URIs Advanced
-    [
+    133 => [
         'text' => 'Routing: which query parameter stores URI expiration for signed URIs?',
         'answers' => [
             'A' => '_expiration',
@@ -1541,12 +1847,12 @@ return [
             'C' => '_expire_at',
             'D' => '_exp',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Form Theme
-    [
+    134 => [
         'text' => 'Forms: what is the default form theme in Symfony?',
         'answers' => [
             'A' => 'form_div_layout.html.twig',
@@ -1554,12 +1860,12 @@ return [
             'C' => 'form_table_layout.html.twig',
             'D' => 'foundation_layout.html.twig',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Advanced Symfony Questions - Architecture
-    [
+    135 => [
         'text' => 'Architecture: which KernelEvents constant represents the event dispatched when a controller is about to be called?',
         'answers' => [
             'A' => 'KernelEvents::CONTROLLER',
@@ -1567,10 +1873,12 @@ return [
             'C' => 'KernelEvents::REQUEST',
             'D' => 'KernelEvents::VIEW',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    136 => [
         'text' => 'Architecture: which methods does MicroKernelTrait require to be implemented in the Kernel class?',
         'answers' => [
             'A' => 'configureContainer()',
@@ -1578,10 +1886,13 @@ return [
             'C' => 'registerBundles()',
             'D' => 'configureBundles()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
-    [
+    137 => [
         'text' => 'Architecture: which request types are defined in HttpKernelInterface?',
         'answers' => [
             'A' => 'HttpKernelInterface::MAIN_REQUEST',
@@ -1589,10 +1900,13 @@ return [
             'C' => 'HttpKernelInterface::MASTER_REQUEST',
             'D' => 'HttpKernelInterface::CHILD_REQUEST',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    138 => [
         'text' => 'Architecture: in which method should you register compiler passes in a bundle or kernel?',
         'answers' => [
             'A' => 'build()',
@@ -1600,10 +1914,12 @@ return [
             'C' => 'register()',
             'D' => 'configure()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    139 => [
         'text' => 'Architecture: which event is dispatched after kernel.response to perform cleanup tasks after response is sent?',
         'answers' => [
             'A' => 'KernelEvents::TERMINATE',
@@ -1611,12 +1927,12 @@ return [
             'C' => 'KernelEvents::CLEANUP',
             'D' => 'KernelEvents::SHUTDOWN',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-
-    // Controllers - Advanced Value Resolvers
-    [
+    140 => [
         'text' => 'Controllers: which attribute injects the decorated service in a decorator class constructor?',
         'answers' => [
             'A' => '#[AutowireDecorated]',
@@ -1624,10 +1940,12 @@ return [
             'C' => '#[DecoratedService]',
             'D' => '#[InnerService]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    141 => [
         'text' => 'Controllers: which MapQueryParameter filter option validates a regexp pattern?',
         'answers' => [
             'A' => 'FILTER_VALIDATE_REGEXP',
@@ -1635,10 +1953,12 @@ return [
             'C' => 'FILTER_REGEXP',
             'D' => 'FILTER_PATTERN',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    142 => [
         'text' => 'Controllers: which UploadedFile method is SAFE for determining file extension?',
         'answers' => [
             'A' => 'guessExtension()',
@@ -1646,10 +1966,12 @@ return [
             'C' => 'getExtension()',
             'D' => 'getMimeExtension()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    143 => [
         'text' => 'Controllers: which Request property bags contain form data?',
         'answers' => [
             'A' => '$request->request',
@@ -1657,10 +1979,13 @@ return [
             'C' => '$request->query',
             'D' => '$request->post',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    144 => [
         'text' => 'Controllers: which AbstractController method creates and returns a RedirectResponse to a given route?',
         'answers' => [
             'A' => 'redirectToRoute()',
@@ -1668,12 +1993,12 @@ return [
             'C' => 'forward()',
             'D' => 'generateUrl()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Routing - Advanced Features
-    [
+    145 => [
         'text' => 'Routing: which inline syntax combines both requirement and default value for a route parameter?',
         'answers' => [
             'A' => '{page<\\d+>?1}',
@@ -1681,10 +2006,12 @@ return [
             'C' => '{page:\\d+:1}',
             'D' => '{page=1|\\d+}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    146 => [
         'text' => 'Routing: which Requirement constants are available in Symfony 7.1+?',
         'answers' => [
             'A' => 'Requirement::DIGITS',
@@ -1692,10 +2019,15 @@ return [
             'C' => 'Requirement::DATE_YMD',
             'D' => 'Requirement::UUID',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    147 => [
         'text' => 'Routing: which redirect status codes are set by RedirectController with keepRequestMethod option?',
         'answers' => [
             'A' => '307',
@@ -1703,10 +2035,13 @@ return [
             'C' => '302',
             'D' => '301',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    148 => [
         'text' => 'Routing: what is the return type of UrlGeneratorInterface::NETWORK_PATH reference type?',
         'answers' => [
             'A' => '//example.com/path',
@@ -1714,10 +2049,12 @@ return [
             'C' => '/path',
             'D' => '../path',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    149 => [
         'text' => 'Routing: which exceptions can UriSigner::verify() throw?',
         'answers' => [
             'A' => 'UnsignedUriException',
@@ -1725,12 +2062,14 @@ return [
             'C' => 'ExpiredSignedUriException',
             'D' => 'InvalidSignatureException',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Twig - Advanced Filters and Functions
-    [
+    150 => [
         'text' => 'Twig: which parameters does the trans filter accept?',
         'answers' => [
             'A' => 'arguments',
@@ -1738,10 +2077,14 @@ return [
             'C' => 'locale',
             'D' => 'parameters',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    151 => [
         'text' => 'Twig: which function creates a TranslatableMessage object in Symfony?',
         'answers' => [
             'A' => 't()',
@@ -1749,10 +2092,12 @@ return [
             'C' => 'translate()',
             'D' => 'message()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    152 => [
         'text' => 'Twig: which app global variable properties are available for routing information?',
         'answers' => [
             'A' => 'app.current_route',
@@ -1760,10 +2105,13 @@ return [
             'C' => 'app.route_name',
             'D' => 'app.route_params',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    153 => [
         'text' => 'Twig: which render function generates ESI tags when ESI support is enabled?',
         'answers' => [
             'A' => 'render_esi()',
@@ -1771,10 +2119,12 @@ return [
             'C' => 'esi()',
             'D' => 'render_hinclude()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    154 => [
         'text' => 'Twig: what is the difference between the trans filter and trans tag regarding escaping?',
         'answers' => [
             'A' => 'Filter auto-escapes output, tag does not',
@@ -1782,12 +2132,12 @@ return [
             'C' => 'Both auto-escape output',
             'D' => 'Neither auto-escapes output',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Forms - Advanced Events and Transformers
-    [
+    155 => [
         'text' => 'Forms: in which FormEvent can you still add or remove form fields?',
         'answers' => [
             'A' => 'FormEvents::PRE_SET_DATA',
@@ -1795,10 +2145,14 @@ return [
             'C' => 'FormEvents::PRE_SUBMIT',
             'D' => 'FormEvents::POST_SUBMIT',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    156 => [
         'text' => 'Forms: which FormBuilderInterface methods add data transformers?',
         'answers' => [
             'A' => 'addModelTransformer()',
@@ -1806,10 +2160,13 @@ return [
             'C' => 'addNormTransformer()',
             'D' => 'addDataTransformer()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    157 => [
         'text' => 'Forms: which built-in form types are available for date and time?',
         'answers' => [
             'A' => 'DateType',
@@ -1817,10 +2174,15 @@ return [
             'C' => 'TimeType',
             'D' => 'DateIntervalType',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    158 => [
         'text' => 'Forms: which option controls whether form errors bubble up to the parent form?',
         'answers' => [
             'A' => 'error_bubbling',
@@ -1828,10 +2190,12 @@ return [
             'C' => 'propagate_errors',
             'D' => 'cascade_errors',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    159 => [
         'text' => 'Forms: which CollectionType options enable dynamic add/remove of entries?',
         'answers' => [
             'A' => 'allow_add',
@@ -1839,10 +2203,15 @@ return [
             'C' => 'prototype',
             'D' => 'delete_empty',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    160 => [
         'text' => 'Forms: what is the default value for the prototype_name option in CollectionType?',
         'answers' => [
             'A' => '__name__',
@@ -1850,12 +2219,12 @@ return [
             'C' => '__prototype__',
             'D' => '__item__',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Validation - Advanced Constraints
-    [
+    161 => [
         'text' => 'Validation: which constraint validates that a value is a valid email according to HTML5?',
         'answers' => [
             'A' => 'Email with mode: "html5"',
@@ -1863,10 +2232,12 @@ return [
             'C' => 'Email with mode: "loose"',
             'D' => 'Html5Email',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    162 => [
         'text' => 'Validation: which ConstraintViolationBuilderInterface methods are chainable?',
         'answers' => [
             'A' => 'setParameter()',
@@ -1874,10 +2245,14 @@ return [
             'C' => 'setCode()',
             'D' => 'addViolation()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    163 => [
         'text' => 'Validation: which constraint option specifies the validation payload?',
         'answers' => [
             'A' => 'payload',
@@ -1885,10 +2260,12 @@ return [
             'C' => 'context',
             'D' => 'extra',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    164 => [
         'text' => 'Validation: which constraint validates nested object properties recursively?',
         'answers' => [
             'A' => 'Valid',
@@ -1896,12 +2273,12 @@ return [
             'C' => 'Traverse',
             'D' => 'Deep',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Dependency Injection - Advanced Attributes
-    [
+    165 => [
         'text' => 'Dependency Injection: which AutowireIterator attribute options configure tagged service iteration?',
         'answers' => [
             'A' => 'indexAttribute',
@@ -1909,10 +2286,15 @@ return [
             'C' => 'defaultPriorityMethod',
             'D' => 'exclude',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    166 => [
         'text' => 'Dependency Injection: which attribute injects a lazy-loading closure for a service?',
         'answers' => [
             'A' => '#[AutowireServiceClosure]',
@@ -1920,10 +2302,12 @@ return [
             'C' => '#[ServiceClosure]',
             'D' => '#[DeferredService]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    167 => [
         'text' => 'Dependency Injection: which AutowireLocator attribute parameters create a service locator?',
         'answers' => [
             'A' => 'Array of service class names',
@@ -1931,10 +2315,14 @@ return [
             'C' => 'defaultIndexMethod',
             'D' => 'defaultPriorityMethod',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    168 => [
         'text' => 'Dependency Injection: what is the default behavior for the lazy service option?',
         'answers' => [
             'A' => 'Creates a ghost object',
@@ -1942,10 +2330,12 @@ return [
             'C' => 'Defers instantiation',
             'D' => 'Uses factory pattern',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    169 => [
         'text' => 'Dependency Injection: which YAML option references the decorated service in a decorator?',
         'answers' => [
             'A' => 'decoration_inner_name',
@@ -1953,12 +2343,12 @@ return [
             'C' => 'inner_service',
             'D' => 'original_service',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // HTTP Cache - Advanced
-    [
+    170 => [
         'text' => 'HTTP Cache: which Response method checks if content has been modified based on request headers?',
         'answers' => [
             'A' => 'isNotModified()',
@@ -1966,10 +2356,12 @@ return [
             'C' => 'checkModified()',
             'D' => 'compareModified()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    171 => [
         'text' => 'HTTP Cache: which response methods implement stale-if-error and stale-while-revalidate (RFC 5861)?',
         'answers' => [
             'A' => 'setStaleIfError()',
@@ -1977,10 +2369,13 @@ return [
             'C' => 'setStaleOnError()',
             'D' => 'enableStaleContent()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    172 => [
         'text' => 'HTTP Cache: which framework configuration options enable ESI support?',
         'answers' => [
             'A' => 'esi',
@@ -1988,10 +2383,13 @@ return [
             'C' => 'http_cache',
             'D' => 'esi_support',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    173 => [
         'text' => 'HTTP Cache: what HTTP header advertises ESI capability to Symfony?',
         'answers' => [
             'A' => 'Surrogate-Capability',
@@ -1999,10 +2397,12 @@ return [
             'C' => 'X-ESI-Capability',
             'D' => 'Cache-Capability',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    174 => [
         'text' => 'HTTP Cache: which Cache attribute parameters configure response caching?',
         'answers' => [
             'A' => 'public',
@@ -2010,12 +2410,15 @@ return [
             'C' => 'smaxage',
             'D' => 'mustRevalidate',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Console - Advanced
-    [
+    175 => [
         'text' => 'Console: which lifecycle methods are called in order during command execution?',
         'answers' => [
             'A' => 'initialize()',
@@ -2023,10 +2426,14 @@ return [
             'C' => 'execute()',
             'D' => 'configure()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    176 => [
         'text' => 'Console: which OutputInterface constants correspond to -vv verbosity?',
         'answers' => [
             'A' => 'OutputInterface::VERBOSITY_VERY_VERBOSE',
@@ -2034,10 +2441,12 @@ return [
             'C' => 'OutputInterface::VERBOSITY_VERBOSE',
             'D' => 'OutputInterface::VERBOSITY_NORMAL',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    177 => [
         'text' => 'Console: which SymfonyStyle methods create admonition blocks?',
         'answers' => [
             'A' => 'note()',
@@ -2045,10 +2454,13 @@ return [
             'C' => 'warning()',
             'D' => 'info()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    178 => [
         'text' => 'Console: which Table style constants are built-in?',
         'answers' => [
             'A' => 'default',
@@ -2056,10 +2468,15 @@ return [
             'C' => 'borderless',
             'D' => 'box',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    179 => [
         'text' => 'Console: which ConsoleEvents constant is dispatched when a signal is received?',
         'answers' => [
             'A' => 'ConsoleEvents::SIGNAL',
@@ -2067,12 +2484,12 @@ return [
             'C' => 'ConsoleEvents::SIGTERM',
             'D' => 'ConsoleEvents::KILL',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Testing - Advanced
-    [
+    180 => [
         'text' => 'Testing: which WebTestCase method creates a test HTTP client?',
         'answers' => [
             'A' => 'static::createClient()',
@@ -2080,10 +2497,12 @@ return [
             'C' => 'static::makeClient()',
             'D' => 'static::newClient()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    181 => [
         'text' => 'Testing: which Crawler methods traverse DOM elements?',
         'answers' => [
             'A' => 'filter()',
@@ -2091,10 +2510,15 @@ return [
             'C' => 'children()',
             'D' => 'siblings()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    182 => [
         'text' => 'Testing: which Client methods simulate user interactions?',
         'answers' => [
             'A' => 'click()',
@@ -2102,10 +2526,15 @@ return [
             'C' => 'clickLink()',
             'D' => 'submitForm()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    183 => [
         'text' => 'Testing: which SYMFONY_DEPRECATIONS_HELPER options control deprecation thresholds?',
         'answers' => [
             'A' => 'max[total]',
@@ -2113,10 +2542,15 @@ return [
             'C' => 'max[direct]',
             'D' => 'max[indirect]',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    184 => [
         'text' => 'Testing: which trait enables expectDeprecation() assertions in tests?',
         'answers' => [
             'A' => 'ExpectDeprecationTrait',
@@ -2124,10 +2558,12 @@ return [
             'C' => 'AssertDeprecationTrait',
             'D' => 'LegacyTestTrait',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    185 => [
         'text' => 'Testing: which assertion methods check response status?',
         'answers' => [
             'A' => 'assertResponseIsSuccessful()',
@@ -2135,12 +2571,15 @@ return [
             'C' => 'assertResponseRedirects()',
             'D' => 'assertResponseIsUnprocessable()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-
-    // Security - Advanced Authenticators
-    [
+    186 => [
         'text' => 'Security: which Passport Badge classes are available for authentication?',
         'answers' => [
             'A' => 'UserBadge',
@@ -2148,10 +2587,15 @@ return [
             'C' => 'CsrfTokenBadge',
             'D' => 'RememberMeBadge',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    187 => [
         'text' => 'Security: which AuthenticatorInterface methods must be implemented?',
         'answers' => [
             'A' => 'supports()',
@@ -2159,10 +2603,15 @@ return [
             'C' => 'onAuthenticationSuccess()',
             'D' => 'onAuthenticationFailure()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    188 => [
         'text' => 'Security: what is the difference between IS_AUTHENTICATED_FULLY and IS_AUTHENTICATED_REMEMBERED?',
         'answers' => [
             'A' => 'FULLY excludes remember-me authentication',
@@ -2170,10 +2619,13 @@ return [
             'C' => 'FULLY requires password authentication',
             'D' => 'REMEMBERED allows anonymous access',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    189 => [
         'text' => 'Security: which access_control options configure firewall matching?',
         'answers' => [
             'A' => 'path',
@@ -2181,12 +2633,15 @@ return [
             'C' => 'methods',
             'D' => 'roles',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // Advanced Pair Questions (similar text, multiple correct answers)
-    [
+    190 => [
         'text' => 'Which form field options control data mapping between the form and underlying object?',
         'answers' => [
             'A' => 'mapped',
@@ -2194,10 +2649,15 @@ return [
             'C' => 'inherit_data',
             'D' => 'by_reference',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    191 => [
         'text' => 'Which form field options control validation behavior?',
         'answers' => [
             'A' => 'constraints',
@@ -2205,10 +2665,15 @@ return [
             'C' => 'invalid_message',
             'D' => 'error_mapping',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    192 => [
         'text' => 'Which Twig functions render controller fragments?',
         'answers' => [
             'A' => 'render()',
@@ -2216,10 +2681,14 @@ return [
             'C' => 'controller()',
             'D' => 'render_hinclude()',
         ],
-        'correctAnswers' => 'A,B,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    193 => [
         'text' => 'Which Twig functions generate URLs?',
         'answers' => [
             'A' => 'path()',
@@ -2227,10 +2696,15 @@ return [
             'C' => 'absolute_url()',
             'D' => 'relative_path()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    194 => [
         'text' => 'Which service container YAML keys configure service instantiation?',
         'answers' => [
             'A' => 'class',
@@ -2238,10 +2712,15 @@ return [
             'C' => 'arguments',
             'D' => 'calls',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    195 => [
         'text' => 'Which service container YAML keys configure service behavior?',
         'answers' => [
             'A' => 'public',
@@ -2249,14 +2728,15 @@ return [
             'C' => 'lazy',
             'D' => 'autowire',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Additional Advanced Questions from Documentation Analysis
-
-    // Kernel Events - Deep Dive
-    [
+    196 => [
         'text' => 'Architecture: which KernelEvents are dispatched during the Symfony request-response cycle?',
         'answers' => [
             'A' => 'KernelEvents::REQUEST',
@@ -2264,10 +2744,15 @@ return [
             'C' => 'KernelEvents::VIEW',
             'D' => 'KernelEvents::RESPONSE',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    197 => [
         'text' => 'Architecture: which event class is used for the kernel.exception event?',
         'answers' => [
             'A' => 'ExceptionEvent',
@@ -2275,10 +2760,12 @@ return [
             'C' => 'ThrowableEvent',
             'D' => 'KernelExceptionEvent',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    198 => [
         'text' => 'Architecture: which ExceptionEvent method sets a custom response for the exception?',
         'answers' => [
             'A' => 'setResponse()',
@@ -2286,10 +2773,12 @@ return [
             'C' => 'createResponse()',
             'D' => 'handleResponse()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    199 => [
         'text' => 'Architecture: which ExceptionEvent method allows replacing the thrown exception?',
         'answers' => [
             'A' => 'setThrowable()',
@@ -2297,10 +2786,12 @@ return [
             'C' => 'replaceException()',
             'D' => 'changeThrowable()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    200 => [
         'text' => 'Architecture: what is the default priority value for event listeners if not specified?',
         'answers' => [
             'A' => '0',
@@ -2308,12 +2799,12 @@ return [
             'C' => '10',
             'D' => '100',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-
-    // Request Handling Advanced
-    [
+    201 => [
         'text' => 'Controllers: which Request method checks if the request is a main request?',
         'answers' => [
             'A' => '$event->isMainRequest()',
@@ -2321,10 +2812,12 @@ return [
             'C' => '$request->isMainRequest()',
             'D' => '$event->getRequestType()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    202 => [
         'text' => 'Controllers: which Request ParameterBag methods retrieve filtered values?',
         'answers' => [
             'A' => 'getAlpha()',
@@ -2332,10 +2825,15 @@ return [
             'C' => 'getDigits()',
             'D' => 'getBoolean()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    203 => [
         'text' => 'Controllers: which Request method retrieves an enum from query parameters?',
         'answers' => [
             'A' => 'getEnum()',
@@ -2343,10 +2841,12 @@ return [
             'C' => 'toEnum()',
             'D' => 'parseEnum()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    204 => [
         'text' => 'Controllers: which AbstractController method forwards to another controller internally?',
         'answers' => [
             'A' => 'forward()',
@@ -2354,10 +2854,12 @@ return [
             'C' => 'redirectToRoute()',
             'D' => 'render()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    205 => [
         'text' => 'Controllers: which forward() method parameters are available?',
         'answers' => [
             'A' => 'controller',
@@ -2365,12 +2867,14 @@ return [
             'C' => 'query',
             'D' => 'headers',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Response Types Advanced
-    [
+    206 => [
         'text' => 'Controllers: which Response subclass streams content using a callback?',
         'answers' => [
             'A' => 'StreamedResponse',
@@ -2378,10 +2882,12 @@ return [
             'C' => 'GeneratorResponse',
             'D' => 'AsyncResponse',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    207 => [
         'text' => 'Controllers: which Response subclass is used for JSON streaming with generators?',
         'answers' => [
             'A' => 'StreamedJsonResponse',
@@ -2389,10 +2895,12 @@ return [
             'C' => 'GeneratorJsonResponse',
             'D' => 'AsyncJsonResponse',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    208 => [
         'text' => 'Controllers: which BinaryFileResponse method sets Content-Disposition header?',
         'answers' => [
             'A' => 'setContentDisposition()',
@@ -2400,10 +2908,12 @@ return [
             'C' => 'setAttachment()',
             'D' => 'setDownload()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    209 => [
         'text' => 'Controllers: which Response HTTP status constants are available?',
         'answers' => [
             'A' => 'Response::HTTP_OK',
@@ -2411,12 +2921,15 @@ return [
             'C' => 'Response::HTTP_MOVED_PERMANENTLY',
             'D' => 'Response::HTTP_UNPROCESSABLE_ENTITY',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Cookie Management
-    [
+    210 => [
         'text' => 'Controllers: which Cookie factory method creates a cookie with fluent interface?',
         'answers' => [
             'A' => 'Cookie::create()',
@@ -2424,10 +2937,12 @@ return [
             'C' => 'Cookie::new()',
             'D' => 'Cookie::build()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    211 => [
         'text' => 'Controllers: which Cookie methods configure cookie properties?',
         'answers' => [
             'A' => 'withValue()',
@@ -2435,10 +2950,15 @@ return [
             'C' => 'withDomain()',
             'D' => 'withSecure()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    212 => [
         'text' => 'Controllers: which Cookie method creates partitioned cookies for CHIPS?',
         'answers' => [
             'A' => 'withPartitioned()',
@@ -2446,12 +2966,12 @@ return [
             'C' => 'enableCHIPS()',
             'D' => 'withCHIPS()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Session Advanced
-    [
+    213 => [
         'text' => 'Controllers: which Session methods manage session lifecycle?',
         'answers' => [
             'A' => 'start()',
@@ -2459,10 +2979,15 @@ return [
             'C' => 'migrate()',
             'D' => 'clear()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    214 => [
         'text' => 'Controllers: which Session method retrieves all attributes?',
         'answers' => [
             'A' => 'all()',
@@ -2470,10 +2995,12 @@ return [
             'C' => 'getAttributes()',
             'D' => 'toArray()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    215 => [
         'text' => 'Controllers: which FlashBag methods retrieve messages without removing them?',
         'answers' => [
             'A' => 'peek()',
@@ -2481,12 +3008,13 @@ return [
             'C' => 'get()',
             'D' => 'all()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Routing Advanced Requirements
-    [
+    216 => [
         'text' => 'Routing: which requirement pattern allows slashes in a route parameter?',
         'answers' => [
             'A' => '.+',
@@ -2494,10 +3022,12 @@ return [
             'C' => '[^/]+',
             'D' => '\\S+',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    217 => [
         'text' => 'Routing: which requirement pattern allows slashes but excludes dots?',
         'answers' => [
             'A' => '[^.]+',
@@ -2505,10 +3035,12 @@ return [
             'C' => '.+',
             'D' => '[^/\\.]+',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    218 => [
         'text' => 'Routing: which Requirement constant matches date in YYYY-MM-DD format?',
         'answers' => [
             'A' => 'Requirement::DATE_YMD',
@@ -2516,10 +3048,12 @@ return [
             'C' => 'Requirement::ISO_DATE',
             'D' => 'Requirement::YYYY_MM_DD',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    219 => [
         'text' => 'Routing: which Requirement constants are available for UID validation?',
         'answers' => [
             'A' => 'Requirement::UID_BASE58',
@@ -2527,12 +3061,14 @@ return [
             'C' => 'Requirement::UID_RFC4122',
             'D' => 'Requirement::UUID',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Routing Localization
-    [
+    220 => [
         'text' => 'Routing: which special parameter automatically sets the request locale?',
         'answers' => [
             'A' => '_locale',
@@ -2540,10 +3076,12 @@ return [
             'C' => '_language',
             'D' => 'lang',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    221 => [
         'text' => 'Routing: which Route attribute syntax defines localized paths?',
         'answers' => [
             'A' => 'path: ["en" => "/about", "fr" => "/a-propos"]',
@@ -2551,10 +3089,12 @@ return [
             'C' => 'paths: ["en" => "/about", "fr" => "/a-propos"]',
             'D' => 'i18nPath: ["en" => "/about", "fr" => "/a-propos"]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    222 => [
         'text' => 'Routing: which console command tests if a URL matches a route?',
         'answers' => [
             'A' => 'router:match',
@@ -2562,12 +3102,12 @@ return [
             'C' => 'router:test',
             'D' => 'debug:route',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Twig Advanced Features
-    [
+    223 => [
         'text' => 'Twig: which Twig configuration option sets the default path for templates?',
         'answers' => [
             'A' => 'default_path',
@@ -2575,10 +3115,12 @@ return [
             'C' => 'base_path',
             'D' => 'root_dir',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    224 => [
         'text' => 'Twig: which filter converts snake_case and camelCase to human-readable format?',
         'answers' => [
             'A' => 'humanize',
@@ -2586,10 +3128,12 @@ return [
             'C' => 'readable',
             'D' => 'format',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    225 => [
         'text' => 'Twig: which filter serializes an object to JSON or other formats?',
         'answers' => [
             'A' => 'serialize',
@@ -2597,10 +3141,12 @@ return [
             'C' => 'json_encode',
             'D' => 'toJson',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    226 => [
         'text' => 'Twig: which filter abbreviates class names with HTML abbr tag?',
         'answers' => [
             'A' => 'abbr_class',
@@ -2608,10 +3154,13 @@ return [
             'C' => 'abbreviate',
             'D' => 'short_class',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    227 => [
         'text' => 'Twig: which filter sanitizes HTML content using HTML Sanitizer component?',
         'answers' => [
             'A' => 'sanitize_html',
@@ -2619,10 +3168,12 @@ return [
             'C' => 'clean_html',
             'D' => 'purify',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    228 => [
         'text' => 'Twig: which function creates a CSRF token for the given intention?',
         'answers' => [
             'A' => 'csrf_token()',
@@ -2630,10 +3181,12 @@ return [
             'C' => 'generate_token()',
             'D' => 'create_csrf()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    229 => [
         'text' => 'Twig: which form rendering function renders unrendered fields including CSRF?',
         'answers' => [
             'A' => 'form_rest()',
@@ -2641,12 +3194,12 @@ return [
             'C' => 'form_hidden()',
             'D' => 'form_finish()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Form Types Deep Dive
-    [
+    230 => [
         'text' => 'Forms: which form type is the parent of all other form types?',
         'answers' => [
             'A' => 'FormType',
@@ -2654,10 +3207,12 @@ return [
             'C' => 'AbstractType',
             'D' => 'ParentType',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    231 => [
         'text' => 'Forms: which form type accepts backed enum values?',
         'answers' => [
             'A' => 'EnumType',
@@ -2665,10 +3220,12 @@ return [
             'C' => 'ChoiceType',
             'D' => 'SelectType',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    232 => [
         'text' => 'Forms: which form types handle UID (UUID/ULID) values?',
         'answers' => [
             'A' => 'UuidType',
@@ -2676,10 +3233,13 @@ return [
             'C' => 'UidType',
             'D' => 'IdentifierType',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    233 => [
         'text' => 'Forms: which form type is specifically for birthday selection?',
         'answers' => [
             'A' => 'BirthdayType',
@@ -2687,10 +3247,12 @@ return [
             'C' => 'BirthDateType',
             'D' => 'AgeType',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    234 => [
         'text' => 'Forms: which form type supports week selection (HTML5)?',
         'answers' => [
             'A' => 'WeekType',
@@ -2698,12 +3260,12 @@ return [
             'C' => 'CalendarWeekType',
             'D' => 'IsoWeekType',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Form Options Advanced
-    [
+    235 => [
         'text' => 'Forms: which form option specifies a custom property path for data binding?',
         'answers' => [
             'A' => 'property_path',
@@ -2711,10 +3273,12 @@ return [
             'C' => 'bind_path',
             'D' => 'field_path',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    236 => [
         'text' => 'Forms: which form option controls whether setters or property access is used?',
         'answers' => [
             'A' => 'by_reference',
@@ -2722,10 +3286,12 @@ return [
             'C' => 'direct_access',
             'D' => 'property_setter',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    237 => [
         'text' => 'Forms: which form options customize the block name in form templates?',
         'answers' => [
             'A' => 'block_name',
@@ -2733,10 +3299,13 @@ return [
             'C' => 'form_name',
             'D' => 'template_block',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    238 => [
         'text' => 'Forms: which form option provides a custom getter callable for reading data?',
         'answers' => [
             'A' => 'getter',
@@ -2744,10 +3313,12 @@ return [
             'C' => 'accessor',
             'D' => 'data_getter',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    239 => [
         'text' => 'Forms: which form option provides a custom setter callable for writing data?',
         'answers' => [
             'A' => 'setter',
@@ -2755,12 +3326,12 @@ return [
             'C' => 'mutator',
             'D' => 'data_setter',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // ChoiceType Advanced
-    [
+    240 => [
         'text' => 'Forms: which ChoiceType options customize choice rendering?',
         'answers' => [
             'A' => 'choice_value',
@@ -2768,10 +3339,15 @@ return [
             'C' => 'choice_name',
             'D' => 'choice_attr',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    241 => [
         'text' => 'Forms: which ChoiceType option groups choices together?',
         'answers' => [
             'A' => 'group_by',
@@ -2779,10 +3355,12 @@ return [
             'C' => 'choice_groups',
             'D' => 'grouped',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    242 => [
         'text' => 'Forms: which ChoiceType option renders choices as radio buttons or checkboxes?',
         'answers' => [
             'A' => 'expanded',
@@ -2790,12 +3368,12 @@ return [
             'C' => 'inline',
             'D' => 'widget',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Validation Constraints Detailed
-    [
+    243 => [
         'text' => 'Validation: which constraint validates that a value is false?',
         'answers' => [
             'A' => 'IsFalse',
@@ -2803,10 +3381,12 @@ return [
             'C' => 'NotTrue',
             'D' => 'EqualFalse',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    244 => [
         'text' => 'Validation: which constraint validates that a value is null?',
         'answers' => [
             'A' => 'IsNull',
@@ -2814,10 +3394,12 @@ return [
             'C' => 'Empty',
             'D' => 'Blank',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    245 => [
         'text' => 'Validation: which constraint validates that a value is NOT null?',
         'answers' => [
             'A' => 'NotNull',
@@ -2825,10 +3407,12 @@ return [
             'C' => 'Required',
             'D' => 'Present',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    246 => [
         'text' => 'Validation: which constraint validates that a value is NOT blank (not empty string)?',
         'answers' => [
             'A' => 'NotBlank',
@@ -2836,10 +3420,12 @@ return [
             'C' => 'Required',
             'D' => 'Filled',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    247 => [
         'text' => 'Validation: which constraint validates a value against a regular expression?',
         'answers' => [
             'A' => 'Regex',
@@ -2847,10 +3433,12 @@ return [
             'C' => 'Matches',
             'D' => 'RegularExpression',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    248 => [
         'text' => 'Validation: which constraint validates that a value is a valid IBAN?',
         'answers' => [
             'A' => 'Iban',
@@ -2858,10 +3446,12 @@ return [
             'C' => 'IBAN',
             'D' => 'InternationalBankAccount',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    249 => [
         'text' => 'Validation: which constraint validates that a value is a valid ISBN?',
         'answers' => [
             'A' => 'Isbn',
@@ -2869,10 +3459,12 @@ return [
             'C' => 'BookNumber',
             'D' => 'InternationalStandardBookNumber',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    250 => [
         'text' => 'Validation: which constraint validates that a value is a valid ISSN?',
         'answers' => [
             'A' => 'Issn',
@@ -2880,12 +3472,12 @@ return [
             'C' => 'SerialNumber',
             'D' => 'InternationalSerialNumber',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Validation Groups Advanced
-    [
+    251 => [
         'text' => 'Validation: which class creates a sequence of validation groups?',
         'answers' => [
             'A' => 'GroupSequence',
@@ -2893,10 +3485,12 @@ return [
             'C' => 'ValidationSequence',
             'D' => 'GroupChain',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    252 => [
         'text' => 'Validation: what happens when a constraint fails in a GroupSequence?',
         'answers' => [
             'A' => 'Subsequent groups are not validated',
@@ -2904,12 +3498,12 @@ return [
             'C' => 'Only the Default group continues',
             'D' => 'Validation stops completely',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Service Container - Service Definition
-    [
+    253 => [
         'text' => 'Dependency Injection: which YAML key specifies the service constructor method?',
         'answers' => [
             'A' => 'constructor',
@@ -2917,10 +3511,12 @@ return [
             'C' => 'builder',
             'D' => 'create',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    254 => [
         'text' => 'Dependency Injection: which YAML key registers service method calls after instantiation?',
         'answers' => [
             'A' => 'calls',
@@ -2928,10 +3524,12 @@ return [
             'C' => 'setters',
             'D' => 'configure',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    255 => [
         'text' => 'Dependency Injection: which YAML syntax marks a method call as returning a clone?',
         'answers' => [
             'A' => '!returns_clone',
@@ -2939,10 +3537,12 @@ return [
             'C' => '!clone',
             'D' => '!copy',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    256 => [
         'text' => 'Dependency Injection: which decoration_on_invalid values are valid?',
         'answers' => [
             'A' => 'ignore',
@@ -2950,12 +3550,14 @@ return [
             'C' => 'null',
             'D' => 'skip',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Autowiring Advanced
-    [
+    257 => [
         'text' => 'Dependency Injection: which Autowire attribute option injects an environment variable?',
         'answers' => [
             'A' => 'env',
@@ -2963,10 +3565,12 @@ return [
             'C' => 'envVar',
             'D' => 'variable',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    258 => [
         'text' => 'Dependency Injection: which Autowire attribute option evaluates an expression?',
         'answers' => [
             'A' => 'expression',
@@ -2974,10 +3578,12 @@ return [
             'C' => 'evaluate',
             'D' => 'exprLang',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    259 => [
         'text' => 'Dependency Injection: which attribute marks a method for required dependency injection?',
         'answers' => [
             'A' => '#[Required]',
@@ -2985,12 +3591,12 @@ return [
             'C' => '#[Inject]',
             'D' => '#[Dependency]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // HTTP Cache - Cache Control
-    [
+    260 => [
         'text' => 'HTTP Cache: which Response method marks content as immutable?',
         'answers' => [
             'A' => 'setCache() with immutable: true',
@@ -2998,10 +3604,12 @@ return [
             'C' => 'markImmutable()',
             'D' => 'enableImmutable()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    261 => [
         'text' => 'HTTP Cache: which Response method forces revalidation when stale?',
         'answers' => [
             'A' => 'setCache() with must_revalidate: true',
@@ -3009,10 +3617,12 @@ return [
             'C' => 'forceRevalidation()',
             'D' => 'enableRevalidation()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    262 => [
         'text' => 'HTTP Cache: which Response method prevents caching entirely?',
         'answers' => [
             'A' => 'setCache() with no_store: true',
@@ -3020,10 +3630,12 @@ return [
             'C' => 'disableCache()',
             'D' => 'noStore()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    263 => [
         'text' => 'HTTP Cache: which Response method marks the response as expired?',
         'answers' => [
             'A' => 'expire()',
@@ -3031,12 +3643,12 @@ return [
             'C' => 'markStale()',
             'D' => 'invalidate()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Console - Input/Output
-    [
+    264 => [
         'text' => 'Console: which command lifecycle method is NOT called when --no-interaction flag is used?',
         'answers' => [
             'A' => 'interact()',
@@ -3044,10 +3656,12 @@ return [
             'C' => 'execute()',
             'D' => 'configure()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    265 => [
         'text' => 'Console: which OutputInterface method writes without a trailing newline?',
         'answers' => [
             'A' => 'write()',
@@ -3055,10 +3669,12 @@ return [
             'C' => 'output()',
             'D' => 'print()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    266 => [
         'text' => 'Console: which OutputInterface constant represents --silent verbosity?',
         'answers' => [
             'A' => 'VERBOSITY_SILENT',
@@ -3066,10 +3682,12 @@ return [
             'C' => 'VERBOSITY_NONE',
             'D' => 'VERBOSITY_MINIMAL',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    267 => [
         'text' => 'Console: which OutputInterface constant represents -vvv verbosity?',
         'answers' => [
             'A' => 'VERBOSITY_DEBUG',
@@ -3077,12 +3695,12 @@ return [
             'C' => 'VERBOSITY_VERBOSE',
             'D' => 'VERBOSITY_MAXIMUM',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Console Helpers
-    [
+    268 => [
         'text' => 'Console: which SymfonyStyle methods display result messages?',
         'answers' => [
             'A' => 'success()',
@@ -3090,10 +3708,15 @@ return [
             'C' => 'warning()',
             'D' => 'error()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    269 => [
         'text' => 'Console: which SymfonyStyle method creates a progress bar?',
         'answers' => [
             'A' => 'createProgressBar()',
@@ -3101,10 +3724,12 @@ return [
             'C' => 'makeProgressBar()',
             'D' => 'newProgressBar()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    270 => [
         'text' => 'Console: which SymfonyStyle methods create tables?',
         'answers' => [
             'A' => 'table()',
@@ -3112,12 +3737,15 @@ return [
             'C' => 'definitionList()',
             'D' => 'createTable()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Testing - Client Methods
-    [
+    271 => [
         'text' => 'Testing: which Client method disables automatic exception catching?',
         'answers' => [
             'A' => 'catchExceptions(false)',
@@ -3125,10 +3753,12 @@ return [
             'C' => 'throwExceptions()',
             'D' => 'enableExceptions()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    272 => [
         'text' => 'Testing: which Client method enables the profiler for the next request?',
         'answers' => [
             'A' => 'enableProfiler()',
@@ -3136,10 +3766,12 @@ return [
             'C' => 'profileNext()',
             'D' => 'startProfiling()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    273 => [
         'text' => 'Testing: which Client method simulates user login?',
         'answers' => [
             'A' => 'loginUser()',
@@ -3147,10 +3779,12 @@ return [
             'C' => 'login()',
             'D' => 'setUser()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    274 => [
         'text' => 'Testing: which Client method makes an AJAX request?',
         'answers' => [
             'A' => 'xmlHttpRequest()',
@@ -3158,12 +3792,12 @@ return [
             'C' => 'xhr()',
             'D' => 'asyncRequest()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-
-    // Testing - Crawler
-    [
+    275 => [
         'text' => 'Testing: which Crawler method selects a link by its text?',
         'answers' => [
             'A' => 'selectLink()',
@@ -3171,10 +3805,12 @@ return [
             'C' => 'getLink()',
             'D' => 'clickableLink()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    276 => [
         'text' => 'Testing: which Crawler method selects a button by its text?',
         'answers' => [
             'A' => 'selectButton()',
@@ -3182,10 +3818,12 @@ return [
             'C' => 'getButton()',
             'D' => 'clickableButton()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    277 => [
         'text' => 'Testing: which Crawler method extracts multiple attributes from matched nodes?',
         'answers' => [
             'A' => 'extract()',
@@ -3193,12 +3831,12 @@ return [
             'C' => 'attributes()',
             'D' => 'pluck()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-
-    // Event Dispatcher - EventSubscriberInterface
-    [
+    278 => [
         'text' => 'Architecture: which EventSubscriberInterface method returns subscribed events?',
         'answers' => [
             'A' => 'getSubscribedEvents()',
@@ -3206,10 +3844,12 @@ return [
             'C' => 'getEvents()',
             'D' => 'subscribeToEvents()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    279 => [
         'text' => 'Architecture: which formats can getSubscribedEvents() return?',
         'answers' => [
             'A' => 'Array with event name as key and method name as value',
@@ -3217,10 +3857,14 @@ return [
             'C' => 'Array with event name as key and array of [method, priority] arrays as value',
             'D' => 'Array of event names only',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-    [
+    280 => [
         'text' => 'Architecture: which event has the highest priority value?',
         'answers' => [
             'A' => 'Events with positive numbers execute first',
@@ -3228,12 +3872,12 @@ return [
             'C' => 'Events with zero execute first',
             'D' => 'Priority does not affect order',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/event_dispatcher.rst',
     ],
-
-    // Request - Advanced Methods
-    [
+    281 => [
         'text' => 'Controllers: which Request method retrieves the client IP address?',
         'answers' => [
             'A' => 'getClientIp()',
@@ -3241,10 +3885,12 @@ return [
             'C' => 'getRemoteAddr()',
             'D' => 'getClientAddress()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    282 => [
         'text' => 'Controllers: which Request method returns the request method (GET, POST, etc.)?',
         'answers' => [
             'A' => 'getMethod()',
@@ -3252,10 +3898,12 @@ return [
             'C' => 'getRequestMethod()',
             'D' => 'method()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    283 => [
         'text' => 'Controllers: which Request methods check for specific HTTP methods?',
         'answers' => [
             'A' => 'isMethod()',
@@ -3263,10 +3911,15 @@ return [
             'C' => 'isMethodIdempotent()',
             'D' => 'isMethodCacheable()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    284 => [
         'text' => 'Controllers: which Request method retrieves the preferred language?',
         'answers' => [
             'A' => 'getPreferredLanguage()',
@@ -3274,10 +3927,12 @@ return [
             'C' => 'getLanguage()',
             'D' => 'getPreferredLocale()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    285 => [
         'text' => 'Controllers: which Request method returns accepted content types from Accept header?',
         'answers' => [
             'A' => 'getAcceptableContentTypes()',
@@ -3285,12 +3940,12 @@ return [
             'C' => 'getAcceptedTypes()',
             'D' => 'getAcceptHeader()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Response - Header Management
-    [
+    286 => [
         'text' => 'Controllers: which Response methods manage headers?',
         'answers' => [
             'A' => 'headers->set()',
@@ -3298,10 +3953,15 @@ return [
             'C' => 'headers->has()',
             'D' => 'headers->remove()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    287 => [
         'text' => 'Controllers: which Response method sets the Content-Type header?',
         'answers' => [
             'A' => 'headers->set("Content-Type", $value)',
@@ -3309,10 +3969,12 @@ return [
             'C' => 'setMimeType()',
             'D' => 'contentType()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    288 => [
         'text' => 'Controllers: which Response method sets the charset?',
         'answers' => [
             'A' => 'setCharset()',
@@ -3320,10 +3982,12 @@ return [
             'C' => 'charset()',
             'D' => 'headers->set("charset")',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    289 => [
         'text' => 'Controllers: which Response method prepares the response before sending?',
         'answers' => [
             'A' => 'prepare()',
@@ -3331,12 +3995,12 @@ return [
             'C' => 'ready()',
             'D' => 'build()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Routing - Route Collection
-    [
+    290 => [
         'text' => 'Routing: which RouteCollection method adds a route?',
         'answers' => [
             'A' => 'add()',
@@ -3344,10 +4008,12 @@ return [
             'C' => 'register()',
             'D' => 'set()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    291 => [
         'text' => 'Routing: which RouteCollection methods retrieve routes?',
         'answers' => [
             'A' => 'get()',
@@ -3355,10 +4021,13 @@ return [
             'C' => 'getIterator()',
             'D' => 'find()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    292 => [
         'text' => 'Routing: which RouteCollection method adds a prefix to all routes?',
         'answers' => [
             'A' => 'addPrefix()',
@@ -3366,10 +4035,12 @@ return [
             'C' => 'setPrefix()',
             'D' => 'prependPrefix()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    293 => [
         'text' => 'Routing: which RouteCollection method adds a name prefix to all routes?',
         'answers' => [
             'A' => 'addNamePrefix()',
@@ -3377,12 +4048,12 @@ return [
             'C' => 'setNamePrefix()',
             'D' => 'prependName()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Twig - Naming Conventions and Paths
-    [
+    294 => [
         'text' => 'Twig: which syntax references a template in a bundle?',
         'answers' => [
             'A' => '@BundleName/directory/template.html.twig',
@@ -3390,10 +4061,12 @@ return [
             'C' => 'Bundle/BundleName/directory/template.html.twig',
             'D' => '#BundleName/directory/template.html.twig',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    295 => [
         'text' => 'Twig: which syntax adds a template namespace?',
         'answers' => [
             'A' => '@namespace_name/template.html.twig',
@@ -3401,10 +4074,12 @@ return [
             'C' => 'namespace_name::template.html.twig',
             'D' => '#namespace_name/template.html.twig',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    296 => [
         'text' => 'Twig: which Twig tag embeds a controller result?',
         'answers' => [
             'A' => 'No tag, use render() function',
@@ -3412,12 +4087,12 @@ return [
             'C' => '{% controller %}',
             'D' => '{% embed_controller %}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Twig - Advanced Block Features
-    [
+    297 => [
         'text' => 'Twig: which syntax defines a block without content?',
         'answers' => [
             'A' => '{% block name %}{% endblock %}',
@@ -3425,10 +4100,12 @@ return [
             'C' => '{% empty_block name %}',
             'D' => '{% block name empty %}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    298 => [
         'text' => 'Twig: which function checks if a block is defined?',
         'answers' => [
             'A' => 'block() returns empty string if not defined',
@@ -3436,10 +4113,12 @@ return [
             'C' => 'is_block_defined()',
             'D' => 'has_block()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    299 => [
         'text' => 'Twig: which syntax prevents template inheritance?',
         'answers' => [
             'A' => 'Do not use extends tag',
@@ -3447,12 +4126,12 @@ return [
             'C' => '{% standalone %}',
             'D' => '{% isolated %}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Forms - Form View Variables
-    [
+    300 => [
         'text' => 'Forms: which form view variables are available in Twig templates?',
         'answers' => [
             'A' => 'form.vars.value',
@@ -3460,10 +4139,15 @@ return [
             'C' => 'form.vars.attr',
             'D' => 'form.vars.label',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    301 => [
         'text' => 'Forms: which form view variable contains the form name?',
         'answers' => [
             'A' => 'form.vars.name',
@@ -3471,10 +4155,12 @@ return [
             'C' => 'form.name',
             'D' => 'form.vars.full_name',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    302 => [
         'text' => 'Forms: which form view variable contains validation errors?',
         'answers' => [
             'A' => 'form.vars.errors',
@@ -3482,10 +4168,12 @@ return [
             'C' => 'form.vars.violations',
             'D' => 'form.validation_errors',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    303 => [
         'text' => 'Forms: which form view variable indicates if the form is submitted?',
         'answers' => [
             'A' => 'form.vars.submitted',
@@ -3493,12 +4181,12 @@ return [
             'C' => 'form.vars.is_submitted',
             'D' => 'form.submitted',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Forms - Compound and Simple Forms
-    [
+    304 => [
         'text' => 'Forms: which form view variable indicates if a form field is compound?',
         'answers' => [
             'A' => 'form.vars.compound',
@@ -3506,10 +4194,12 @@ return [
             'C' => 'form.vars.is_compound',
             'D' => 'form.compound',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    305 => [
         'text' => 'Forms: what does compound form field mean?',
         'answers' => [
             'A' => 'The field contains nested fields',
@@ -3517,12 +4207,12 @@ return [
             'C' => 'The field uses multiple transformers',
             'D' => 'The field has multiple constraints',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Validation - Constraint Targets
-    [
+    306 => [
         'text' => 'Validation: which constraint targets are available?',
         'answers' => [
             'A' => 'PROPERTY_CONSTRAINT',
@@ -3530,10 +4220,13 @@ return [
             'C' => 'METHOD_CONSTRAINT',
             'D' => 'GETTER_CONSTRAINT',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    307 => [
         'text' => 'Validation: which method defines constraint targets in a custom constraint?',
         'answers' => [
             'A' => 'getTargets()',
@@ -3541,12 +4234,12 @@ return [
             'C' => 'getAppliesTo()',
             'D' => 'appliesTo()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Validation - Constraint Options
-    [
+    308 => [
         'text' => 'Validation: which Constraint options are available in all constraints?',
         'answers' => [
             'A' => 'message',
@@ -3554,10 +4247,14 @@ return [
             'C' => 'payload',
             'D' => 'priority',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    309 => [
         'text' => 'Validation: which Count constraint options validate array size?',
         'answers' => [
             'A' => 'min',
@@ -3565,10 +4262,13 @@ return [
             'C' => 'divisibleBy',
             'D' => 'exactly',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    310 => [
         'text' => 'Validation: which Range constraint options define numeric boundaries?',
         'answers' => [
             'A' => 'min',
@@ -3576,12 +4276,15 @@ return [
             'C' => 'minMessage',
             'D' => 'maxMessage',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Dependency Injection - Service Aliases
-    [
+    311 => [
         'text' => 'Dependency Injection: which YAML key creates a service alias?',
         'answers' => [
             'A' => 'alias',
@@ -3589,10 +4292,12 @@ return [
             'C' => 'parent',
             'D' => 'extends',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    312 => [
         'text' => 'Dependency Injection: which interface should an alias reference implement?',
         'answers' => [
             'A' => 'The same interface as the target service',
@@ -3600,10 +4305,12 @@ return [
             'C' => 'ServiceAliasInterface',
             'D' => 'No specific requirement',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    313 => [
         'text' => 'Dependency Injection: which YAML key marks an alias as public?',
         'answers' => [
             'A' => 'public',
@@ -3611,12 +4318,12 @@ return [
             'C' => 'exposed',
             'D' => 'accessible',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Dependency Injection - Abstract Services
-    [
+    314 => [
         'text' => 'Dependency Injection: which YAML key defines an abstract service?',
         'answers' => [
             'A' => 'abstract',
@@ -3624,10 +4331,12 @@ return [
             'C' => 'base',
             'D' => 'prototype',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    315 => [
         'text' => 'Dependency Injection: which YAML key inherits from an abstract service?',
         'answers' => [
             'A' => 'parent',
@@ -3635,10 +4344,12 @@ return [
             'C' => 'inherits',
             'D' => 'base',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    316 => [
         'text' => 'Dependency Injection: can abstract services be instantiated?',
         'answers' => [
             'A' => 'No, they serve as templates only',
@@ -3646,12 +4357,12 @@ return [
             'C' => 'Yes, using factory pattern',
             'D' => 'Yes, via service locator',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Security - Password Hashing Algorithms
-    [
+    317 => [
         'text' => 'Security: which password hashing algorithms are available?',
         'answers' => [
             'A' => 'auto',
@@ -3659,10 +4370,15 @@ return [
             'C' => 'sodium',
             'D' => 'plaintext',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    318 => [
         'text' => 'Security: which algorithm is recommended for password hashing?',
         'answers' => [
             'A' => 'auto',
@@ -3670,10 +4386,12 @@ return [
             'C' => 'sodium',
             'D' => 'argon2i',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    319 => [
         'text' => 'Security: which algorithm should NOT be used in production?',
         'answers' => [
             'A' => 'plaintext',
@@ -3681,12 +4399,12 @@ return [
             'C' => 'sodium',
             'D' => 'auto',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // Security - Access Decision Strategies
-    [
+    320 => [
         'text' => 'Security: which access decision strategies are available?',
         'answers' => [
             'A' => 'affirmative',
@@ -3694,10 +4412,15 @@ return [
             'C' => 'unanimous',
             'D' => 'priority',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    321 => [
         'text' => 'Security: what is the default access decision strategy?',
         'answers' => [
             'A' => 'affirmative',
@@ -3705,10 +4428,12 @@ return [
             'C' => 'unanimous',
             'D' => 'priority',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    322 => [
         'text' => 'Security: what does the affirmative strategy require?',
         'answers' => [
             'A' => 'At least one voter must grant access',
@@ -3716,10 +4441,12 @@ return [
             'C' => 'Majority of voters must grant access',
             'D' => 'No voter must deny access',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    323 => [
         'text' => 'Security: what does the unanimous strategy require?',
         'answers' => [
             'A' => 'All voters must grant access',
@@ -3727,12 +4454,12 @@ return [
             'C' => 'No voter must abstain',
             'D' => 'Majority of voters must grant access',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // HTTP Cache - Vary Header
-    [
+    324 => [
         'text' => 'HTTP Cache: which Response method sets the Vary header?',
         'answers' => [
             'A' => 'setVary()',
@@ -3740,10 +4467,12 @@ return [
             'C' => 'addVary()',
             'D' => 'headers->set("Vary")',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    325 => [
         'text' => 'HTTP Cache: what does the Vary header control?',
         'answers' => [
             'A' => 'Which request headers affect cache variations',
@@ -3751,10 +4480,12 @@ return [
             'C' => 'Cache validation method',
             'D' => 'Cache storage location',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    326 => [
         'text' => 'HTTP Cache: which headers are commonly used in Vary?',
         'answers' => [
             'A' => 'Accept',
@@ -3762,12 +4493,15 @@ return [
             'C' => 'Accept-Encoding',
             'D' => 'Cookie',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Console - Progress Bar
-    [
+    327 => [
         'text' => 'Console: which ProgressBar methods control the progress?',
         'answers' => [
             'A' => 'start()',
@@ -3775,10 +4509,15 @@ return [
             'C' => 'setProgress()',
             'D' => 'finish()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    328 => [
         'text' => 'Console: which ProgressBar method sets the maximum steps?',
         'answers' => [
             'A' => 'setMaxSteps()',
@@ -3786,10 +4525,12 @@ return [
             'C' => 'setTotal()',
             'D' => 'maxSteps()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    329 => [
         'text' => 'Console: which ProgressBar method sets the progress message?',
         'answers' => [
             'A' => 'setMessage()',
@@ -3797,10 +4538,12 @@ return [
             'C' => 'setLabel()',
             'D' => 'setText()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    330 => [
         'text' => 'Console: which ProgressBar method sets the format?',
         'answers' => [
             'A' => 'setFormat()',
@@ -3808,12 +4551,12 @@ return [
             'C' => 'setTemplate()',
             'D' => 'setStyle()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Console - Question Helper
-    [
+    331 => [
         'text' => 'Console: which SymfonyStyle methods ask questions?',
         'answers' => [
             'A' => 'ask()',
@@ -3821,10 +4564,15 @@ return [
             'C' => 'confirm()',
             'D' => 'choice()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    332 => [
         'text' => 'Console: which method asks for a password without displaying it?',
         'answers' => [
             'A' => 'askHidden()',
@@ -3832,10 +4580,12 @@ return [
             'C' => 'askSecret()',
             'D' => 'prompt()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    333 => [
         'text' => 'Console: which method asks a yes/no confirmation?',
         'answers' => [
             'A' => 'confirm()',
@@ -3843,12 +4593,12 @@ return [
             'C' => 'askYesNo()',
             'D' => 'yesNo()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Testing - Assertion Methods Advanced
-    [
+    334 => [
         'text' => 'Testing: which assertion checks for specific HTML selector?',
         'answers' => [
             'A' => 'assertSelectorExists()',
@@ -3856,10 +4606,15 @@ return [
             'C' => 'assertSelectorTextContains()',
             'D' => 'assertSelectorTextSame()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    335 => [
         'text' => 'Testing: which assertion checks response has specific header?',
         'answers' => [
             'A' => 'assertResponseHasHeader()',
@@ -3867,10 +4622,14 @@ return [
             'C' => 'assertResponseHeaderNotSame()',
             'D' => 'assertHeaderExists()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    336 => [
         'text' => 'Testing: which assertion checks for form validation errors?',
         'answers' => [
             'A' => 'assertFormHasErrors()',
@@ -3878,12 +4637,12 @@ return [
             'C' => 'assertFormIsValid()',
             'D' => 'assertValidForm()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-
-    // Miscellaneous - Environment Variables
-    [
+    337 => [
         'text' => 'Configuration: which syntax references environment variables in YAML?',
         'answers' => [
             'A' => '%env(VAR_NAME)%',
@@ -3891,10 +4650,12 @@ return [
             'C' => '$env(VAR_NAME)',
             'D' => '{{VAR_NAME}}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
-    [
+    338 => [
         'text' => 'Configuration: which env processors are available?',
         'answers' => [
             'A' => 'env(string:VAR)',
@@ -3902,10 +4663,15 @@ return [
             'C' => 'env(int:VAR)',
             'D' => 'env(float:VAR)',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
-    [
+    339 => [
         'text' => 'Configuration: which env processor decodes JSON?',
         'answers' => [
             'A' => 'env(json:VAR)',
@@ -3913,10 +4679,12 @@ return [
             'C' => 'env(parse_json:VAR)',
             'D' => 'env(json_decode:VAR)',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
-    [
+    340 => [
         'text' => 'Configuration: which env processor reads from a file?',
         'answers' => [
             'A' => 'env(file:VAR)',
@@ -3924,12 +4692,12 @@ return [
             'C' => 'env(file_contents:VAR)',
             'D' => 'env(load:VAR)',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
-
-    // Miscellaneous - Serializer
-    [
+    341 => [
         'text' => 'Serializer: which formats does the Serializer component support by default?',
         'answers' => [
             'A' => 'json',
@@ -3937,10 +4705,15 @@ return [
             'C' => 'csv',
             'D' => 'yaml',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/serializer.rst',
     ],
-    [
+    342 => [
         'text' => 'Serializer: which attribute controls property serialization?',
         'answers' => [
             'A' => '#[Ignore]',
@@ -3948,10 +4721,15 @@ return [
             'C' => '#[Groups]',
             'D' => '#[MaxDepth]',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/serializer.rst',
     ],
-    [
+    343 => [
         'text' => 'Serializer: which normalizer converts DateTime objects?',
         'answers' => [
             'A' => 'DateTimeNormalizer',
@@ -3959,12 +4737,12 @@ return [
             'C' => 'TimeNormalizer',
             'D' => 'DateTimeFormatNormalizer',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/serializer.rst',
     ],
-
-    // Messenger Component
-    [
+    344 => [
         'text' => 'Messenger: which interface must a message implement?',
         'answers' => [
             'A' => 'No specific interface required',
@@ -3972,10 +4750,12 @@ return [
             'C' => 'MessengerInterface',
             'D' => 'AsyncMessageInterface',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/messenger.rst',
     ],
-    [
+    345 => [
         'text' => 'Messenger: which attribute marks a message handler?',
         'answers' => [
             'A' => '#[AsMessageHandler]',
@@ -3983,10 +4763,12 @@ return [
             'C' => '#[Handler]',
             'D' => '#[HandlesMessage]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/messenger.rst',
     ],
-    [
+    346 => [
         'text' => 'Messenger: which method must a message handler implement?',
         'answers' => [
             'A' => '__invoke()',
@@ -3994,10 +4776,12 @@ return [
             'C' => 'execute()',
             'D' => 'process()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/messenger.rst',
     ],
-    [
+    347 => [
         'text' => 'Messenger: which MessageBusInterface method dispatches a message?',
         'answers' => [
             'A' => 'dispatch()',
@@ -4005,12 +4789,12 @@ return [
             'C' => 'publish()',
             'D' => 'emit()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/messenger.rst',
     ],
-
-    // HttpKernel - SubRequest
-    [
+    348 => [
         'text' => 'Architecture: which HttpKernelInterface constant creates a sub-request?',
         'answers' => [
             'A' => 'HttpKernelInterface::SUB_REQUEST',
@@ -4018,10 +4802,12 @@ return [
             'C' => 'HttpKernelInterface::INTERNAL_REQUEST',
             'D' => 'HttpKernelInterface::NESTED_REQUEST',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/components/http_kernel.rst',
     ],
-    [
+    349 => [
         'text' => 'Architecture: which HttpKernelInterface constant represents the main request?',
         'answers' => [
             'A' => 'HttpKernelInterface::MAIN_REQUEST',
@@ -4029,12 +4815,12 @@ return [
             'C' => 'HttpKernelInterface::PRIMARY_REQUEST',
             'D' => 'HttpKernelInterface::ROOT_REQUEST',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/components/http_kernel.rst',
     ],
-
-    // Request - Content Negotiation
-    [
+    350 => [
         'text' => 'Controllers: which Request method returns the request format?',
         'answers' => [
             'A' => 'getRequestFormat()',
@@ -4042,10 +4828,12 @@ return [
             'C' => 'getContentFormat()',
             'D' => 'format()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    351 => [
         'text' => 'Controllers: which Request method sets the request format?',
         'answers' => [
             'A' => 'setRequestFormat()',
@@ -4053,10 +4841,12 @@ return [
             'C' => 'format()',
             'D' => 'setContentFormat()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    352 => [
         'text' => 'Controllers: which Request method gets format from MIME type?',
         'answers' => [
             'A' => 'getFormat()',
@@ -4064,10 +4854,12 @@ return [
             'C' => 'formatFromMime()',
             'D' => 'mimeToFormat()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    353 => [
         'text' => 'Controllers: which Request method gets MIME types for a format?',
         'answers' => [
             'A' => 'getMimeTypes()',
@@ -4075,12 +4867,12 @@ return [
             'C' => 'mimeTypes()',
             'D' => 'formatMimeTypes()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Response - Content Disposition
-    [
+    354 => [
         'text' => 'Controllers: which ResponseHeaderBag method creates Content-Disposition header?',
         'answers' => [
             'A' => 'makeDisposition()',
@@ -4088,10 +4880,12 @@ return [
             'C' => 'createDisposition()',
             'D' => 'disposition()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    355 => [
         'text' => 'Controllers: which disposition types are available in ResponseHeaderBag?',
         'answers' => [
             'A' => 'ResponseHeaderBag::DISPOSITION_ATTACHMENT',
@@ -4099,12 +4893,13 @@ return [
             'C' => 'ResponseHeaderBag::DISPOSITION_FORM_DATA',
             'D' => 'ResponseHeaderBag::DISPOSITION_DOWNLOAD',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // JsonResponse
-    [
+    356 => [
         'text' => 'Controllers: which JsonResponse method sets the data?',
         'answers' => [
             'A' => 'setData()',
@@ -4112,10 +4907,12 @@ return [
             'C' => 'setContent()',
             'D' => 'data()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    357 => [
         'text' => 'Controllers: which JsonResponse options control encoding?',
         'answers' => [
             'A' => 'JSON_HEX_TAG',
@@ -4123,10 +4920,15 @@ return [
             'C' => 'JSON_HEX_AMP',
             'D' => 'JSON_HEX_QUOT',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    358 => [
         'text' => 'Controllers: which JsonResponse method sets encoding options?',
         'answers' => [
             'A' => 'setEncodingOptions()',
@@ -4134,12 +4936,12 @@ return [
             'C' => 'setOptions()',
             'D' => 'jsonOptions()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // RedirectResponse
-    [
+    359 => [
         'text' => 'Controllers: which RedirectResponse method sets the target URL?',
         'answers' => [
             'A' => 'setTargetUrl()',
@@ -4147,10 +4949,12 @@ return [
             'C' => 'setLocation()',
             'D' => 'redirect()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-    [
+    360 => [
         'text' => 'Controllers: which RedirectResponse method returns the target URL?',
         'answers' => [
             'A' => 'getTargetUrl()',
@@ -4158,12 +4962,12 @@ return [
             'C' => 'getLocation()',
             'D' => 'targetUrl()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/controller.rst',
     ],
-
-    // Routing - Route Options
-    [
+    361 => [
         'text' => 'Routing: which Route option sets the path?',
         'answers' => [
             'A' => 'path',
@@ -4171,10 +4975,12 @@ return [
             'C' => 'url',
             'D' => 'pattern',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    362 => [
         'text' => 'Routing: which Route method sets defaults?',
         'answers' => [
             'A' => 'setDefaults()',
@@ -4182,10 +4988,14 @@ return [
             'C' => 'addDefaults()',
             'D' => 'defaults()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    363 => [
         'text' => 'Routing: which Route method sets requirements?',
         'answers' => [
             'A' => 'setRequirements()',
@@ -4193,10 +5003,13 @@ return [
             'C' => 'addRequirements()',
             'D' => 'requirements()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    364 => [
         'text' => 'Routing: which Route method sets options?',
         'answers' => [
             'A' => 'setOptions()',
@@ -4204,10 +5017,13 @@ return [
             'C' => 'addOptions()',
             'D' => 'options()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    365 => [
         'text' => 'Routing: which Route method sets the host?',
         'answers' => [
             'A' => 'setHost()',
@@ -4215,12 +5031,12 @@ return [
             'C' => 'setDomain()',
             'D' => 'domain()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Router Matching
-    [
+    366 => [
         'text' => 'Routing: which RouterInterface method matches a request?',
         'answers' => [
             'A' => 'matchRequest()',
@@ -4228,10 +5044,13 @@ return [
             'C' => 'findRoute()',
             'D' => 'resolve()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    367 => [
         'text' => 'Routing: which exception is thrown when no route matches?',
         'answers' => [
             'A' => 'ResourceNotFoundException',
@@ -4239,10 +5058,12 @@ return [
             'C' => 'NoMatchException',
             'D' => 'RoutingException',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-    [
+    368 => [
         'text' => 'Routing: which exception is thrown when HTTP method is not allowed?',
         'answers' => [
             'A' => 'MethodNotAllowedException',
@@ -4250,12 +5071,12 @@ return [
             'C' => 'HttpMethodException',
             'D' => 'NotAllowedException',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/routing.rst',
     ],
-
-    // Twig Extensions
-    [
+    369 => [
         'text' => 'Twig: which interface must a Twig extension implement?',
         'answers' => [
             'A' => 'ExtensionInterface',
@@ -4263,10 +5084,12 @@ return [
             'C' => 'Extension',
             'D' => 'TwigExtension',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    370 => [
         'text' => 'Twig: which class should a Twig extension extend?',
         'answers' => [
             'A' => 'AbstractExtension',
@@ -4274,10 +5097,12 @@ return [
             'C' => 'BaseExtension',
             'D' => 'TwigExtension',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    371 => [
         'text' => 'Twig: which extension methods register custom features?',
         'answers' => [
             'A' => 'getFilters()',
@@ -4285,12 +5110,15 @@ return [
             'C' => 'getTests()',
             'D' => 'getOperators()',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Twig - Template References
-    [
+    372 => [
         'text' => 'Twig: which function returns the parent template name?',
         'answers' => [
             'A' => 'No such function exists',
@@ -4298,10 +5126,12 @@ return [
             'C' => 'get_parent()',
             'D' => 'template_parent()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    373 => [
         'text' => 'Twig: which syntax includes a template?',
         'answers' => [
             'A' => '{% include %}',
@@ -4309,10 +5139,12 @@ return [
             'C' => '{% use %}',
             'D' => '{% embed %}',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-    [
+    374 => [
         'text' => 'Twig: which syntax imports macros?',
         'answers' => [
             'A' => '{% import %}',
@@ -4320,12 +5152,13 @@ return [
             'C' => '{% use %}',
             'D' => '{% include %}',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/templates.rst',
     ],
-
-    // Forms - FormInterface Methods
-    [
+    375 => [
         'text' => 'Forms: which FormInterface method adds a child form?',
         'answers' => [
             'A' => 'add()',
@@ -4333,10 +5166,12 @@ return [
             'C' => 'addForm()',
             'D' => 'appendChild()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    376 => [
         'text' => 'Forms: which FormInterface method removes a child form?',
         'answers' => [
             'A' => 'remove()',
@@ -4344,10 +5179,12 @@ return [
             'C' => 'delete()',
             'D' => 'removeForm()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    377 => [
         'text' => 'Forms: which FormInterface method checks if a child exists?',
         'answers' => [
             'A' => 'has()',
@@ -4355,10 +5192,12 @@ return [
             'C' => 'contains()',
             'D' => 'exists()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    378 => [
         'text' => 'Forms: which FormInterface method retrieves a child form?',
         'answers' => [
             'A' => 'get()',
@@ -4366,10 +5205,12 @@ return [
             'C' => 'child()',
             'D' => 'find()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    379 => [
         'text' => 'Forms: which FormInterface method returns all children?',
         'answers' => [
             'A' => 'all()',
@@ -4377,12 +5218,12 @@ return [
             'C' => 'children()',
             'D' => 'getAll()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Forms - Form State
-    [
+    380 => [
         'text' => 'Forms: which FormInterface method checks if form is valid?',
         'answers' => [
             'A' => 'isValid()',
@@ -4390,10 +5231,12 @@ return [
             'C' => 'hasErrors()',
             'D' => 'validate()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    381 => [
         'text' => 'Forms: which FormInterface method returns form errors?',
         'answers' => [
             'A' => 'getErrors()',
@@ -4401,10 +5244,12 @@ return [
             'C' => 'getViolations()',
             'D' => 'violations()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-    [
+    382 => [
         'text' => 'Forms: which FormInterface method creates the form view?',
         'answers' => [
             'A' => 'createView()',
@@ -4412,12 +5257,12 @@ return [
             'C' => 'view()',
             'D' => 'toView()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/forms.rst',
     ],
-
-    // Validation - ValidatorInterface
-    [
+    383 => [
         'text' => 'Validation: which ValidatorInterface method validates a value?',
         'answers' => [
             'A' => 'validate()',
@@ -4425,10 +5270,12 @@ return [
             'C' => 'verify()',
             'D' => 'assert()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    384 => [
         'text' => 'Validation: which ValidatorInterface method validates a property?',
         'answers' => [
             'A' => 'validateProperty()',
@@ -4436,10 +5283,13 @@ return [
             'C' => 'checkProperty()',
             'D' => 'verifyProperty()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    385 => [
         'text' => 'Validation: which method returns ConstraintViolationListInterface?',
         'answers' => [
             'A' => 'validate()',
@@ -4447,12 +5297,14 @@ return [
             'C' => 'validatePropertyValue()',
             'D' => 'getViolations()',
         ],
-        'correctAnswers' => 'A,B,C',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Validation - Constraint Validator
-    [
+    386 => [
         'text' => 'Validation: which class must a constraint validator extend?',
         'answers' => [
             'A' => 'ConstraintValidator',
@@ -4460,10 +5312,12 @@ return [
             'C' => 'BaseValidator',
             'D' => 'Validator',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    387 => [
         'text' => 'Validation: which method must a constraint validator implement?',
         'answers' => [
             'A' => 'validate()',
@@ -4471,10 +5325,12 @@ return [
             'C' => 'verify()',
             'D' => 'assert()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-    [
+    388 => [
         'text' => 'Validation: which ExecutionContextInterface method adds a violation?',
         'answers' => [
             'A' => 'buildViolation()',
@@ -4482,12 +5338,13 @@ return [
             'C' => 'violation()',
             'D' => 'createViolation()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/validation.rst',
     ],
-
-    // Dependency Injection - Container Interface
-    [
+    389 => [
         'text' => 'Dependency Injection: which ContainerInterface method retrieves a service?',
         'answers' => [
             'A' => 'get()',
@@ -4495,10 +5352,12 @@ return [
             'C' => 'service()',
             'D' => 'retrieve()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    390 => [
         'text' => 'Dependency Injection: which ContainerInterface method checks if service exists?',
         'answers' => [
             'A' => 'has()',
@@ -4506,10 +5365,12 @@ return [
             'C' => 'hasService()',
             'D' => 'contains()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    391 => [
         'text' => 'Dependency Injection: which exception is thrown for missing service?',
         'answers' => [
             'A' => 'ServiceNotFoundException',
@@ -4517,12 +5378,12 @@ return [
             'C' => 'ContainerException',
             'D' => 'NotFoundException',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Dependency Injection - Compiler Pass
-    [
+    392 => [
         'text' => 'Dependency Injection: which interface must a compiler pass implement?',
         'answers' => [
             'A' => 'CompilerPassInterface',
@@ -4530,10 +5391,12 @@ return [
             'C' => 'ContainerPassInterface',
             'D' => 'BuildPassInterface',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    393 => [
         'text' => 'Dependency Injection: which method must a compiler pass implement?',
         'answers' => [
             'A' => 'process()',
@@ -4541,10 +5404,12 @@ return [
             'C' => 'build()',
             'D' => 'execute()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-    [
+    394 => [
         'text' => 'Dependency Injection: which PassConfig constants set compiler pass type?',
         'answers' => [
             'A' => 'PassConfig::TYPE_BEFORE_OPTIMIZATION',
@@ -4552,12 +5417,15 @@ return [
             'C' => 'PassConfig::TYPE_BEFORE_REMOVING',
             'D' => 'PassConfig::TYPE_REMOVE',
         ],
-        'correctAnswers' => 'A,B,C,D',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
         'linkAtDocumentation' => 'sf-doc/service_container.rst',
     ],
-
-    // Security - FirewallInterface
-    [
+    395 => [
         'text' => 'Security: which attribute configures firewall for a controller?',
         'answers' => [
             'A' => 'No attribute exists for this',
@@ -4565,10 +5433,12 @@ return [
             'C' => '#[Security]',
             'D' => '#[IsGranted]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    396 => [
         'text' => 'Security: which security.yaml key defines firewalls?',
         'answers' => [
             'A' => 'firewalls',
@@ -4576,10 +5446,12 @@ return [
             'C' => 'security_firewalls',
             'D' => 'access_control',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    397 => [
         'text' => 'Security: which firewall option makes it stateless?',
         'answers' => [
             'A' => 'stateless',
@@ -4587,12 +5459,12 @@ return [
             'C' => 'remember_me',
             'D' => 'lazy',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // Security - UserInterface
-    [
+    398 => [
         'text' => 'Security: which UserInterface method returns the username?',
         'answers' => [
             'A' => 'getUserIdentifier()',
@@ -4600,10 +5472,12 @@ return [
             'C' => 'getIdentifier()',
             'D' => 'getId()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    399 => [
         'text' => 'Security: which UserInterface method returns user roles?',
         'answers' => [
             'A' => 'getRoles()',
@@ -4611,10 +5485,12 @@ return [
             'C' => 'getUserRoles()',
             'D' => 'getAuthorities()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-    [
+    400 => [
         'text' => 'Security: which UserInterface method erases credentials?',
         'answers' => [
             'A' => 'eraseCredentials()',
@@ -4622,12 +5498,12 @@ return [
             'C' => 'removeCredentials()',
             'D' => 'resetCredentials()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/security.rst',
     ],
-
-    // HTTP Cache - Cache Control Directives
-    [
+    401 => [
         'text' => 'HTTP Cache: which Response method sets cache as private?',
         'answers' => [
             'A' => 'setPrivate()',
@@ -4635,10 +5511,12 @@ return [
             'C' => 'setCachePrivate()',
             'D' => 'makePrivate()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    402 => [
         'text' => 'HTTP Cache: which Response method sets s-maxage?',
         'answers' => [
             'A' => 'setSharedMaxAge()',
@@ -4646,10 +5524,12 @@ return [
             'C' => 'setProxyMaxAge()',
             'D' => 'sharedMaxAge()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    403 => [
         'text' => 'HTTP Cache: which Response method marks response as immutable?',
         'answers' => [
             'A' => 'setImmutable()',
@@ -4657,12 +5537,12 @@ return [
             'C' => 'makeImmutable()',
             'D' => 'setCacheImmutable()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // HTTP Cache - Validation
-    [
+    404 => [
         'text' => 'HTTP Cache: which Response method sets ETag?',
         'answers' => [
             'A' => 'setEtag()',
@@ -4670,10 +5550,12 @@ return [
             'C' => 'setEntityTag()',
             'D' => 'entityTag()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    405 => [
         'text' => 'HTTP Cache: which Response method sets Last-Modified?',
         'answers' => [
             'A' => 'setLastModified()',
@@ -4681,10 +5563,12 @@ return [
             'C' => 'setModified()',
             'D' => 'modified()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    406 => [
         'text' => 'HTTP Cache: which Request method returns If-None-Match header?',
         'answers' => [
             'A' => 'getETags()',
@@ -4692,10 +5576,12 @@ return [
             'C' => 'getETag()',
             'D' => 'ifNoneMatch()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-    [
+    407 => [
         'text' => 'HTTP Cache: which Request method returns If-Modified-Since header?',
         'answers' => [
             'A' => 'headers->get("If-Modified-Since")',
@@ -4703,12 +5589,12 @@ return [
             'C' => 'ifModifiedSince()',
             'D' => 'getModifiedSince()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/http_cache.rst',
     ],
-
-    // Console - Command Registration
-    [
+    408 => [
         'text' => 'Console: which attribute registers a console command?',
         'answers' => [
             'A' => '#[AsCommand]',
@@ -4716,10 +5602,12 @@ return [
             'C' => '#[Console]',
             'D' => '#[ConsoleCommand]',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    409 => [
         'text' => 'Console: which Command method sets the command name?',
         'answers' => [
             'A' => 'setName()',
@@ -4727,10 +5615,12 @@ return [
             'C' => 'setCommandName()',
             'D' => 'commandName()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    410 => [
         'text' => 'Console: which Command method sets the description?',
         'answers' => [
             'A' => 'setDescription()',
@@ -4738,10 +5628,12 @@ return [
             'C' => 'setHelp()',
             'D' => 'help()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    411 => [
         'text' => 'Console: which Command method sets the help text?',
         'answers' => [
             'A' => 'setHelp()',
@@ -4749,12 +5641,12 @@ return [
             'C' => 'setDescription()',
             'D' => 'setHelpText()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Console - Input Definition
-    [
+    412 => [
         'text' => 'Console: which Command method adds an argument?',
         'answers' => [
             'A' => 'addArgument()',
@@ -4762,10 +5654,12 @@ return [
             'C' => 'setArgument()',
             'D' => 'defineArgument()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    413 => [
         'text' => 'Console: which Command method adds an option?',
         'answers' => [
             'A' => 'addOption()',
@@ -4773,10 +5667,12 @@ return [
             'C' => 'setOption()',
             'D' => 'defineOption()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    414 => [
         'text' => 'Console: which InputArgument mode makes it required?',
         'answers' => [
             'A' => 'InputArgument::REQUIRED',
@@ -4784,10 +5680,12 @@ return [
             'C' => 'InputArgument::NEEDED',
             'D' => 'InputArgument::MUST',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    415 => [
         'text' => 'Console: which InputOption mode requires a value?',
         'answers' => [
             'A' => 'InputOption::VALUE_REQUIRED',
@@ -4795,10 +5693,12 @@ return [
             'C' => 'InputOption::MUST_HAVE_VALUE',
             'D' => 'InputOption::NEEDS_VALUE',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    416 => [
         'text' => 'Console: which InputOption mode makes value optional?',
         'answers' => [
             'A' => 'InputOption::VALUE_OPTIONAL',
@@ -4806,10 +5706,12 @@ return [
             'C' => 'InputOption::MAY_HAVE_VALUE',
             'D' => 'InputOption::CAN_HAVE_VALUE',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-    [
+    417 => [
         'text' => 'Console: which InputOption mode creates a flag?',
         'answers' => [
             'A' => 'InputOption::VALUE_NONE',
@@ -4817,12 +5719,12 @@ return [
             'C' => 'InputOption::FLAG',
             'D' => 'InputOption::BOOLEAN',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/console.rst',
     ],
-
-    // Testing - Client Configuration
-    [
+    418 => [
         'text' => 'Testing: which Client method follows redirects?',
         'answers' => [
             'A' => 'followRedirects()',
@@ -4830,10 +5732,13 @@ return [
             'C' => 'setFollowRedirects()',
             'D' => 'autoRedirect()',
         ],
-        'correctAnswers' => 'A,B',
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    419 => [
         'text' => 'Testing: which Client method gets the response?',
         'answers' => [
             'A' => 'getResponse()',
@@ -4841,10 +5746,12 @@ return [
             'C' => 'getLastResponse()',
             'D' => 'lastResponse()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    420 => [
         'text' => 'Testing: which Client method gets the crawler?',
         'answers' => [
             'A' => 'getCrawler()',
@@ -4852,10 +5759,12 @@ return [
             'C' => 'getLastCrawler()',
             'D' => 'dom()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    421 => [
         'text' => 'Testing: which Client method gets internal request?',
         'answers' => [
             'A' => 'getInternalRequest()',
@@ -4863,12 +5772,12 @@ return [
             'C' => 'request()',
             'D' => 'internalRequest()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-
-    // Testing - Crawler Filters
-    [
+    422 => [
         'text' => 'Testing: which Crawler method filters by CSS selector?',
         'answers' => [
             'A' => 'filter()',
@@ -4876,10 +5785,12 @@ return [
             'C' => 'css()',
             'D' => 'select()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    423 => [
         'text' => 'Testing: which Crawler method filters by XPath?',
         'answers' => [
             'A' => 'filterXPath()',
@@ -4887,10 +5798,12 @@ return [
             'C' => 'filterByXPath()',
             'D' => 'xpathFilter()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    424 => [
         'text' => 'Testing: which Crawler method returns element text?',
         'answers' => [
             'A' => 'text()',
@@ -4898,10 +5811,12 @@ return [
             'C' => 'content()',
             'D' => 'innerText()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    425 => [
         'text' => 'Testing: which Crawler method returns element HTML?',
         'answers' => [
             'A' => 'html()',
@@ -4909,10 +5824,12 @@ return [
             'C' => 'outerHtml()',
             'D' => 'innerHTML()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
-    [
+    426 => [
         'text' => 'Testing: which Crawler method returns an attribute value?',
         'answers' => [
             'A' => 'attr()',
@@ -4920,7 +5837,9 @@ return [
             'C' => 'getAttribute()',
             'D' => 'get()',
         ],
-        'correctAnswers' => 'A',
+        'correctAnswers' => [
+            0 => 'A',
+        ],
         'linkAtDocumentation' => 'sf-doc/testing.rst',
     ],
 ];

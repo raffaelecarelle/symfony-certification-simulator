@@ -6,13 +6,14 @@ final class Question
 {
     /**
      * @param array<string, string> $answers
+     * @param list<string>          $correctAnswers
      */
     public function __construct(
         private readonly string $text,
         private readonly array $answers,
-        private readonly string $correctAnswers,
+        private readonly array $correctAnswers,
         private readonly ?string $linkAtDocumentation = null,
-        private ?bool $isCorrect = null
+        private ?bool $isCorrect = null,
     ) {
     }
 
@@ -29,14 +30,22 @@ final class Question
         return $this->answers;
     }
 
-    public function getCorrectAnswer(): string
+    /**
+     * @return string[]
+     */
+    public function getCorrectAnswer(): array
     {
         return $this->correctAnswers;
     }
 
-    public function isCorrect(string $answer): bool
+    /**
+     * @param list<string> $answer
+     */
+    public function isCorrect(array $answer): bool
     {
-        $isCorrect = strtolower($this->correctAnswers) === strtolower($answer);
+        sort($answer);
+
+        $isCorrect = $answer === $this->correctAnswers;
         $this->isCorrect = $isCorrect;
 
         return $isCorrect;
@@ -49,7 +58,7 @@ final class Question
 
     public function getLinkAtDocumentation(): ?string
     {
-        if ($this->linkAtDocumentation === null) {
+        if (null === $this->linkAtDocumentation) {
             return null;
         }
 
@@ -70,7 +79,7 @@ final class Question
         }
 
         // Remove prefix/suffix
-        $core = substr($docPath, strlen($prefix), -strlen($suffix));
+        $core = substr($docPath, \strlen($prefix), -\strlen($suffix));
 
         // 1) language/...
         if (str_starts_with($core, 'language/')) {
@@ -78,17 +87,17 @@ final class Question
         }
         // 2) reference/*/functions/foo
         elseif (preg_match('#^reference/[^/]+/functions/([^/]+)$#', $core, $m)) {
-            $slug = 'function.' . $m[1];
+            $slug = 'function.'.$m[1];
         }
         // 3) reference/spl/Class/method
         elseif (preg_match('#^reference/spl/([^/]+)/([^/]+)$#', $core, $m)) {
-            $slug = $m[1] . '.' . $m[2];
+            $slug = $m[1].'.'.$m[2];
         }
         // 4) fallback: replace / with .
         else {
             $slug = str_replace('/', '.', $core);
         }
 
-        return 'https://www.php.net/manual/en/' . $slug . '.php';
+        return 'https://www.php.net/manual/en/'.$slug.'.php';
     }
 }

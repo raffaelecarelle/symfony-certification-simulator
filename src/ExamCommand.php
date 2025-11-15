@@ -26,14 +26,14 @@ class ExamCommand extends Command
 
         $examFactory = new ExamFactory();
         $exam = $examFactory->make();
-        $style->writeln(sprintf('You have %d questions to answer.', $exam->getNumberOfQuestions()));
+        $style->writeln(\sprintf('You have %d questions to answer.', $exam->getNumberOfQuestions()));
         $questions = $exam->getQuestions();
 
-        $progressBar = $style->createProgressBar(count($questions));
+        $progressBar = $style->createProgressBar(\count($questions));
         $progressBar->start();
         $style->newLine(2);
 
-        while (count($questions) > 0) {
+        while (\count($questions) > 0) {
             /** @var Question $question */
             $question = array_shift($questions);
 
@@ -42,19 +42,19 @@ class ExamCommand extends Command
             $helper = new QuestionHelper();
             $choiceQuestion = new ChoiceQuestion('', $question->getAnswers());
             $choiceQuestion->setErrorMessage('Answer %s is invalid.');
-            $choiceQuestion->setMultiselect(count(explode(',', $question->getCorrectAnswer())) > 1);
+            $choiceQuestion->setMultiselect(\count($question->getCorrectAnswer()) > 1);
 
             $answer = $helper->ask($input, $output, $choiceQuestion);
 
-            if (is_array($answer)) {
-                $answer = implode(',', $answer);
+            if (\is_string($answer)) {
+                $answer = [$answer];
             }
 
             if ($question->isCorrect($answer)) {
                 $style->success('Correct!');
             } else {
-                if ($question->getLinkAtDocumentation() !== null) {
-                    $style->error('The answer is incorrect. The link at documentation is: ' . $question->getLinkAtDocumentation());
+                if (null !== $question->getLinkAtDocumentation()) {
+                    $style->error('The answer is incorrect. The link at documentation is: '.$question->getLinkAtDocumentation());
                 } else {
                     $style->error('The answer is incorrect.');
                 }
@@ -70,7 +70,7 @@ class ExamCommand extends Command
         $style->table(
             ['Total Score', 'Corrects', 'Incorrect'],
             [
-                [$exam->getPercentage() . '%', $exam->getCorrectCount(), $exam->getIncorrectCount()]
+                [$exam->getPercentage().'%', $exam->getCorrectCount(), $exam->getIncorrectCount()],
             ]
         );
 

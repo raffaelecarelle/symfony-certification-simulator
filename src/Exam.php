@@ -5,15 +5,15 @@ namespace App;
 final readonly class Exam
 {
     /**
-     *  @param Question[] $questions
+     * @param Question[] $questions
      */
     public function __construct(
-        private array $questions
+        private array $questions,
     ) {
     }
 
     /**
-     *  @return Question[]
+     * @return Question[]
      */
     public function getQuestions(): array
     {
@@ -22,17 +22,17 @@ final readonly class Exam
 
     public function getNumberOfQuestions(): int
     {
-        return count($this->questions);
+        return \count($this->questions);
     }
 
     public function getCorrectAnswers(): int
     {
-        return count(array_filter($this->questions, fn (Question $question) => $question->isAnsweredCorrectly()));
+        return \count(array_filter($this->questions, fn (Question $question) => $question->isAnsweredCorrectly()));
     }
 
     public function getPercentage(): float
     {
-        if ($this->getNumberOfQuestions() === 0) {
+        if (0 === $this->getNumberOfQuestions()) {
             return 0;
         }
 
@@ -51,7 +51,7 @@ final readonly class Exam
 
     public function getPercentageCorrect(): float
     {
-        if ($this->getNumberOfQuestions() === 0) {
+        if (0 === $this->getNumberOfQuestions()) {
             return 0;
         }
 
@@ -60,7 +60,7 @@ final readonly class Exam
 
     public function getPercentageIncorrect(): float
     {
-        if ($this->getNumberOfQuestions() === 0) {
+        if (0 === $this->getNumberOfQuestions()) {
             return 0;
         }
 

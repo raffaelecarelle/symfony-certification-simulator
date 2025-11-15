@@ -7,7 +7,7 @@ final readonly class ExamFactory
     private const QUESTIONS_COUNT = 75;
 
     public function __construct(
-        private QuestionProvider $questionProvider = new QuestionProvider()
+        private QuestionProvider $questionProvider = new QuestionProvider(),
     ) {
     }
 
@@ -23,15 +23,16 @@ final readonly class ExamFactory
 
             // Original answers and original correct indexes
             /** @var array<string, string> $originalAnswers */
-            $originalAnswers       = $question['answers'];
-            $originalCorrectIndexes = explode(',', $question['correctAnswers']);
+            $originalAnswers = $question['answers'];
+            /** @var array<string> $originalCorrectIndexes */
+            $originalCorrectIndexes = $question['correctAnswers'];
 
             // 1. Attach the original index to each answer
             $answersWithIndex = [];
             foreach ($originalAnswers as $i => $answerText) {
                 $answersWithIndex[] = [
                     'originalIndex' => $i,
-                    'text'          => $answerText,
+                    'text' => $answerText,
                 ];
             }
 
@@ -39,16 +40,16 @@ final readonly class ExamFactory
             shuffle($answersWithIndex);
 
             // 3. Rebuild the answers array and the new correct indexes
-            $shuffledAnswers        = [];
+            $shuffledAnswers = [];
             $shuffledCorrectIndexes = [];
 
             foreach ($answersWithIndex as $newIndex => $item) {
                 // Map 0 => 'A', 1 => 'B', 2 => 'C', ...
-                $label = chr(65 + $newIndex);
+                $label = \chr(65 + $newIndex);
                 $shuffledAnswers[$label] = $item['text'];
 
                 // if the original index was correct, the new index is correct
-                if (in_array($item['originalIndex'], $originalCorrectIndexes, true)) {
+                if (\in_array($item['originalIndex'], $originalCorrectIndexes, true)) {
                     $shuffledCorrectIndexes[] = $label;
                 }
             }
@@ -56,7 +57,7 @@ final readonly class ExamFactory
             $finalQuestions[] = new Question(
                 $question['text'],
                 $shuffledAnswers,
-                implode(',', $shuffledCorrectIndexes),
+                $shuffledCorrectIndexes,
                 $question['linkAtDocumentation'] ?? null,
             );
         }
