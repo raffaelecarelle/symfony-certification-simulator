@@ -13,10 +13,10 @@ A lightweight tool to simulate the official Symfony certification exam.
 ### What this project includes
 - sf-doc: a packaged subset or links to the official Symfony documentation used as reference.
 - php-doc: a packaged subset or links to the official PHP documentation used as reference.
-- A question bank and the simulator logic (75-question mode, randomization, scoring).
+- A question bank and the simulator logic (100-question mode, randomization, scoring).
 
 ### Key features
-- 75-question simulated session.
+- 100-question simulated session.
 - Multiple-choice questions with support for multiple correct answers.
 - Scoring and feedback with correct/incorrect indication and a link for further reading when available.
 - Ability to consult the reference documentation (sf-doc and php-doc) for each question.
