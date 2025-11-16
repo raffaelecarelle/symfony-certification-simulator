@@ -6,6 +6,7 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -13,6 +14,14 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 #[AsCommand(name: 'exam:start', description: 'Start the exam')]
 class ExamCommand extends Command
 {
+    protected function configure(): void
+    {
+        $this
+            ->addOption('php-only', 'p', InputOption::VALUE_NONE, 'Start the exam with only PHP questions .')
+            ->addOption('sf-only', 'S', InputOption::VALUE_NONE, 'Start the exam with only Symfony questions .')
+        ;
+    }
+
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $style = new SymfonyStyle($input, $output);
@@ -24,8 +33,11 @@ class ExamCommand extends Command
             EOF
         );
 
+        $phpOnly = $input->getOption('php-only');
+        $symfonyOnly = $input->getOption('sf-only');
+
         $examFactory = new ExamFactory();
-        $exam = $examFactory->make();
+        $exam = $examFactory->make(['phpOnly' => $phpOnly, 'symfonyOnly' => $symfonyOnly]);
         $style->writeln(\sprintf('You have %d questions to answer.', $exam->getNumberOfQuestions()));
         $questions = $exam->getQuestions();
 

@@ -11,13 +11,25 @@ final readonly class ExamFactory
     ) {
     }
 
-    public function make(): Exam
+    /**
+     * @param array{symfonyOnly?: bool, phpOnly?: bool} $options
+     */
+    public function make(array $options = []): Exam
     {
         $sfQuestions = $this->questionProvider->getSymfonyQuestions();
         $phpQuestions = $this->questionProvider->getPhpQuestions();
 
-        $sfIndexes = array_rand($sfQuestions, self::QUESTIONS_COUNT);
         $phpIndexes = array_rand($phpQuestions, 25 /* For now */);
+
+        if ($options['symfonyOnly'] ?? false) {
+            $phpIndexes = [];
+        }
+
+        $sfIndexes = array_rand($sfQuestions, self::QUESTIONS_COUNT);
+
+        if ($options['phpOnly'] ?? false) {
+            $sfIndexes = [];
+        }
 
         $finalQuestions = [];
         foreach ($sfIndexes as $index) {
