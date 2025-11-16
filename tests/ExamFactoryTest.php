@@ -15,14 +15,17 @@ class ExamFactoryTest extends TestCase
         $mockQuestionProvider = $this->createMock(QuestionProvider::class);
         $questions = $this->generateMockQuestions(100);
         $mockQuestionProvider->expects(self::once())
-            ->method('get')
+            ->method('getSymfonyQuestions')
+            ->willReturn($questions);
+        $mockQuestionProvider->expects(self::once())
+            ->method('getPhpQuestions')
             ->willReturn($questions);
 
         $examFactory = new ExamFactory($mockQuestionProvider);
         $exam = $examFactory->make();
 
         self::assertInstanceOf(Exam::class, $exam);
-        self::assertCount(ExamFactory::QUESTIONS_COUNT, $exam->getQuestions());
+        self::assertCount(75, $exam->getQuestions());
     }
 
     public function testMakeShufflesQuestions(): void
@@ -30,7 +33,10 @@ class ExamFactoryTest extends TestCase
         $mockQuestionProvider = $this->createMock(QuestionProvider::class);
         $questions = $this->generateMockQuestions(ExamFactory::QUESTIONS_COUNT);
         $mockQuestionProvider->expects(self::once())
-            ->method('get')
+            ->method('getSymfonyQuestions')
+            ->willReturn($questions);
+        $mockQuestionProvider->expects(self::once())
+            ->method('getPhpQuestions')
             ->willReturn($questions);
 
         $examFactory = new ExamFactory($mockQuestionProvider);
@@ -41,7 +47,7 @@ class ExamFactoryTest extends TestCase
         $shuffledTexts = array_map(fn (Question $q) => $q->getText(), $exam->getQuestions());
 
         self::assertNotSame($originalTexts, $shuffledTexts);
-        self::assertCount(ExamFactory::QUESTIONS_COUNT, $shuffledTexts);
+        self::assertCount(75, $shuffledTexts);
     }
 
     /**

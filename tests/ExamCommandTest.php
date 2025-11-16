@@ -3,7 +3,6 @@
 namespace App\Tests;
 
 use App\ExamCommand;
-use App\ExamFactory;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
@@ -16,7 +15,7 @@ class ExamCommandTest extends TestCase
 
         $inputs = [];
         $answers = ['A', 'B', 'C', 'D'];
-        for ($i = 1; $i <= ExamFactory::QUESTIONS_COUNT; ++$i) {
+        for ($i = 1; $i <= 75; ++$i) {
             $inputs[] = $answers[array_rand($answers)];
         }
 
