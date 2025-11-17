@@ -37,7 +37,7 @@ class ExamCommand extends Command
         $phpOnly = (bool) $input->getOption('php-only');
         $symfonyOnly = $input->getOption('sf-only');
         $phpQuestionCap = (int) $input->getOption('php-questions');
-        $sfQuestionCap = (int) $input->getOption('php-questions');
+        $sfQuestionCap = (int) $input->getOption('sf-questions');
 
         $examFactory = new ExamFactory();
         $exam = $examFactory->make(['phpOnly' => $phpOnly, 'sfOnly' => $symfonyOnly, 'phpQuestionCap' => $phpQuestionCap, 'sfQuestionCap' => $sfQuestionCap]);

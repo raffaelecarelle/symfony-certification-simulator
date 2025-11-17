@@ -18,13 +18,13 @@ final readonly class ExamFactory
     {
         $finalQuestions = [];
 
-        if (false === $options['phpOnly'] || true === $options['sfOnly']) {
+        if ((false === $options['phpOnly'] || true === $options['sfOnly']) && $options['sfQuestionCap'] >= 1) {
             $sfQuestions = $this->questionProvider->getSymfonyQuestions();
             $sfIndexes = array_rand($sfQuestions, $options['sfQuestionCap']);
             $this->createRandomQuestionSet($sfIndexes, $sfQuestions, $finalQuestions);
         }
 
-        if (false === $options['sfOnly'] || true === $options['phpOnly']) {
+        if ((false === $options['sfOnly'] || true === $options['phpOnly']) && $options['phpQuestionCap'] >= 1) {
             $phpQuestions = $this->questionProvider->getPhpQuestions();
             $phpIndexes = array_rand($phpQuestions, $options['phpQuestionCap']);
             $this->createRandomQuestionSet($phpIndexes, $phpQuestions, $finalQuestions);

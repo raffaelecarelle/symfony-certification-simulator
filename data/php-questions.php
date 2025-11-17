@@ -3057,4 +3057,646 @@ return [
         ],
         'linkAtDocumentation' => 'php-doc/reference/spl/recursiveiterator.xml',
     ],
+    [
+        'text' => 'OOP Overloading: Which statements about property overloading magic methods are correct?',
+        'answers' => [
+            'A' => 'All overloading methods must be declared as public',
+            'B' => 'None of the arguments can be passed by reference',
+            'C' => 'Property overloading only works in object context (not static)',
+            'D' => 'Overloading methods can be declared as protected',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/overloading.xml',
+    ],
+    [
+        'text' => 'OOP Overloading: What is the return value behavior of __set() magic method?',
+        'answers' => [
+            'A' => 'Return value is ignored due to assignment operator processing',
+            'B' => 'Must return true on success, false on failure',
+            'C' => 'Must return void',
+            'D' => 'Return value becomes the assigned value',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/overloading.xml',
+    ],
+    [
+        'text' => 'OOP Overloading: When does the __get() magic method get called?',
+        'answers' => [
+            'A' => 'Reading from inaccessible or non-existing properties',
+            'B' => 'Writing to inaccessible properties',
+            'C' => 'On chained assignments like $a = $obj->b = 8',
+            'D' => 'Within itself (recursively)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/overloading.xml',
+    ],
+    [
+        'text' => 'OOP Overloading: Which magic methods are invoked when calling isset() or empty() on inaccessible properties?',
+        'answers' => [
+            'A' => '__isset()',
+            'B' => '__get()',
+            'C' => '__set()',
+            'D' => '__unset()',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/overloading.xml',
+    ],
+    [
+        'text' => 'OOP Overloading: Which statements about __call() and __callStatic() are correct?',
+        'answers' => [
+            'A' => '__call() is invoked for inaccessible methods in object context',
+            'B' => '__callStatic() is invoked for inaccessible methods in static context',
+            'C' => 'Method name passed to these methods is case-sensitive',
+            'D' => 'Method name is case-insensitive',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/overloading.xml',
+    ],
+    [
+        'text' => 'OOP Final: From which PHP version can constants be declared as final?',
+        'answers' => [
+            'A' => 'PHP 8.1.0',
+            'B' => 'PHP 8.0.0',
+            'C' => 'PHP 8.2.0',
+            'D' => 'PHP 7.4.0',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/final.xml',
+    ],
+    [
+        'text' => 'OOP Final: Which statements about final private methods are correct in PHP 8.0.0+?',
+        'answers' => [
+            'A' => 'Private methods may NOT be declared final (except constructors)',
+            'B' => 'Private constructors can be declared final',
+            'C' => 'All private methods can be declared final',
+            'D' => 'Final modifier is ignored for private methods',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/final.xml',
+    ],
+    [
+        'text' => 'OOP Final: What happens when a class is declared final?',
+        'answers' => [
+            'A' => 'The class cannot be extended',
+            'B' => 'All methods become implicitly final',
+            'C' => 'All properties become readonly',
+            'D' => 'The class cannot be instantiated',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/final.xml',
+    ],
+    [
+        'text' => 'OOP Visibility: Which statements about asymmetric property visibility (PHP 8.4) are correct?',
+        'answers' => [
+            'A' => 'Only typed properties can have separate set visibility',
+            'B' => 'Set visibility must be same or more restrictive than get visibility',
+            'C' => 'private(set) properties are automatically final',
+            'D' => 'Untyped properties can have asymmetric visibility',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/visibility.xml',
+    ],
+    [
+        'text' => 'OOP Visibility: What syntax is used for asymmetric property visibility in PHP 8.4?',
+        'answers' => [
+            'A' => 'public private(set) string $title',
+            'B' => 'public string $title { private set; }',
+            'C' => 'public private( set ) string $title',
+            'D' => 'If property is public, main visibility may be omitted: private(set)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/visibility.xml',
+    ],
+    [
+        'text' => 'OOP Visibility: Can objects of the same type access each other\'s private and protected members?',
+        'answers' => [
+            'A' => 'Yes, even if they are different instances',
+            'B' => 'No, only the same instance',
+            'C' => 'Only protected members',
+            'D' => 'Only in static contexts',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/visibility.xml',
+    ],
+    [
+        'text' => 'OOP Visibility: From which PHP version can class constants have visibility modifiers?',
+        'answers' => [
+            'A' => 'PHP 7.1.0',
+            'B' => 'PHP 7.0.0',
+            'C' => 'PHP 7.2.0',
+            'D' => 'PHP 8.0.0',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/visibility.xml',
+    ],
+    [
+        'text' => 'OOP Static: What happens when trying to access a static property using the object operator -> ?',
+        'answers' => [
+            'A' => 'Triggers a Notice or Warning',
+            'B' => 'Works correctly',
+            'C' => 'Fatal error',
+            'D' => 'Property is treated as non-static',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/static.xml',
+    ],
+    [
+        'text' => 'OOP Static: Which statements about static methods are correct?',
+        'answers' => [
+            'A' => 'Static methods cannot use $this',
+            'B' => 'Calling non-static methods statically throws Error in PHP 8.0+',
+            'C' => 'Static methods can access static properties',
+            'D' => 'Static methods can use $this in PHP 7.4',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/static.xml',
+    ],
+    [
+        'text' => 'OOP Iterations: What properties are visible when iterating over an object with foreach from outside the class?',
+        'answers' => [
+            'A' => 'Only public properties',
+            'B' => 'Public and protected properties',
+            'C' => 'Public, protected, and private properties',
+            'D' => 'All declared properties',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/iterations.xml',
+    ],
+    [
+        'text' => 'OOP Iterations: What properties are visible when iterating over an object with foreach from inside the class?',
+        'answers' => [
+            'A' => 'Public, protected, AND private properties',
+            'B' => 'Only public properties',
+            'C' => 'Only public and protected properties',
+            'D' => 'Depends on visibility modifiers',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/iterations.xml',
+    ],
+    [
+        'text' => 'OOP Scope Resolution: What does the scope resolution operator :: allow access to?',
+        'answers' => [
+            'A' => 'Constants',
+            'B' => 'Static properties',
+            'C' => 'Static methods',
+            'D' => 'Instance properties',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/paamayim-nekudotayim.xml',
+    ],
+    [
+        'text' => 'Closures: Which statements about Closure::bindTo() are correct?',
+        'answers' => [
+            'A' => 'Duplicates closure with new bound object and class scope',
+            'B' => 'Static closures cannot have bound object ($newThis must be null)',
+            'C' => 'Returns new Closure or null on failure',
+            'D' => 'Can pass internal class as $newScope',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/predefined/closure/bindto.xml',
+    ],
+    [
+        'text' => 'Closures: What is the difference between Closure::bind() and Closure::bindTo()?',
+        'answers' => [
+            'A' => 'bind() is static, bindTo() is instance method',
+            'B' => 'bind() is faster than bindTo()',
+            'C' => 'bind() returns the same closure, bindTo() returns new one',
+            'D' => 'They have the same signature except bind() is static',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/predefined/closure/bind.xml',
+    ],
+    [
+        'text' => 'Closures: What does Closure::call() do in PHP 7.0+?',
+        'answers' => [
+            'A' => 'Temporarily binds closure to object and calls it',
+            'B' => 'More efficient than bindTo() for one-time calls',
+            'C' => 'Permanently binds closure to object',
+            'D' => 'Creates a copy of the closure',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/predefined/closure/call.xml',
+    ],
+    [
+        'text' => 'Closures: What does Closure::fromCallable() do in PHP 7.1+?',
+        'answers' => [
+            'A' => 'Converts callable to closure using current scope',
+            'B' => 'Checks if callable is valid in current scope',
+            'C' => 'Throws TypeError if not callable',
+            'D' => 'Returns null if not callable',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/predefined/closure/fromcallable.xml',
+    ],
+    [
+        'text' => 'SPL: Which interfaces does ArrayObject implement?',
+        'answers' => [
+            'A' => 'IteratorAggregate',
+            'B' => 'ArrayAccess',
+            'C' => 'Serializable',
+            'D' => 'Countable',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/arrayobject.xml',
+    ],
+    [
+        'text' => 'SPL: Which ArrayObject constants control behavior?',
+        'answers' => [
+            'A' => 'STD_PROP_LIST - properties have normal functionality',
+            'B' => 'ARRAY_AS_PROPS - entries accessible as properties',
+            'C' => 'PROPS_AS_ARRAY - properties accessible as array',
+            'D' => 'CASE_INSENSITIVE - case-insensitive keys',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/arrayobject.xml',
+    ],
+    [
+        'text' => 'SPL: Which RecursiveIteratorIterator mode constants are available?',
+        'answers' => [
+            'A' => 'LEAVES_ONLY (default, only leaf nodes)',
+            'B' => 'SELF_FIRST (parent before children)',
+            'C' => 'CHILD_FIRST (children before parent)',
+            'D' => 'CATCH_GET_CHILD (catch exceptions during getChildren)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/recursiveiteratoriterator.xml',
+    ],
+    [
+        'text' => 'SPL: What is FilterIterator?',
+        'answers' => [
+            'A' => 'Abstract class that must be extended',
+            'B' => 'Must implement accept() method',
+            'C' => 'Extends IteratorIterator',
+            'D' => 'Concrete class ready to use',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/filteriterator.xml',
+    ],
+    [
+        'text' => 'SPL: What is the callback signature for CallbackFilterIterator?',
+        'answers' => [
+            'A' => 'function($current, $key, $iterator): bool',
+            'B' => 'function($value): bool',
+            'C' => 'Callback accepts up to 3 arguments',
+            'D' => 'function($iterator, $current): bool',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/callbackfilteriterator.xml',
+    ],
+    [
+        'text' => 'SPL: Which RegexIterator operation modes are available?',
+        'answers' => [
+            'A' => 'MATCH - only execute match (filter)',
+            'B' => 'GET_MATCH - return first match',
+            'C' => 'ALL_MATCHES - return all matches',
+            'D' => 'SPLIT - return split values',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/regexiterator.xml',
+    ],
+    [
+        'text' => 'SPL: Which RegexIterator flags are available?',
+        'answers' => [
+            'A' => 'USE_KEY - match entry key instead of value',
+            'B' => 'INVERT_MATCH - invert return value of accept()',
+            'C' => 'CASE_INSENSITIVE - case-insensitive matching',
+            'D' => 'MULTILINE - multiline matching',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/regexiterator.xml',
+    ],
+    [
+        'text' => 'PHP 8.0: Which new features were introduced?',
+        'answers' => [
+            'A' => 'Named arguments',
+            'B' => 'Attributes (annotations)',
+            'C' => 'Constructor property promotion',
+            'D' => 'Union types',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration80/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.0: Which statements about the match expression are correct?',
+        'answers' => [
+            'A' => 'Uses strict comparison (===)',
+            'B' => 'Returns a value directly',
+            'C' => 'Is exhaustive and throws UnhandledMatchError if no match',
+            'D' => 'Uses loose comparison (==)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration80/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.0: What syntax allows getting class name from an object?',
+        'answers' => [
+            'A' => '$object::class',
+            'B' => 'Same as get_class($object)',
+            'C' => '$object->class',
+            'D' => 'class($object)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration80/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.0: Which new types were introduced?',
+        'answers' => [
+            'A' => 'mixed',
+            'B' => 'static (return type)',
+            'C' => 'never',
+            'D' => 'Union types (int|string)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration80/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.0: What is the syntax for non-capturing catch blocks?',
+        'answers' => [
+            'A' => 'catch (Exception) { }',
+            'B' => 'catch (Exception $_) { }',
+            'C' => 'catch { }',
+            'D' => 'catch (Exception as _) { }',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration80/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.0: Which new classes were introduced?',
+        'answers' => [
+            'A' => 'WeakMap',
+            'B' => 'ValueError',
+            'C' => 'Stringable interface',
+            'D' => 'UnhandledMatchError',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration80/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.1: What is the first-class callable syntax?',
+        'answers' => [
+            'A' => 'myFunc(...)',
+            'B' => 'Same semantics as Closure::fromCallable()',
+            'C' => '... is part of the syntax, not omission',
+            'D' => 'Closure::wrap(myFunc)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration81/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.1: What are intersection types?',
+        'answers' => [
+            'A' => 'Types combined with & requiring all types',
+            'B' => 'Example: Countable&ArrayAccess',
+            'C' => 'Cannot be mixed with union types',
+            'D' => 'Can be mixed with union types',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration81/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.1: What does the never return type indicate?',
+        'answers' => [
+            'A' => 'Function exits, throws exception, or does not terminate',
+            'B' => 'Function never returns a value',
+            'C' => 'Function always throws',
+            'D' => 'Function cannot be called',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration81/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.1: What is the new octal literal prefix?',
+        'answers' => [
+            'A' => '0o14 or 0O14',
+            'B' => '0x14',
+            'C' => '0b14',
+            'D' => 'Only 014 (old style)',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration81/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.1: Which statements about readonly properties are correct?',
+        'answers' => [
+            'A' => 'Can only be initialized once',
+            'B' => 'Must be typed',
+            'C' => 'Cannot have default values except in constructor promotion',
+            'D' => 'Can be untyped',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration81/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.1: What new feature allows using new in initializers?',
+        'answers' => [
+            'A' => 'new can be used in default parameter values',
+            'B' => 'new can be used in class property initializers',
+            'C' => 'Example: public Logger $logger = new NullLogger()',
+            'D' => 'new can only be used in method bodies',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration81/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.2: What are DNF types (Disjunctive Normal Form)?',
+        'answers' => [
+            'A' => 'Combination of intersection and union types',
+            'B' => 'Example: (A&B)|C',
+            'C' => 'Allows complex type expressions',
+            'D' => 'DNF stands for Do Not Format',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration82/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.2: Which standalone types were introduced?',
+        'answers' => [
+            'A' => 'null',
+            'B' => 'false',
+            'C' => 'true',
+            'D' => 'void',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration82/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.2: What does the SensitiveParameter attribute do?',
+        'answers' => [
+            'A' => 'Redacts sensitive data in stack traces',
+            'B' => 'Redacts sensitive data in error messages',
+            'C' => 'Encrypts parameter values',
+            'D' => 'Validates parameter format',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration82/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.2: What is the effect of declaring a class as readonly?',
+        'answers' => [
+            'A' => 'All properties are automatically readonly',
+            'B' => 'The class cannot be extended',
+            'C' => 'All methods become final',
+            'D' => 'Constructor promotion works with all properties',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration82/new-features.xml',
+    ],
+    [
+        'text' => 'PHP 8.2: Can traits define constants starting from PHP 8.2?',
+        'answers' => [
+            'A' => 'Yes',
+            'B' => 'No, only classes can define constants',
+            'C' => 'Only public constants',
+            'D' => 'Only private constants',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/appendices/migration82/new-features.xml',
+    ],
 ];
