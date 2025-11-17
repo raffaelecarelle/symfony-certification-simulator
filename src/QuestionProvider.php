@@ -5,7 +5,7 @@ namespace App;
 class QuestionProvider
 {
     /**
-     * @return array{ text: string, answers: array<string, string>, correctAnswers: string }
+     * @return list<array{ text: string, answers: array<string, string>, correctAnswers: array<string>, linkAtDocumentation: string|null}>
      */
     public function getSymfonyQuestions(): array
     {
@@ -13,7 +13,7 @@ class QuestionProvider
     }
 
     /**
-     * @return array{ text: string, answers: array<string, string>, correctAnswers: string }
+     * @return list<array{ text: string, answers: array<string, string>, correctAnswers: array<string>, linkAtDocumentation: string|null}>
      */
     public function getPhpQuestions(): array
     {
