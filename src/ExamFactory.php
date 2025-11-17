@@ -12,21 +12,21 @@ final readonly class ExamFactory
     }
 
     /**
-     * @param array{symfonyOnly?: bool, phpOnly?: bool, phpQuestionCap?: int, sfQuestionCap?: int} $options
+     * @param array{sfOnly: bool, phpOnly: bool, phpQuestionCap?: int, sfQuestionCap: int} $options
      */
-    public function make(array $options = []): Exam
+    public function make(array $options = ['sfOnly' => false, 'phpOnly' => false, 'sfQuestionCap' => self::QUESTIONS_COUNT, 'phpQuestionCap' => self::QUESTIONS_COUNT]): Exam
     {
         $finalQuestions = [];
 
-        if (!\array_key_exists('symfonyOnly', $options) || true === $options['symfonyOnly']) {
+        if (false === $options['phpOnly'] || true === $options['sfOnly']) {
             $sfQuestions = $this->questionProvider->getSymfonyQuestions();
-            $sfIndexes = array_rand($sfQuestions, $options['sfQuestionCap'] ?? self::QUESTIONS_COUNT);
+            $sfIndexes = array_rand($sfQuestions, $options['sfQuestionCap']);
             $this->createRandomQuestionSet($sfIndexes, $sfQuestions, $finalQuestions);
         }
 
-        if (!\array_key_exists('phpOnly', $options) || true === $options['phpOnly']) {
+        if (false === $options['sfOnly'] || true === $options['phpOnly']) {
             $phpQuestions = $this->questionProvider->getPhpQuestions();
-            $phpIndexes = array_rand($phpQuestions, $options['phpQuestionCap'] ?? self::QUESTIONS_COUNT);
+            $phpIndexes = array_rand($phpQuestions, $options['phpQuestionCap']);
             $this->createRandomQuestionSet($phpIndexes, $phpQuestions, $finalQuestions);
         }
 
@@ -42,6 +42,10 @@ final readonly class ExamFactory
      */
     public function createRandomQuestionSet(array|int|string $indexes, array $questions, array &$finalQuestions = []): void
     {
+        if (!\is_array($indexes)) {
+            $indexes = [$indexes];
+        }
+
         foreach ($indexes as $index) {
             $question = $questions[$index];
 

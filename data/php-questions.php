@@ -2493,4 +2493,568 @@ return [
         ],
         'linkAtDocumentation' => 'php-doc/language/types/declarations.xml',
     ],
+    [
+        'text' => 'Traits: What happens when a class redefines a trait property with different characteristics?',
+        'answers' => [
+            'A' => 'Fatal error unless identical (same visibility, type, readonly, initial value)',
+            'B' => 'Class property overrides trait property',
+            'C' => 'Trait property takes precedence',
+            'D' => 'Properties are merged',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/traits.xml',
+    ],
+    [
+        'text' => 'Traits: Which statements about trait constants (PHP 8.2.0+) are correct?',
+        'answers' => [
+            'A' => 'Traits can define constants',
+            'B' => 'Trait constants can have the final modifier',
+            'C' => 'Class must have compatible constant or fatal error occurs',
+            'D' => 'Trait constants can be private',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/traits.xml',
+    ],
+    [
+        'text' => 'Traits: Which operators are used for trait conflict resolution and aliasing?',
+        'answers' => [
+            'A' => 'insteadof for selecting between conflicting methods',
+            'B' => 'as for creating method aliases',
+            'C' => 'as for changing method visibility',
+            'D' => 'override for replacing methods',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/traits.xml',
+    ],
+    [
+        'text' => 'Traits: What is true about the as operator when used on trait methods?',
+        'answers' => [
+            'A' => 'It creates an alias without renaming the original method',
+            'B' => 'It renames the original method',
+            'C' => 'It can change method visibility',
+            'D' => 'It deletes the original method',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/traits.xml',
+    ],
+    [
+        'text' => 'Interfaces: From PHP 8.0.0, why are interface parameter names important?',
+        'answers' => [
+            'A' => 'Due to named arguments support',
+            'B' => 'Strongly recommended to use same names as interface',
+            'C' => 'Parameter names must match exactly or fatal error',
+            'D' => 'Parameter names are used for documentation only',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/interfaces.xml',
+    ],
+    [
+        'text' => 'Interfaces: Which statements about interface properties (PHP 8.4.0+) are correct?',
+        'answers' => [
+            'A' => 'Must specify { get; }, { set; }, or { get; set; }',
+            'B' => 'Readable interface property can be satisfied by readonly property',
+            'C' => 'Settable interface property can be satisfied by readonly property',
+            'D' => 'Apply only to public read/write access',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/interfaces.xml',
+    ],
+    [
+        'text' => 'Abstract Classes: Which visibility modifiers can abstract properties have (PHP 8.4.0+)?',
+        'answers' => [
+            'A' => 'public',
+            'B' => 'protected',
+            'C' => 'private',
+            'D' => 'final',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/abstract.xml',
+    ],
+    [
+        'text' => 'Abstract Classes: How can abstract properties (PHP 8.4.0+) be satisfied?',
+        'answers' => [
+            'A' => 'By standard property',
+            'B' => 'By property with hooks',
+            'C' => 'Protected abstract property can be satisfied by public property',
+            'D' => 'Must be satisfied with exact visibility match only',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/abstract.xml',
+    ],
+    [
+        'text' => 'Late Static Bindings: Which constant contains the name of the class where the method is defined?',
+        'answers' => [
+            'A' => '__CLASS__',
+            'B' => '__NAMESPACE__',
+            'C' => 'get_called_class()',
+            'D' => 'static::class',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/late-static-bindings.xml',
+    ],
+    [
+        'text' => 'Late Static Bindings: Which calls preserve the "forwarding" behavior for static:: resolution?',
+        'answers' => [
+            'A' => 'self::method()',
+            'B' => 'parent::method()',
+            'C' => 'static::method()',
+            'D' => 'ClassName::method()',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/late-static-bindings.xml',
+    ],
+    [
+        'text' => 'Magic Methods: Which magic methods can have non-public visibility without triggering warnings?',
+        'answers' => [
+            'A' => '__construct()',
+            'B' => '__destruct()',
+            'C' => '__clone()',
+            'D' => '__toString()',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/magic.xml',
+    ],
+    [
+        'text' => 'Magic Methods: Which statements about __toString() in PHP 8.0.0+ are correct?',
+        'answers' => [
+            'A' => 'Implicitly implements Stringable interface',
+            'B' => 'Can throw exceptions',
+            'C' => 'Must return string or Error is thrown',
+            'D' => 'Cannot throw exceptions',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/magic.xml',
+    ],
+    [
+        'text' => 'Magic Methods: What happens if magic method signatures do not match documented signatures in PHP 8.0.0+?',
+        'answers' => [
+            'A' => 'Fatal error',
+            'B' => 'Warning only',
+            'C' => 'Notice only',
+            'D' => 'No diagnostic',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/magic.xml',
+    ],
+    [
+        'text' => 'Magic Methods: Which serialization method pair takes precedence if both are defined?',
+        'answers' => [
+            'A' => '__serialize() and __unserialize()',
+            'B' => '__sleep() and __wakeup()',
+            'C' => 'They are used together',
+            'D' => 'Fatal error if both defined',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/magic.xml',
+    ],
+    [
+        'text' => 'Magic Methods: What must __serialize() return in PHP 7.4.0+?',
+        'answers' => [
+            'A' => 'An associative array',
+            'B' => 'An array of property names',
+            'C' => 'A string',
+            'D' => 'Returning non-array causes TypeError',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/magic.xml',
+    ],
+    [
+        'text' => 'Anonymous Classes: Which features can anonymous classes use?',
+        'answers' => [
+            'A' => 'Constructor arguments',
+            'B' => 'Extend classes',
+            'C' => 'Implement interfaces',
+            'D' => 'Use traits',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/anonymous.xml',
+    ],
+    [
+        'text' => 'Anonymous Classes: What scope access does nesting an anonymous class inside an outer class provide?',
+        'answers' => [
+            'A' => 'No automatic access to private/protected members',
+            'B' => 'Can extend outer class to access protected members',
+            'C' => 'Must pass private properties through constructor',
+            'D' => 'Full access to all outer class members',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/anonymous.xml',
+    ],
+    [
+        'text' => 'Covariance and Contravariance: From which PHP version was full covariance and contravariance support added?',
+        'answers' => [
+            'A' => 'PHP 7.4.0',
+            'B' => 'PHP 7.2.0',
+            'C' => 'PHP 8.0.0',
+            'D' => 'PHP 7.3.0',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/variance.xml',
+    ],
+    [
+        'text' => 'Covariance and Contravariance: Which variance rules apply to properties (PHP 8.4.0+)?',
+        'answers' => [
+            'A' => 'Properties are invariant by default',
+            'B' => 'Abstract/virtual properties with only get can be covariant',
+            'C' => 'Abstract/virtual properties with only set can be contravariant',
+            'D' => 'All properties are covariant',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/oop5/variance.xml',
+    ],
+    [
+        'text' => 'Namespaces: Which statement about namespace name case sensitivity is correct?',
+        'answers' => [
+            'A' => 'Namespace names are case-insensitive',
+            'B' => 'Namespace names are case-sensitive',
+            'C' => 'Only on Unix systems are they case-sensitive',
+            'D' => 'Depends on autoloader implementation',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: What types of code are affected by namespaces?',
+        'answers' => [
+            'A' => 'Classes',
+            'B' => 'Interfaces',
+            'C' => 'Traits',
+            'D' => 'Enums',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: What types of code are affected by namespaces regarding callables?',
+        'answers' => [
+            'A' => 'Functions',
+            'B' => 'Constants',
+            'C' => 'Variables',
+            'D' => 'Superglobals',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: Where must use statements appear in a file?',
+        'answers' => [
+            'A' => 'In outermost scope only',
+            'B' => 'After namespace declaration',
+            'C' => 'Cannot be inside functions or methods',
+            'D' => 'Can appear anywhere',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: What is the value of __NAMESPACE__ constant in global scope?',
+        'answers' => [
+            'A' => 'Empty string \'\'',
+            'B' => 'NULL',
+            'C' => 'The string "global"',
+            'D' => 'False',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Namespaces: What does the namespace keyword do when used as prefix?',
+        'answers' => [
+            'A' => 'Explicitly requests element from current namespace',
+            'B' => 'Equivalent to self for classes',
+            'C' => 'Example: namespace\\func() calls CurrentNamespace\\func()',
+            'D' => 'References the global namespace',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/namespaces.xml',
+    ],
+    [
+        'text' => 'Exceptions: Which statements about the finally block are correct?',
+        'answers' => [
+            'A' => 'Always executes after try/catch blocks',
+            'B' => 'Can be specified instead of catch blocks',
+            'C' => 'Executes before return value is returned',
+            'D' => 'Prevents exception propagation',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
+    ],
+    [
+        'text' => 'Exceptions: What is the complete signature of Exception::__construct()?',
+        'answers' => [
+            'A' => '__construct(string $message = "", int $code = 0, ?Throwable $previous = null)',
+            'B' => '__construct(string $message, int $code = 0)',
+            'C' => '__construct(string $message = "", ?Throwable $previous = null)',
+            'D' => '__construct($message = "")',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
+    ],
+    [
+        'text' => 'Exceptions: Which Exception class methods are declared as final?',
+        'answers' => [
+            'A' => 'getMessage()',
+            'B' => 'getCode()',
+            'C' => 'getFile()',
+            'D' => '__toString()',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/exceptions.xml',
+    ],
+    [
+        'text' => 'Closures: Which language construct is used to inherit parent scope variables?',
+        'answers' => [
+            'A' => 'use',
+            'B' => 'global',
+            'C' => 'inherit',
+            'D' => 'import',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/functions.xml',
+    ],
+    [
+        'text' => 'Closures: Which statements about variable inheritance with use are correct?',
+        'answers' => [
+            'A' => 'Inherited by value by default',
+            'B' => 'Use & for inheritance by reference',
+            'C' => 'Value captured when function defined, not called',
+            'D' => 'Value captured when function called',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/functions.xml',
+    ],
+    [
+        'text' => 'Closures: From PHP 7.1+, which cannot be included in use clause?',
+        'answers' => [
+            'A' => 'Superglobals',
+            'B' => '$this',
+            'C' => 'Same-named parameters',
+            'D' => 'Static variables',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/functions.xml',
+    ],
+    [
+        'text' => 'Arrow Functions (PHP 7.4+): Which statements about arrow functions are correct?',
+        'answers' => [
+            'A' => 'Variables from parent scope implicitly captured by-value',
+            'B' => 'No use keyword needed',
+            'C' => 'Body is single expression',
+            'D' => 'Can contain multiple statements',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/language/functions.xml',
+    ],
+    [
+        'text' => 'SPL Exceptions: Which are children of LogicException?',
+        'answers' => [
+            'A' => 'BadFunctionCallException',
+            'B' => 'DomainException',
+            'C' => 'InvalidArgumentException',
+            'D' => 'LengthException',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/logicexception.xml',
+    ],
+    [
+        'text' => 'SPL Exceptions: Which exception extends BadFunctionCallException?',
+        'answers' => [
+            'A' => 'BadMethodCallException',
+            'B' => 'InvalidArgumentException',
+            'C' => 'DomainException',
+            'D' => 'OutOfRangeException',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/badfunctioncallexception.xml',
+    ],
+    [
+        'text' => 'SPL Exceptions: Which are children of RuntimeException?',
+        'answers' => [
+            'A' => 'OutOfBoundsException',
+            'B' => 'OverflowException',
+            'C' => 'RangeException',
+            'D' => 'UnderflowException',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/runtimeexception.xml',
+    ],
+    [
+        'text' => 'SPL Data Structures: Which are valid heap implementations in SPL?',
+        'answers' => [
+            'A' => 'SplMaxHeap',
+            'B' => 'SplMinHeap',
+            'C' => 'SplHeap (abstract)',
+            'D' => 'SplPriorityQueue',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+            3 => 'D',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/splheap.xml',
+    ],
+    [
+        'text' => 'SPL Data Structures: What are the key differences between SplFixedArray and standard PHP arrays?',
+        'answers' => [
+            'A' => 'SplFixedArray must be resized manually',
+            'B' => 'SplFixedArray only accepts integer indexes',
+            'C' => 'SplFixedArray is contiguous (not hashtable)',
+            'D' => 'SplFixedArray auto-grows like standard arrays',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/splfixedarray.xml',
+    ],
+    [
+        'text' => 'SPL Iterators: Which core iterator interfaces exist in SPL?',
+        'answers' => [
+            'A' => 'OuterIterator',
+            'B' => 'RecursiveIterator',
+            'C' => 'SeekableIterator',
+            'D' => 'UniqueIterator',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+            2 => 'C',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/iteratoriterator.xml',
+    ],
+    [
+        'text' => 'SPL: Which methods does the RecursiveIterator interface add to Iterator?',
+        'answers' => [
+            'A' => 'hasChildren()',
+            'B' => 'getChildren()',
+            'C' => 'getDepth()',
+            'D' => 'seek()',
+        ],
+        'correctAnswers' => [
+            0 => 'A',
+            1 => 'B',
+        ],
+        'linkAtDocumentation' => 'php-doc/reference/spl/recursiveiterator.xml',
+    ],
 ];

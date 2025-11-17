@@ -34,13 +34,13 @@ class ExamCommand extends Command
             EOF
         );
 
-        $phpOnly = $input->getOption('php-only');
+        $phpOnly = (bool) $input->getOption('php-only');
         $symfonyOnly = $input->getOption('sf-only');
         $phpQuestionCap = (int) $input->getOption('php-questions');
         $sfQuestionCap = (int) $input->getOption('php-questions');
 
         $examFactory = new ExamFactory();
-        $exam = $examFactory->make(['phpOnly' => $phpOnly, 'symfonyOnly' => $symfonyOnly, 'phpQuestionCap' => $phpQuestionCap, 'sfQuestionCap' => $sfQuestionCap]);
+        $exam = $examFactory->make(['phpOnly' => $phpOnly, 'sfOnly' => $symfonyOnly, 'phpQuestionCap' => $phpQuestionCap, 'sfQuestionCap' => $sfQuestionCap]);
         $style->writeln(\sprintf('You have %d questions to answer.', $exam->getNumberOfQuestions()));
         $questions = $exam->getQuestions();
 

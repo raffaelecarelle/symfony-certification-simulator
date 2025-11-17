@@ -22,10 +22,10 @@ class ExamFactoryTest extends TestCase
             ->willReturn($questions);
 
         $examFactory = new ExamFactory($mockQuestionProvider);
-        $exam = $examFactory->make();
+        $exam = $examFactory->make(['phpOnly' => false, 'sfOnly' => false, 'sfQuestionCap' => 2, 'phpQuestionCap' => 1]);
 
         self::assertInstanceOf(Exam::class, $exam);
-        self::assertCount(ExamFactory::QUESTIONS_COUNT * 2, $exam->getQuestions());
+        self::assertCount(3, $exam->getQuestions());
     }
 
     public function testMakeShufflesQuestions(): void
@@ -40,14 +40,14 @@ class ExamFactoryTest extends TestCase
             ->willReturn($questions);
 
         $examFactory = new ExamFactory($mockQuestionProvider);
-        $exam = $examFactory->make();
+        $exam = $examFactory->make(['phpOnly' => false, 'sfOnly' => false, 'sfQuestionCap' => 2, 'phpQuestionCap' => 1]);
 
         // Extracting question texts for comparison
         $originalTexts = array_column($questions, 'text');
         $shuffledTexts = array_map(fn (Question $q) => $q->getText(), $exam->getQuestions());
 
         self::assertNotSame($originalTexts, $shuffledTexts);
-        self::assertCount(ExamFactory::QUESTIONS_COUNT * 2, $shuffledTexts);
+        self::assertCount(3, $shuffledTexts);
     }
 
     /**

@@ -8,4 +8,5 @@ use App\ExamCommand;
 
 $app = (new Application());
 $app->addCommand(new ExamCommand());
+$app->setDefaultCommand('exam:start', true);
 $app->run();
