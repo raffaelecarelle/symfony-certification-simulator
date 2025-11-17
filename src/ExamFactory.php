@@ -26,7 +26,7 @@ final readonly class ExamFactory
 
         if (!\array_key_exists('phpOnly', $options) || true === $options['phpOnly']) {
             $phpQuestions = $this->questionProvider->getPhpQuestions();
-            $phpIndexes = array_rand($phpQuestions, 25 /* For now. TODO increment this */);
+            $phpIndexes = array_rand($phpQuestions, self::QUESTIONS_COUNT);
             $this->createRandomQuestionSet($phpIndexes, $phpQuestions, $finalQuestions);
         }
 
