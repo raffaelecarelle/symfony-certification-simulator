@@ -19,7 +19,8 @@ class ExamCommand extends Command
         $this
             ->addOption('php-only', 'p', InputOption::VALUE_NONE, 'Start the exam with only PHP questions .')
             ->addOption('sf-only', 'S', InputOption::VALUE_NONE, 'Start the exam with only Symfony questions .')
-        ;
+            ->addOption('php-questions', null, InputOption::VALUE_REQUIRED, 'Number of PHP questions', ExamFactory::QUESTIONS_COUNT)
+            ->addOption('sf-questions', null, InputOption::VALUE_REQUIRED, 'Number of PHP questions', ExamFactory::QUESTIONS_COUNT);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -35,9 +36,11 @@ class ExamCommand extends Command
 
         $phpOnly = $input->getOption('php-only');
         $symfonyOnly = $input->getOption('sf-only');
+        $phpQuestionCap = (int) $input->getOption('php-questions');
+        $sfQuestionCap = (int) $input->getOption('php-questions');
 
         $examFactory = new ExamFactory();
-        $exam = $examFactory->make(['phpOnly' => $phpOnly, 'symfonyOnly' => $symfonyOnly]);
+        $exam = $examFactory->make(['phpOnly' => $phpOnly, 'symfonyOnly' => $symfonyOnly, 'phpQuestionCap' => $phpQuestionCap, 'sfQuestionCap' => $sfQuestionCap]);
         $style->writeln(\sprintf('You have %d questions to answer.', $exam->getNumberOfQuestions()));
         $questions = $exam->getQuestions();
 

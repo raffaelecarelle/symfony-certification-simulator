@@ -12,7 +12,7 @@ final readonly class ExamFactory
     }
 
     /**
-     * @param array{symfonyOnly?: bool, phpOnly?: bool} $options
+     * @param array{symfonyOnly?: bool, phpOnly?: bool, phpQuestionCap?: int, sfQuestionCap?: int} $options
      */
     public function make(array $options = []): Exam
     {
@@ -20,13 +20,13 @@ final readonly class ExamFactory
 
         if (!\array_key_exists('symfonyOnly', $options) || true === $options['symfonyOnly']) {
             $sfQuestions = $this->questionProvider->getSymfonyQuestions();
-            $sfIndexes = array_rand($sfQuestions, self::QUESTIONS_COUNT);
+            $sfIndexes = array_rand($sfQuestions, $options['sfQuestionCap'] ?? self::QUESTIONS_COUNT);
             $this->createRandomQuestionSet($sfIndexes, $sfQuestions, $finalQuestions);
         }
 
         if (!\array_key_exists('phpOnly', $options) || true === $options['phpOnly']) {
             $phpQuestions = $this->questionProvider->getPhpQuestions();
-            $phpIndexes = array_rand($phpQuestions, self::QUESTIONS_COUNT);
+            $phpIndexes = array_rand($phpQuestions, $options['phpQuestionCap'] ?? self::QUESTIONS_COUNT);
             $this->createRandomQuestionSet($phpIndexes, $phpQuestions, $finalQuestions);
         }
 
