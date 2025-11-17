@@ -1,6 +1,6 @@
 {
-    "name": "raffaelecarelle/symfony-certification-program",
-    "description": "UNOFFICIAL Symfony Certification Program with Exercises",
+    "name": "raffaelecarelle/symfony-certification-simulator",
+    "description": "UNOFFICIAL Symfony Certification Simulator with Exercises",
     "type": "project",
     "license": "GPL-3.0-or-later",
     "authors": [
