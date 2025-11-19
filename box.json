@@ -1,0 +1,26 @@
+{
+    "main": "bin/exam-start",
+    "output": "symfony-certification.phar",
+    "chmod": "0755",
+    "directories": [
+        "src",
+        "data"
+    ],
+    "files": [
+        "composer.json"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "tests",
+                "vendor"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "compression": "GZ",
+    "compactors": [
+        "KevinGH\\Box\\Compactor\\Php"
+    ]
+}
