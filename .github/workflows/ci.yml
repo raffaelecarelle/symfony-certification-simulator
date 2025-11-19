@@ -74,6 +74,7 @@ jobs:
                     php-version: '8.2'
                     extensions: mbstring, xml, ctype, iconv, intl, phar
                     coverage: none
+                    ini-values: phar.readonly=0
 
             -   name: Install dependencies
                 run: composer install --prefer-dist --no-progress --no-dev --optimize-autoloader
