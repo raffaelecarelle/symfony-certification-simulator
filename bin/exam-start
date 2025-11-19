@@ -5,8 +5,17 @@ require __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use App\ExamCommand;
+use Symfony\Component\Console\Command\HelpCommand;
+use Symfony\Component\Console\Command\ListCommand;
 
-$app = (new Application());
-$app->addCommand(new ExamCommand());
+$app = new class() extends Application {
+    protected function getDefaultCommands(): array
+    {
+        // Return only the help and list commands, skip completion commands
+        return [new HelpCommand(), new ListCommand()];
+    }
+};
+
+$app->add(new ExamCommand());
 $app->setDefaultCommand('exam:start', true);
 $app->run();

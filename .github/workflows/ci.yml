@@ -81,13 +81,13 @@ jobs:
 
             -   name: Install Box
                 run: |
-                    curl -LSs https://box-project.github.io/box2/installer.php | php
+                    curl -L https://github.com/box-project/box/releases/latest/download/box.phar -o box.phar
                     chmod +x box.phar
-                    mv box.phar /usr/local/bin/box
+                    sudo mv box.phar /usr/local/bin/box
 
             -   name: Build PHAR
                 run: |
-                    box build -v
+                    box compile -v
                     chmod +x symfony-certification.phar
 
             -   name: Create Release

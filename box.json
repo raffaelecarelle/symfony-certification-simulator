@@ -1,26 +1,22 @@
 {
-    "alias": "symfony-certification.phar",
     "output": "symfony-certification.phar",
-    "chmod": "0755",
-    "stub": true,
+    "main": "bin/exam-start",
     "directories": [
         "src",
         "data"
     ],
     "files": [
-        "composer.json",
-        "bin/exam-start"
+        "composer.json"
     ],
     "finder": [
         {
             "name": "*.php",
             "exclude": [
-                "tests",
-                "vendor"
+                "tests"
             ],
             "in": "vendor"
         }
     ],
-    "main": "bin/exam-start",
-    "compression": "GZ"
+    "compression": "GZ",
+    "check-requirements": false
 }
