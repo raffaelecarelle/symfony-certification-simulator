@@ -726,7 +726,7 @@ return [
     [
         'text' => 'OOP: What is the required signature for __set_state()?',
         'answers' => [
-            'A' => 'static object __set_state(array $properties)',
+            'A' => 'static object __set_state(array $properties): object',
             'B' => 'public function __set_state(array $properties): object',
             'C' => 'public static function __set_state(array $properties): self',
             'D' => 'function __set_state(array $properties)',
