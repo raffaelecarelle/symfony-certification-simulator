@@ -1558,11 +1558,10 @@ return [
             'A' => 'configureContainer()',
             'B' => 'configureRoutes()',
             'C' => 'registerBundles()',
-            'D' => 'configureBundles()',
+            'D' => 'No one',
         ],
         'correctAnswers' => [
-            0 => 'A',
-            1 => 'B',
+            0 => 'D',
         ],
         'linkAtDocumentation' => 'sf-doc/configuration.rst',
     ],
